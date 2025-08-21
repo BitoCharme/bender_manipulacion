@@ -1,0 +1,21 @@
+running develop
+running egg_info
+creating bender_moveit_scripts.egg-info
+writing bender_moveit_scripts.egg-info/PKG-INFO
+writing dependency_links to bender_moveit_scripts.egg-info/dependency_links.txt
+writing entry points to bender_moveit_scripts.egg-info/entry_points.txt
+writing requirements to bender_moveit_scripts.egg-info/requires.txt
+writing top-level names to bender_moveit_scripts.egg-info/top_level.txt
+writing manifest file 'bender_moveit_scripts.egg-info/SOURCES.txt'
+reading manifest file 'bender_moveit_scripts.egg-info/SOURCES.txt'
+writing manifest file 'bender_moveit_scripts.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/robotica-06/Downloads/bender_workspace/install/lib/python3.12/site-packages/bender-moveit-scripts.egg-link (link to .)
+Installing move_groups_control script to /home/robotica-06/Downloads/bender_workspace/install/lib/bender_moveit_scripts
+Installing move_left_arm script to /home/robotica-06/Downloads/bender_workspace/install/lib/bender_moveit_scripts
+Installing moveit_target_pose script to /home/robotica-06/Downloads/bender_workspace/install/lib/bender_moveit_scripts
+
+Installed /home/robotica-06/Downloads/bender_workspace/build/bender_moveit_scripts
+running symlink_data
+symbolically linking /home/robotica-06/Downloads/bender_workspace/build/bender_moveit_scripts/resource/bender_moveit_scripts -> /home/robotica-06/Downloads/bender_workspace/install/share/ament_index/resource_index/packages
+symbolically linking /home/robotica-06/Downloads/bender_workspace/build/bender_moveit_scripts/package.xml -> /home/robotica-06/Downloads/bender_workspace/install/share/bender_moveit_scripts

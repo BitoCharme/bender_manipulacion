@@ -1,0 +1,119 @@
+[0.019s] Invoking command in '/home/robotica-06/Downloads/bender_workspace/build/bender_description': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/robotica-06/Downloads/bender_workspace/src/bender_description -U CATKIN_INSTALL_INTO_PREFIX_ROOT -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCATKIN_SYMLINK_INSTALL=ON -DCMAKE_INSTALL_PREFIX=/home/robotica-06/Downloads/bender_workspace/install
+[0.080s] -- The C compiler identification is GNU 13.3.0
+[0.144s] -- The CXX compiler identification is GNU 13.3.0
+[0.161s] -- Detecting C compiler ABI info
+[0.254s] -- Detecting C compiler ABI info - done
+[0.266s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.267s] -- Detecting C compile features
+[0.267s] -- Detecting C compile features - done
+[0.277s] -- Detecting CXX compiler ABI info
+[0.391s] -- Detecting CXX compiler ABI info - done
+[0.404s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.404s] -- Detecting CXX compile features
+[0.405s] -- Detecting CXX compile features - done
+[0.457s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.626s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.762s] -- Found ament_lint_auto: 0.17.2 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[0.894s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.894s] -- Configured 'flake8' exclude dirs and/or files: 
+[0.896s] -- Added test 'lint_cmake' to check CMake code style
+[0.897s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.901s] -- Added test 'xmllint' to check XML markup files
+[0.904s] -- Configuring done (0.9s)
+[0.907s] -- Generating done (0.0s)
+[0.908s] [33mCMake Warning:
+[0.908s]   Manually-specified variables were not used by the project:
+[0.908s] 
+[0.909s]     CATKIN_INSTALL_INTO_PREFIX_ROOT
+[0.909s]     CATKIN_SYMLINK_INSTALL
+[0.909s] 
+[0.909s] [0m
+[0.909s] -- Build files have been written to: /home/robotica-06/Downloads/bender_workspace/build/bender_description
+[0.915s] Invoked command in '/home/robotica-06/Downloads/bender_workspace/build/bender_description' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/robotica-06/Downloads/bender_workspace/src/bender_description -U CATKIN_INSTALL_INTO_PREFIX_ROOT -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCATKIN_SYMLINK_INSTALL=ON -DCMAKE_INSTALL_PREFIX=/home/robotica-06/Downloads/bender_workspace/install
+[0.916s] Invoking command in '/home/robotica-06/Downloads/bender_workspace/build/bender_description': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/robotica-06/Downloads/bender_workspace/build/bender_description -- -j8 -l8
+[0.960s] Invoked command in '/home/robotica-06/Downloads/bender_workspace/build/bender_description' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/robotica-06/Downloads/bender_workspace/build/bender_description -- -j8 -l8
+[0.972s] Invoking command in '/home/robotica-06/Downloads/bender_workspace/build/bender_description': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/robotica-06/Downloads/bender_workspace/build/bender_description
+[0.981s] -- Install configuration: ""
+[0.981s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/launch
+[0.981s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/launch/gazebo.launch.py
+[0.981s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/launch/bender_moveit_rviz.launch.py
+[0.982s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/launch/bender_moveit.launch.py
+[0.982s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/launch/display.launch.py
+[0.982s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/launch/rsp.launch.py
+[0.982s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/launch/bender_move_group.launch.py
+[0.982s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/urdf
+[0.982s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/urdf/rgbd_camera.xacro
+[0.982s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/urdf/ros2_control.xacro
+[0.983s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/urdf/bender.xacro
+[0.983s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/urdf/materials.xacro
+[0.983s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/urdf/bender.xml
+[0.983s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/config
+[0.983s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/config/gz_bridge.yaml
+[0.983s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/config/ompl_planning.yaml
+[0.983s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/config/controllers
+[0.983s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/config/controllers/joint_state_broadcaster.yaml
+[0.984s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/config/controllers/moveit_controllers
+[0.984s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/config/controllers/moveit_controllers/left_arm_controller.yaml
+[0.984s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/config/controllers/moveit_controllers/right_arm_controller.yaml
+[0.984s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/config/controllers/moveit_controllers/left_gripper_controller.yaml
+[0.984s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/config/controllers/moveit_controllers/head_controller.yaml
+[0.984s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/config/controllers/moveit_controllers/right_gripper_controller.yaml
+[0.984s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/config/controllers/gazebo_controllers
+[0.984s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/config/controllers/gazebo_controllers/right_arm.yaml
+[0.985s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/config/controllers/gazebo_controllers/left_gripper.yaml
+[0.985s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/config/controllers/gazebo_controllers/head.yaml
+[0.985s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/config/controllers/gazebo_controllers/right_gripper.yaml
+[0.985s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/config/controllers/gazebo_controllers/left_arm.yaml
+[0.985s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/config/controllers/controllers.yaml
+[0.985s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/config/controllers/initial_position.yaml
+[0.985s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/config/ros2_controllers.yaml
+[0.997s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/config/colors.yaml
+[0.997s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/rviz
+[0.997s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/rviz/rviz.rviz
+[0.997s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/meshes
+[0.998s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/meshes/g2la_1.stl
+[0.998s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/meshes/l3l_1.stl
+[0.998s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/meshes/l6l_1.stl
+[0.998s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/meshes/l2h_1.stl
+[0.998s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/meshes/laser_1.stl
+[0.999s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/meshes/wfr_1.stl
+[0.999s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/meshes/l5l_1.stl
+[0.999s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/meshes/wfl_1.stl
+[1.000s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/meshes/d435.stl
+[1.011s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/meshes/g2ra_1.stl
+[1.011s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/meshes/l4l_1.stl
+[1.011s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/meshes/real_sense_1.stl
+[1.012s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/meshes/l2r_1.stl
+[1.012s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/meshes/l1r_1.stl
+[1.013s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/meshes/base_link.stl
+[1.013s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/meshes/g1l_1.stl
+[1.013s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/meshes/l1h_1.stl
+[1.014s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/meshes/l4r_1.stl
+[1.014s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/meshes/g1r_1.stl
+[1.014s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/meshes/wrl_1.stl
+[1.015s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/meshes/l1l_1.stl
+[1.015s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/meshes/l2l_1.stl
+[1.016s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/meshes/l3r_1.stl
+[1.016s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/meshes/l6r_1.stl
+[1.016s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/meshes/g2lb_1.stl
+[1.016s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/meshes/wrr_1.stl
+[1.017s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/meshes/l5r_1.stl
+[1.017s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/meshes/g2rb_1.stl
+[1.018s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/worlds
+[1.018s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/worlds/empty.world
+[1.018s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/ament_index/resource_index/package_run_dependencies/bender_description
+[1.018s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/ament_index/resource_index/parent_prefix_path/bender_description
+[1.019s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/environment/ament_prefix_path.sh
+[1.019s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/environment/ament_prefix_path.dsv
+[1.019s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/environment/path.sh
+[1.019s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/environment/path.dsv
+[1.019s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/local_setup.bash
+[1.019s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/local_setup.sh
+[1.019s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/local_setup.zsh
+[1.020s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/local_setup.dsv
+[1.020s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/package.dsv
+[1.020s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/ament_index/resource_index/packages/bender_description
+[1.020s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/cmake/bender_descriptionConfig.cmake
+[1.020s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/cmake/bender_descriptionConfig-version.cmake
+[1.020s] -- Installing: /home/robotica-06/Downloads/bender_workspace/install/share/bender_description/package.xml
+[1.022s] Invoked command in '/home/robotica-06/Downloads/bender_workspace/build/bender_description' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/robotica-06/Downloads/bender_workspace/build/bender_description
