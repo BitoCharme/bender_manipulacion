@@ -44,7 +44,7 @@ class SerialROSNode(Node):
             # No era número; puedes comentar si no quieres publicar texto crudo
             self.pub_text.publish(String(data=line.strip()))
 
-    def send_cmd(self, msg: Twist):
+    def send_cmd(self, msg: String):
         """TODO EN EL CALLBACK:
         - Si hay comando (|ang.x|>ε): envia 'v <ang.x>\n' una vez.
         - Si no hay comando: envia 'r\n' y publica respuesta si llega.
@@ -70,12 +70,22 @@ class SerialROSNode(Node):
                     cmd_serial = f"v {cmd_l[1]}\n".encode('utf-8')
                 self.ser.write(cmd_serial) ## Esto factorizar si es que en los demás if sean así
                 self.get_logger().debug(f"TX: {cmd_serial.decode().strip()}")
-            elif cmd == "s":
-                cmd_serial = b"s\n".encode('utf-8')
+            elif cmd.startswith("p"):
+                cmd_l = cmd.strip().split()
+                if len(cmd_l) != 2:
+                    self.get_logger().warn(f"Comando inválido: {cmd}")
+                    return
+                try: pos = float(cmd_l[1])  # aunque no se usa aquí, valida que sea float
+                except ValueError:
+                    self.get_logger().warn(f"Comando inválido: {cmd}")
+                    return
+                cmd_serial = f"p {cmd_l[1]}\n".encode('utf-8')
                 self.ser.write(cmd_serial)
                 self.get_logger().debug(f"TX: {cmd_serial.decode().strip()}")
+            elif cmd == "s":
+                self.ser.write(b"s\n")
+                self.get_logger().debug(f"TX: s")
             elif cmd == "r":
-                # Modo “sin comando”: pedir lectura 'r'
                 self.ser.write(b"r\n")
                 self.get_logger().debug("TX: r")
 
