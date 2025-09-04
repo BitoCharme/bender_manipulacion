@@ -29,9 +29,17 @@ class SerialROSNode(Node):
         self.pub_text  = self.create_publisher(String,  'shoulder/raw_text', 10)  # opcional, debug
 
         # Subscriber
-        self.sub_cmd = self.create_subscription(String, 'shoulder/cmd_vel', self.send_cmd, 10)
+    
 
-        self.get_logger().info("Listo: sub 'shoulder/cmd_vel' → envía 'v' o 'r' y publica 'shoulder/angle'.")
+        # Suscripción a Twist
+        self.sub_twist = self.create_subscription(
+            Twist,
+            'shoulder/angular_velocity',
+            self.twist_callback,
+            10
+        )
+
+        self.get_logger().info("Listo: sub 'shoulder/cmd_vel' → envía 'v' o 'r' y publica 'shoulder/hola'.")
 
     def _try_publish_line(self, line: str):
         """Intenta publicar ángulo si 'line' es número; si no, publica texto crudo (debug)."""
@@ -96,6 +104,23 @@ class SerialROSNode(Node):
 
         except Exception as e:
             self.get_logger().warn(f"Error serial en send_cmd: {e}")
+
+    def twist_callback(self, msg: Twist):
+        # Tomar la componente X
+        vel_x = msg.angular.x
+        # Enviar comando tipo "v x"
+        cmd_serial = f"v {vel_x}\n".encode('utf-8')
+        self.ser.write(cmd_serial)
+        self.get_logger().debug(f"TX: {cmd_serial.decode().strip()}")
+
+        # Leer el puerto
+        line = self.ser.readline().decode('utf-8', errors='ignore').strip()
+        if line:
+            try:
+                value = float(line)
+                self.pub_angle.publish(Float32(data=value))
+            except ValueError:
+                pass  # Ignora si no es número
 
 
 def main():
