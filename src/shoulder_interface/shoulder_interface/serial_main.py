@@ -29,7 +29,7 @@ class SerialROSNode(Node):
         self.pub_text  = self.create_publisher(String,  'shoulder/raw_text', 10)  # opcional, debug
 
         # Subscriber
-        self.sub_cmd = self.create_subscription(Twist, 'shoulder/cmd_vel', self.send_cmd, 10)
+        self.sub_cmd = self.create_subscription(String, 'shoulder/cmd_vel', self.send_cmd, 10)
 
         self.get_logger().info("Listo: sub 'shoulder/cmd_vel' → envía 'v' o 'r' y publica 'shoulder/angle'.")
 
@@ -50,15 +50,31 @@ class SerialROSNode(Node):
         - Si no hay comando: envia 'r\n' y publica respuesta si llega.
         - Luego intenta leer 1 línea (no bloqueante) y publicarla (ángulo si es número).
         """
-        angx = float(msg.angular.x)
+        cmd = String(msg.data)
 
         try:
-            if abs(angx) > self.epsilon:
+            if cmd.startswith("v"): ## Esto debe ser el problema
                 # Enviar comando una sola vez
-                cmd = f"v {angx:.6f}\n".encode('utf-8')
-                self.ser.write(cmd)
-                self.get_logger().debug(f"TX: {cmd.decode().strip()}")
-            else:
+                cmd_l = cmd.strip().split()
+                if len(cmd_l) != 2:
+                    self.get_logger().warn(f"Comando inválido: {cmd}") ## Revisar que hace
+                    return
+                try:
+                    angx = float(cmd_l[1])
+                except ValueError:
+                    self.get_logger().warn(f"Comando inválido: {cmd}")
+                    return
+                if abs(angx) <= self.epsilon:
+                    cmd_serial = f"s\n".encode('utf-8')
+                else:
+                    cmd_serial = f"v {cmd_l[1]}\n".encode('utf-8')
+                self.ser.write(cmd_serial) ## Esto factorizar si es que en los demás if sean así
+                self.get_logger().debug(f"TX: {cmd_serial.decode().strip()}")
+            elif cmd == "s":
+                cmd_serial = b"s\n".encode('utf-8')
+                self.ser.write(cmd_serial)
+                self.get_logger().debug(f"TX: {cmd_serial.decode().strip()}")
+            elif cmd == "r":
                 # Modo “sin comando”: pedir lectura 'r'
                 self.ser.write(b"r\n")
                 self.get_logger().debug("TX: r")
