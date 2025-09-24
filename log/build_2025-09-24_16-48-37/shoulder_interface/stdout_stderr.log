@@ -1,0 +1,22 @@
+running egg_info
+creating ../../build/shoulder_interface/shoulder_interface.egg-info
+writing ../../build/shoulder_interface/shoulder_interface.egg-info/PKG-INFO
+writing dependency_links to ../../build/shoulder_interface/shoulder_interface.egg-info/dependency_links.txt
+writing requirements to ../../build/shoulder_interface/shoulder_interface.egg-info/requires.txt
+writing top-level names to ../../build/shoulder_interface/shoulder_interface.egg-info/top_level.txt
+writing manifest file '../../build/shoulder_interface/shoulder_interface.egg-info/SOURCES.txt'
+reading manifest file '../../build/shoulder_interface/shoulder_interface.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/shoulder_interface/shoulder_interface.egg-info/SOURCES.txt'
+running build
+running install
+running install_data
+creating /home/robotica-06/nuevasuper/bender_manipulacion/install/shoulder_interface/share/ament_index
+creating /home/robotica-06/nuevasuper/bender_manipulacion/install/shoulder_interface/share/ament_index/resource_index
+creating /home/robotica-06/nuevasuper/bender_manipulacion/install/shoulder_interface/share/ament_index/resource_index/packages
+copying resource/shoulder_interface -> /home/robotica-06/nuevasuper/bender_manipulacion/install/shoulder_interface/share/ament_index/resource_index/packages
+copying package.xml -> /home/robotica-06/nuevasuper/bender_manipulacion/install/shoulder_interface/share/shoulder_interface
+running install_egg_info
+Copying ../../build/shoulder_interface/shoulder_interface.egg-info to /home/robotica-06/nuevasuper/bender_manipulacion/install/shoulder_interface/lib/python3.12/site-packages/shoulder_interface-0.0.0-py3.12.egg-info
+running install_scripts
+writing list of installed files to '/home/robotica-06/nuevasuper/bender_manipulacion/build/shoulder_interface/install.log'

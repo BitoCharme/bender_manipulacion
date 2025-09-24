@@ -1,0 +1,120 @@
+[0.026s] Invoking command in '/home/robotica-06/nuevasuper/bender_manipulacion/build/bender_description': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/robotica-06/nuevasuper/bender_manipulacion/build/bender_description -- -j8 -l8
+[0.070s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.546s] -- Found ament_lint_auto: 0.17.3 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[0.683s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.683s] -- Configured 'flake8' exclude dirs and/or files: 
+[0.685s] -- Added test 'lint_cmake' to check CMake code style
+[0.686s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.693s] -- Added test 'xmllint' to check XML markup files
+[0.694s] -- Configuring done (0.6s)
+[0.699s] -- Generating done (0.0s)
+[0.703s] -- Build files have been written to: /home/robotica-06/nuevasuper/bender_manipulacion/build/bender_description
+[0.778s] Built target ament_cmake_python_copy_bender_description
+[1.201s] running egg_info
+[1.252s] writing bender_description.egg-info/PKG-INFO
+[1.252s] writing dependency_links to bender_description.egg-info/dependency_links.txt
+[1.252s] writing top-level names to bender_description.egg-info/top_level.txt
+[1.391s] reading manifest file 'bender_description.egg-info/SOURCES.txt'
+[1.392s] writing manifest file 'bender_description.egg-info/SOURCES.txt'
+[1.443s] Built target ament_cmake_python_build_bender_description_egg
+[1.462s] Invoked command in '/home/robotica-06/nuevasuper/bender_manipulacion/build/bender_description' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/robotica-06/nuevasuper/bender_manipulacion/build/bender_description -- -j8 -l8
+[1.480s] Invoking command in '/home/robotica-06/nuevasuper/bender_manipulacion/build/bender_description': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/robotica-06/nuevasuper/bender_manipulacion/build/bender_description
+[1.494s] -- Install configuration: ""
+[1.494s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/launch
+[1.494s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/launch/gazebo.launch.py
+[1.494s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/launch/bender_moveit_rviz.launch.py
+[1.495s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/launch/bender_moveit.launch.py
+[1.495s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/launch/display.launch.py
+[1.495s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/launch/rsp.launch.py
+[1.495s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/launch/bender_move_group.launch.py
+[1.496s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/urdf
+[1.496s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/urdf/rgbd_camera.xacro
+[1.496s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/urdf/ros2_control.xacro
+[1.496s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/urdf/bender.xacro
+[1.496s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/urdf/materials.xacro
+[1.496s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/urdf/bender.xml
+[1.496s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/config
+[1.497s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/config/gz_bridge.yaml
+[1.497s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/config/ompl_planning.yaml
+[1.497s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/config/controllers
+[1.497s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/config/controllers/joint_state_broadcaster.yaml
+[1.497s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/config/controllers/moveit_controllers
+[1.497s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/config/controllers/moveit_controllers/left_arm_controller.yaml
+[1.497s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/config/controllers/moveit_controllers/right_arm_controller.yaml
+[1.497s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/config/controllers/moveit_controllers/left_gripper_controller.yaml
+[1.497s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/config/controllers/moveit_controllers/head_controller.yaml
+[1.498s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/config/controllers/moveit_controllers/right_gripper_controller.yaml
+[1.498s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/config/controllers/gazebo_controllers
+[1.498s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/config/controllers/gazebo_controllers/right_arm.yaml
+[1.498s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/config/controllers/gazebo_controllers/left_gripper.yaml
+[1.498s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/config/controllers/gazebo_controllers/head.yaml
+[1.498s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/config/controllers/gazebo_controllers/right_gripper.yaml
+[1.498s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/config/controllers/gazebo_controllers/left_arm.yaml
+[1.498s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/config/controllers/controllers.yaml
+[1.498s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/config/controllers/initial_position.yaml
+[1.498s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/config/ros2_controllers.yaml
+[1.499s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/config/colors.yaml
+[1.499s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/rviz
+[1.499s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/rviz/rviz.rviz
+[1.499s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/meshes
+[1.499s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/meshes/g2la_1.stl
+[1.499s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/meshes/l3l_1.stl
+[1.499s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/meshes/l6l_1.stl
+[1.499s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/meshes/l2h_1.stl
+[1.499s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/meshes/laser_1.stl
+[1.500s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/meshes/wfr_1.stl
+[1.500s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/meshes/l5l_1.stl
+[1.500s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/meshes/wfl_1.stl
+[1.500s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/meshes/d435.stl
+[1.500s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/meshes/g2ra_1.stl
+[1.500s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/meshes/l4l_1.stl
+[1.500s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/meshes/real_sense_1.stl
+[1.500s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/meshes/l2r_1.stl
+[1.501s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/meshes/l1r_1.stl
+[1.501s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/meshes/base_link.stl
+[1.501s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/meshes/g1l_1.stl
+[1.501s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/meshes/l1h_1.stl
+[1.501s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/meshes/l4r_1.stl
+[1.501s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/meshes/g1r_1.stl
+[1.501s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/meshes/wrl_1.stl
+[1.502s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/meshes/l1l_1.stl
+[1.502s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/meshes/l2l_1.stl
+[1.502s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/meshes/l3r_1.stl
+[1.502s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/meshes/l6r_1.stl
+[1.502s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/meshes/g2lb_1.stl
+[1.502s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/meshes/wrr_1.stl
+[1.503s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/meshes/l5r_1.stl
+[1.503s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/meshes/g2rb_1.stl
+[1.503s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/worlds
+[1.503s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/worlds/empty.world
+[1.503s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/environment/pythonpath.sh
+[1.503s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/environment/pythonpath.dsv
+[1.504s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/lib/python3.12/site-packages/bender_description-0.0.1-py3.12.egg-info
+[1.504s] -- Installing: /home/robotica-06/nuevasuper/bender_manipulacion/install/lib/python3.12/site-packages/bender_description-0.0.1-py3.12.egg-info/top_level.txt
+[1.504s] -- Installing: /home/robotica-06/nuevasuper/bender_manipulacion/install/lib/python3.12/site-packages/bender_description-0.0.1-py3.12.egg-info/PKG-INFO
+[1.504s] -- Installing: /home/robotica-06/nuevasuper/bender_manipulacion/install/lib/python3.12/site-packages/bender_description-0.0.1-py3.12.egg-info/SOURCES.txt
+[1.504s] -- Installing: /home/robotica-06/nuevasuper/bender_manipulacion/install/lib/python3.12/site-packages/bender_description-0.0.1-py3.12.egg-info/dependency_links.txt
+[1.504s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/lib/python3.12/site-packages/bender_description
+[1.504s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/lib/python3.12/site-packages/bender_description/joint_tester.py
+[1.504s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/lib/python3.12/site-packages/bender_description/cylinder_marker.py
+[1.504s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/lib/python3.12/site-packages/bender_description/moveit_target_pose.py
+[1.505s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/lib/python3.12/site-packages/bender_description/__init__.py
+[1.554s] Listing '/home/robotica-06/nuevasuper/bender_manipulacion/install/lib/python3.12/site-packages/bender_description'...
+[1.561s] -- Installing: /home/robotica-06/nuevasuper/bender_manipulacion/install/lib/bender_description/cylinder_marker
+[1.561s] -- Installing: /home/robotica-06/nuevasuper/bender_manipulacion/install/lib/bender_description/moveit_target_pose
+[1.561s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/ament_index/resource_index/package_run_dependencies/bender_description
+[1.561s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/ament_index/resource_index/parent_prefix_path/bender_description
+[1.562s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/environment/ament_prefix_path.sh
+[1.562s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/environment/ament_prefix_path.dsv
+[1.562s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/environment/path.sh
+[1.562s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/environment/path.dsv
+[1.562s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/local_setup.bash
+[1.562s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/local_setup.sh
+[1.562s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/local_setup.zsh
+[1.562s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/local_setup.dsv
+[1.563s] -- Installing: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/package.dsv
+[1.563s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/ament_index/resource_index/packages/bender_description
+[1.563s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/cmake/bender_descriptionConfig.cmake
+[1.563s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/cmake/bender_descriptionConfig-version.cmake
+[1.563s] -- Up-to-date: /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/package.xml
+[1.565s] Invoked command in '/home/robotica-06/nuevasuper/bender_manipulacion/build/bender_description' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/robotica-06/nuevasuper/bender_manipulacion/build/bender_description

@@ -1,8 +1,8 @@
-# Install script for directory: /home/robotica-06/bender_manipulacion/src/bender_description
+# Install script for directory: /home/robotica-06/nuevasuper/bender_manipulacion/src/bender_description
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/robotica-06/bender_manipulacion/install")
+  set(CMAKE_INSTALL_PREFIX "/home/robotica-06/nuevasuper/bender_manipulacion/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -44,21 +44,53 @@ endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bender_description" TYPE DIRECTORY FILES
-    "/home/robotica-06/bender_manipulacion/src/bender_description/launch"
-    "/home/robotica-06/bender_manipulacion/src/bender_description/urdf"
-    "/home/robotica-06/bender_manipulacion/src/bender_description/config"
-    "/home/robotica-06/bender_manipulacion/src/bender_description/rviz"
-    "/home/robotica-06/bender_manipulacion/src/bender_description/meshes"
-    "/home/robotica-06/bender_manipulacion/src/bender_description/worlds"
+    "/home/robotica-06/nuevasuper/bender_manipulacion/src/bender_description/launch"
+    "/home/robotica-06/nuevasuper/bender_manipulacion/src/bender_description/urdf"
+    "/home/robotica-06/nuevasuper/bender_manipulacion/src/bender_description/config"
+    "/home/robotica-06/nuevasuper/bender_manipulacion/src/bender_description/rviz"
+    "/home/robotica-06/nuevasuper/bender_manipulacion/src/bender_description/meshes"
+    "/home/robotica-06/nuevasuper/bender_manipulacion/src/bender_description/worlds"
     )
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/robotica-06/bender_manipulacion/build/bender_description/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/bender_description")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bender_description/environment" TYPE FILE FILES "/home/robotica-06/nuevasuper/bender_manipulacion/build/bender_description/ament_cmake_environment_hooks/pythonpath.sh")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/robotica-06/bender_manipulacion/build/bender_description/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/bender_description")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bender_description/environment" TYPE FILE FILES "/home/robotica-06/nuevasuper/bender_manipulacion/build/bender_description/ament_cmake_environment_hooks/pythonpath.dsv")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3.12/site-packages/bender_description-0.0.1-py3.12.egg-info" TYPE DIRECTORY FILES "/home/robotica-06/nuevasuper/bender_manipulacion/build/bender_description/ament_cmake_python/bender_description/bender_description.egg-info/")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3.12/site-packages/bender_description" TYPE DIRECTORY FILES "/home/robotica-06/nuevasuper/bender_manipulacion/src/bender_description/bender_description/" REGEX "/[^/]*\\.pyc$" EXCLUDE REGEX "/\\_\\_pycache\\_\\_$" EXCLUDE)
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  execute_process(
+        COMMAND
+        "/usr/bin/python3" "-m" "compileall"
+        "/home/robotica-06/nuevasuper/bender_manipulacion/install/lib/python3.12/site-packages/bender_description"
+      )
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/bender_description" TYPE PROGRAM RENAME "cylinder_marker" FILES "/home/robotica-06/nuevasuper/bender_manipulacion/src/bender_description/bender_description/cylinder_marker.py")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/bender_description" TYPE PROGRAM RENAME "moveit_target_pose" FILES "/home/robotica-06/nuevasuper/bender_manipulacion/src/bender_description/bender_description/moveit_target_pose.py")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/robotica-06/nuevasuper/bender_manipulacion/build/bender_description/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/bender_description")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/robotica-06/nuevasuper/bender_manipulacion/build/bender_description/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/bender_description")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -66,7 +98,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bender_description/environment" TYPE FILE FILES "/home/robotica-06/bender_manipulacion/build/bender_description/ament_cmake_environment_hooks/ament_prefix_path.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bender_description/environment" TYPE FILE FILES "/home/robotica-06/nuevasuper/bender_manipulacion/build/bender_description/ament_cmake_environment_hooks/ament_prefix_path.dsv")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -74,42 +106,42 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bender_description/environment" TYPE FILE FILES "/home/robotica-06/bender_manipulacion/build/bender_description/ament_cmake_environment_hooks/path.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bender_description/environment" TYPE FILE FILES "/home/robotica-06/nuevasuper/bender_manipulacion/build/bender_description/ament_cmake_environment_hooks/path.dsv")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bender_description" TYPE FILE FILES "/home/robotica-06/bender_manipulacion/build/bender_description/ament_cmake_environment_hooks/local_setup.bash")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bender_description" TYPE FILE FILES "/home/robotica-06/nuevasuper/bender_manipulacion/build/bender_description/ament_cmake_environment_hooks/local_setup.bash")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bender_description" TYPE FILE FILES "/home/robotica-06/bender_manipulacion/build/bender_description/ament_cmake_environment_hooks/local_setup.sh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bender_description" TYPE FILE FILES "/home/robotica-06/nuevasuper/bender_manipulacion/build/bender_description/ament_cmake_environment_hooks/local_setup.sh")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bender_description" TYPE FILE FILES "/home/robotica-06/bender_manipulacion/build/bender_description/ament_cmake_environment_hooks/local_setup.zsh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bender_description" TYPE FILE FILES "/home/robotica-06/nuevasuper/bender_manipulacion/build/bender_description/ament_cmake_environment_hooks/local_setup.zsh")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bender_description" TYPE FILE FILES "/home/robotica-06/bender_manipulacion/build/bender_description/ament_cmake_environment_hooks/local_setup.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bender_description" TYPE FILE FILES "/home/robotica-06/nuevasuper/bender_manipulacion/build/bender_description/ament_cmake_environment_hooks/local_setup.dsv")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bender_description" TYPE FILE FILES "/home/robotica-06/bender_manipulacion/build/bender_description/ament_cmake_environment_hooks/package.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bender_description" TYPE FILE FILES "/home/robotica-06/nuevasuper/bender_manipulacion/build/bender_description/ament_cmake_environment_hooks/package.dsv")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/robotica-06/bender_manipulacion/build/bender_description/ament_cmake_index/share/ament_index/resource_index/packages/bender_description")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/robotica-06/nuevasuper/bender_manipulacion/build/bender_description/ament_cmake_index/share/ament_index/resource_index/packages/bender_description")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bender_description/cmake" TYPE FILE FILES
-    "/home/robotica-06/bender_manipulacion/build/bender_description/ament_cmake_core/bender_descriptionConfig.cmake"
-    "/home/robotica-06/bender_manipulacion/build/bender_description/ament_cmake_core/bender_descriptionConfig-version.cmake"
+    "/home/robotica-06/nuevasuper/bender_manipulacion/build/bender_description/ament_cmake_core/bender_descriptionConfig.cmake"
+    "/home/robotica-06/nuevasuper/bender_manipulacion/build/bender_description/ament_cmake_core/bender_descriptionConfig-version.cmake"
     )
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bender_description" TYPE FILE FILES "/home/robotica-06/bender_manipulacion/src/bender_description/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bender_description" TYPE FILE FILES "/home/robotica-06/nuevasuper/bender_manipulacion/src/bender_description/package.xml")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -120,5 +152,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/robotica-06/bender_manipulacion/build/bender_description/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/robotica-06/nuevasuper/bender_manipulacion/build/bender_description/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

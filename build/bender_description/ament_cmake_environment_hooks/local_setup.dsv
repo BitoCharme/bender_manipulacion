@@ -1,2 +1,3 @@
 source;share/bender_description/environment/ament_prefix_path.sh
 source;share/bender_description/environment/path.sh
+source;share/bender_description/environment/pythonpath.sh

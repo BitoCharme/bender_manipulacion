@@ -7,6 +7,3 @@ source;share/shoulder_interface/hook/pythonpath.sh
 source;share/shoulder_interface/hook/ament_prefix_path.ps1
 source;share/shoulder_interface/hook/ament_prefix_path.dsv
 source;share/shoulder_interface/hook/ament_prefix_path.sh
-source;../build/shoulder_interface/share/shoulder_interface/hook/pythonpath_develop.ps1
-source;../build/shoulder_interface/share/shoulder_interface/hook/pythonpath_develop.dsv
-source;../build/shoulder_interface/share/shoulder_interface/hook/pythonpath_develop.sh

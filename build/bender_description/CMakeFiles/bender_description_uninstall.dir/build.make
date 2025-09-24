@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/robotica-06/bender_manipulacion/src/bender_description
+CMAKE_SOURCE_DIR = /home/robotica-06/nuevasuper/bender_manipulacion/src/bender_description
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/robotica-06/bender_manipulacion/build/bender_description
+CMAKE_BINARY_DIR = /home/robotica-06/nuevasuper/bender_manipulacion/build/bender_description
 
 # Utility rule file for bender_description_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/bender_description_uninstall.dir/compiler_depend.make
 include CMakeFiles/bender_description_uninstall.dir/progress.make
 
 CMakeFiles/bender_description_uninstall:
-	/usr/bin/cmake -P /home/robotica-06/bender_manipulacion/build/bender_description/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/robotica-06/nuevasuper/bender_manipulacion/build/bender_description/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 bender_description_uninstall: CMakeFiles/bender_description_uninstall
 bender_description_uninstall: CMakeFiles/bender_description_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/bender_description_uninstall.dir/clean:
 .PHONY : CMakeFiles/bender_description_uninstall.dir/clean
 
 CMakeFiles/bender_description_uninstall.dir/depend:
-	cd /home/robotica-06/bender_manipulacion/build/bender_description && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robotica-06/bender_manipulacion/src/bender_description /home/robotica-06/bender_manipulacion/src/bender_description /home/robotica-06/bender_manipulacion/build/bender_description /home/robotica-06/bender_manipulacion/build/bender_description /home/robotica-06/bender_manipulacion/build/bender_description/CMakeFiles/bender_description_uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/robotica-06/nuevasuper/bender_manipulacion/build/bender_description && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robotica-06/nuevasuper/bender_manipulacion/src/bender_description /home/robotica-06/nuevasuper/bender_manipulacion/src/bender_description /home/robotica-06/nuevasuper/bender_manipulacion/build/bender_description /home/robotica-06/nuevasuper/bender_manipulacion/build/bender_description /home/robotica-06/nuevasuper/bender_manipulacion/build/bender_description/CMakeFiles/bender_description_uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/bender_description_uninstall.dir/depend
 

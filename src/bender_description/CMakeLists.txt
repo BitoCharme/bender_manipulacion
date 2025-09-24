@@ -16,6 +16,23 @@ install(
   DESTINATION share/${PROJECT_NAME}
 )
 
+# Find and install Python scripts
+find_package(ament_cmake_python REQUIRED)
+ament_python_install_package(${PROJECT_NAME})
+
+# Install Python scripts as executables without .py extension
+install(PROGRAMS
+  bender_description/cylinder_marker.py
+  DESTINATION lib/${PROJECT_NAME}
+  RENAME cylinder_marker
+)
+
+install(PROGRAMS
+  bender_description/moveit_target_pose.py
+  DESTINATION lib/${PROJECT_NAME}
+  RENAME moveit_target_pose
+)
+
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
   # the following line skips the linter which checks for copyrights

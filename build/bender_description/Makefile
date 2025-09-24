@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/robotica-06/bender_manipulacion/src/bender_description
+CMAKE_SOURCE_DIR = /home/robotica-06/nuevasuper/bender_manipulacion/src/bender_description
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/robotica-06/bender_manipulacion/build/bender_description
+CMAKE_BINARY_DIR = /home/robotica-06/nuevasuper/bender_manipulacion/build/bender_description
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -142,9 +142,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robotica-06/bender_manipulacion/build/bender_description/CMakeFiles /home/robotica-06/bender_manipulacion/build/bender_description//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robotica-06/nuevasuper/bender_manipulacion/build/bender_description/CMakeFiles /home/robotica-06/nuevasuper/bender_manipulacion/build/bender_description//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robotica-06/bender_manipulacion/build/bender_description/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robotica-06/nuevasuper/bender_manipulacion/build/bender_description/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -197,6 +197,32 @@ bender_description_uninstall/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bender_description_uninstall.dir/build.make CMakeFiles/bender_description_uninstall.dir/build
 .PHONY : bender_description_uninstall/fast
 
+#=============================================================================
+# Target rules for targets named ament_cmake_python_copy_bender_description
+
+# Build rule for target.
+ament_cmake_python_copy_bender_description: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ament_cmake_python_copy_bender_description
+.PHONY : ament_cmake_python_copy_bender_description
+
+# fast build rule for target.
+ament_cmake_python_copy_bender_description/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_copy_bender_description.dir/build.make CMakeFiles/ament_cmake_python_copy_bender_description.dir/build
+.PHONY : ament_cmake_python_copy_bender_description/fast
+
+#=============================================================================
+# Target rules for targets named ament_cmake_python_build_bender_description_egg
+
+# Build rule for target.
+ament_cmake_python_build_bender_description_egg: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ament_cmake_python_build_bender_description_egg
+.PHONY : ament_cmake_python_build_bender_description_egg
+
+# fast build rule for target.
+ament_cmake_python_build_bender_description_egg/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_build_bender_description_egg.dir/build.make CMakeFiles/ament_cmake_python_build_bender_description_egg.dir/build
+.PHONY : ament_cmake_python_build_bender_description_egg/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -210,6 +236,8 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... ament_cmake_python_build_bender_description_egg"
+	@echo "... ament_cmake_python_copy_bender_description"
 	@echo "... bender_description_uninstall"
 	@echo "... uninstall"
 .PHONY : help

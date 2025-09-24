@@ -1,1 +1,0 @@
-/home/robotica-06/bender_manipulacion/src/shoulder_interface/setup.py

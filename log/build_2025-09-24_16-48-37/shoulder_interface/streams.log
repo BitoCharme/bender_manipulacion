@@ -1,0 +1,24 @@
+[3.606s] Invoking command in '/home/robotica-06/nuevasuper/bender_manipulacion/src/shoulder_interface': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/robotica-06/nuevasuper/bender_manipulacion/build/shoulder_interface/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/robotica-06/nuevasuper/bender_manipulacion/install/shoulder_interface/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/shoulder_interface build --build-base /home/robotica-06/nuevasuper/bender_manipulacion/build/shoulder_interface/build install --record /home/robotica-06/nuevasuper/bender_manipulacion/build/shoulder_interface/install.log --single-version-externally-managed install_data
+[4.156s] running egg_info
+[4.156s] creating ../../build/shoulder_interface/shoulder_interface.egg-info
+[4.207s] writing ../../build/shoulder_interface/shoulder_interface.egg-info/PKG-INFO
+[4.207s] writing dependency_links to ../../build/shoulder_interface/shoulder_interface.egg-info/dependency_links.txt
+[4.208s] writing requirements to ../../build/shoulder_interface/shoulder_interface.egg-info/requires.txt
+[4.208s] writing top-level names to ../../build/shoulder_interface/shoulder_interface.egg-info/top_level.txt
+[4.208s] writing manifest file '../../build/shoulder_interface/shoulder_interface.egg-info/SOURCES.txt'
+[4.251s] reading manifest file '../../build/shoulder_interface/shoulder_interface.egg-info/SOURCES.txt'
+[4.251s] adding license file 'LICENSE'
+[4.252s] writing manifest file '../../build/shoulder_interface/shoulder_interface.egg-info/SOURCES.txt'
+[4.252s] running build
+[4.252s] running install
+[4.260s] running install_data
+[4.260s] creating /home/robotica-06/nuevasuper/bender_manipulacion/install/shoulder_interface/share/ament_index
+[4.261s] creating /home/robotica-06/nuevasuper/bender_manipulacion/install/shoulder_interface/share/ament_index/resource_index
+[4.261s] creating /home/robotica-06/nuevasuper/bender_manipulacion/install/shoulder_interface/share/ament_index/resource_index/packages
+[4.261s] copying resource/shoulder_interface -> /home/robotica-06/nuevasuper/bender_manipulacion/install/shoulder_interface/share/ament_index/resource_index/packages
+[4.261s] copying package.xml -> /home/robotica-06/nuevasuper/bender_manipulacion/install/shoulder_interface/share/shoulder_interface
+[4.261s] running install_egg_info
+[4.356s] Copying ../../build/shoulder_interface/shoulder_interface.egg-info to /home/robotica-06/nuevasuper/bender_manipulacion/install/shoulder_interface/lib/python3.12/site-packages/shoulder_interface-0.0.0-py3.12.egg-info
+[4.357s] running install_scripts
+[4.709s] writing list of installed files to '/home/robotica-06/nuevasuper/bender_manipulacion/build/shoulder_interface/install.log'
+[4.756s] Invoked command in '/home/robotica-06/nuevasuper/bender_manipulacion/src/shoulder_interface' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/robotica-06/nuevasuper/bender_manipulacion/build/shoulder_interface/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/robotica-06/nuevasuper/bender_manipulacion/install/shoulder_interface/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/shoulder_interface build --build-base /home/robotica-06/nuevasuper/bender_manipulacion/build/shoulder_interface/build install --record /home/robotica-06/nuevasuper/bender_manipulacion/build/shoulder_interface/install.log --single-version-externally-managed install_data
