@@ -29,6 +29,10 @@
     <color rgba="1 0 0 0.5"/>
   </material>
 
+  <material name="green">
+    <color rgba="0 1 0 0.5"/>
+  </material>
+
   <material name="light_blue">
     <color rgba="0.6 0.8 1 1"/> 
   </material>

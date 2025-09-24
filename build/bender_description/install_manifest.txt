@@ -9,6 +9,7 @@
 /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/urdf/bender.xacro
 /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/urdf/materials.xacro
 /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/urdf/bender.xml
+/home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/urdf/obstacles.xacro
 /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/config/gz_bridge.yaml
 /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/config/ompl_planning.yaml
 /home/robotica-06/nuevasuper/bender_manipulacion/install/share/bender_description/config/controllers/joint_state_broadcaster.yaml
@@ -63,6 +64,7 @@
 /home/robotica-06/nuevasuper/bender_manipulacion/install/lib/python3.12/site-packages/bender_description-0.0.1-py3.12.egg-info/SOURCES.txt
 /home/robotica-06/nuevasuper/bender_manipulacion/install/lib/python3.12/site-packages/bender_description-0.0.1-py3.12.egg-info/dependency_links.txt
 /home/robotica-06/nuevasuper/bender_manipulacion/install/lib/python3.12/site-packages/bender_description/joint_tester.py
+/home/robotica-06/nuevasuper/bender_manipulacion/install/lib/python3.12/site-packages/bender_description/dynamic_obstacles.py
 /home/robotica-06/nuevasuper/bender_manipulacion/install/lib/python3.12/site-packages/bender_description/cylinder_marker.py
 /home/robotica-06/nuevasuper/bender_manipulacion/install/lib/python3.12/site-packages/bender_description/moveit_target_pose.py
 /home/robotica-06/nuevasuper/bender_manipulacion/install/lib/python3.12/site-packages/bender_description/__init__.py

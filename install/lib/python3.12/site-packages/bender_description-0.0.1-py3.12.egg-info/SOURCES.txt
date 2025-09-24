@@ -1,6 +1,7 @@
 setup.py
 bender_description/__init__.py
 bender_description/cylinder_marker.py
+bender_description/dynamic_obstacles.py
 bender_description/joint_tester.py
 bender_description/moveit_target_pose.py
 bender_description.egg-info/PKG-INFO

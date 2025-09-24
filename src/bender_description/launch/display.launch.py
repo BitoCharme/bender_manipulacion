@@ -14,12 +14,17 @@ def generate_launch_description():
 
     # Launch configurations
     rviz = LaunchConfiguration('rviz')
+    enable_obstacles = LaunchConfiguration('enable_obstacles')
 
     # Path to default world 
     # Launch Arguments
     declare_rviz = DeclareLaunchArgument(
         name='rviz', default_value='True',
         description='Opens rviz is set to True')
+
+    declare_enable_obstacles = DeclareLaunchArgument(
+        name='enable_obstacles', default_value='true',
+        description='Enable obstacles in the URDF if set to true')
 
     # Launch Robot State Publisher Node
     urdf_path = os.path.join(get_package_share_directory(package_name),'urdf','bender.xacro')
@@ -42,7 +47,8 @@ def generate_launch_description():
         package='robot_state_publisher',
         executable='robot_state_publisher',
         output='screen',
-        parameters=[{'use_sim_time': use_sim_time,'robot_description': Command(['xacro ', urdf])}]
+        parameters=[{'use_sim_time': use_sim_time,
+                    'robot_description': Command(['xacro ', urdf, ' enable_obstacles:=', enable_obstacles])}]
     )
     rviz_config_file = os.path.join(get_package_share_directory(package_name), 'rviz', 'rviz.rviz')
     rviz2 = GroupAction(
@@ -70,9 +76,10 @@ def generate_launch_description():
     return LaunchDescription([
         declare_urdf,
         declare_use_sim_time,
+        declare_enable_obstacles,
         robot_state_publisher,
         declare_rviz,
         rviz2,
         joint_state_publisher_gui,
-        cylinder_marker   # 👈 aquí agregamos el cilindro
+        # cylinder_marker removido - obstáculos ahora están en URDF
     ])
