@@ -1,0 +1,17 @@
+running develop
+running egg_info
+creating shoulder_interface.egg-info
+writing shoulder_interface.egg-info/PKG-INFO
+writing dependency_links to shoulder_interface.egg-info/dependency_links.txt
+writing requirements to shoulder_interface.egg-info/requires.txt
+writing top-level names to shoulder_interface.egg-info/top_level.txt
+writing manifest file 'shoulder_interface.egg-info/SOURCES.txt'
+reading manifest file 'shoulder_interface.egg-info/SOURCES.txt'
+writing manifest file 'shoulder_interface.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/robotica-06/bender_manipulacion/install/lib/python3.12/site-packages/shoulder-interface.egg-link (link to .)
+
+Installed /home/robotica-06/bender_manipulacion/build/shoulder_interface
+running symlink_data
+symbolically linking /home/robotica-06/bender_manipulacion/build/shoulder_interface/resource/shoulder_interface -> /home/robotica-06/bender_manipulacion/install/share/ament_index/resource_index/packages
+symbolically linking /home/robotica-06/bender_manipulacion/build/shoulder_interface/package.xml -> /home/robotica-06/bender_manipulacion/install/share/shoulder_interface

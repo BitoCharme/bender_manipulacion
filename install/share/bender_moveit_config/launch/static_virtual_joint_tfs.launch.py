@@ -1,1 +1,1 @@
-/home/robotica-06/Downloads/bender_workspace/src/bender_moveit_config/launch/static_virtual_joint_tfs.launch.py
+/home/robotica-06/bender_manipulacion/src/bender_moveit_config/launch/static_virtual_joint_tfs.launch.py

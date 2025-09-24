@@ -11,6 +11,7 @@ setup(
             ["resource/" + package_name]),
         ("share/" + package_name, ["package.xml"]),
     ],
+    package_dir={'': '.'},
     install_requires=["setuptools"],
     zip_safe=True,
     maintainer="tu_nombre",
@@ -21,6 +22,7 @@ setup(
     entry_points={
         "console_scripts": [
             "moveit_target_pose = bender_description.moveit_target_pose:main",
+            'cylinder_marker = bender_description.cylinder_marker:main',
         ],
     },
 )

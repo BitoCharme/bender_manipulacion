@@ -8,10 +8,10 @@ from launch.substitutions import LaunchConfiguration, PathJoinSubstitution, Comm
 def generate_launch_description():
 
     # Package name
-    package_name = FindPackageShare("el7009_diff_drive_robot")
+    package_name = FindPackageShare("bender_description")
 
     # Default robot description if none is specified
-    urdf_path = PathJoinSubstitution([package_name, "urdf", "robot.urdf.xacro"])
+    urdf_path = PathJoinSubstitution([package_name, "urdf", "bender.xacro"])
     
     # Launch configurations
     urdf = LaunchConfiguration('urdf')

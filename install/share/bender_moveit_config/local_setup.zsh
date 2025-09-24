@@ -1,1 +1,1 @@
-/home/robotica-06/Downloads/bender_workspace/build/bender_moveit_config/ament_cmake_environment_hooks/local_setup.zsh
+/home/robotica-06/bender_manipulacion/build/bender_moveit_config/ament_cmake_environment_hooks/local_setup.zsh

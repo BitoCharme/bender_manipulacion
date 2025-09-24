@@ -1,1 +1,1 @@
-prepend-non-duplicate;PYTHONPATH;/home/robotica-06/Downloads/bender_workspace/build/bender_moveit_scripts
+prepend-non-duplicate;PYTHONPATH;/home/robotica-06/bender_manipulacion/build/bender_moveit_scripts

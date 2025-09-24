@@ -1,8 +1,8 @@
-# Install script for directory: /home/robotica-06/Downloads/bender_workspace/src/bender_moveit_config
+# Install script for directory: /home/robotica-06/bender_manipulacion/src/bender_moveit_config
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/robotica-06/Downloads/bender_workspace/install")
+  set(CMAKE_INSTALL_PREFIX "/home/robotica-06/bender_manipulacion/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -43,7 +43,7 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/robotica-06/Downloads/bender_workspace/build/bender_moveit_config/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
+  include("/home/robotica-06/bender_manipulacion/build/bender_moveit_config/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -54,5 +54,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/robotica-06/Downloads/bender_workspace/build/bender_moveit_config/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/robotica-06/bender_manipulacion/build/bender_moveit_config/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

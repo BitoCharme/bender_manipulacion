@@ -54,7 +54,11 @@ def generate_launch_description():
                     output='screen',)]
     )
 
-
+    cylinder_marker = Node(
+        package='bender_description',       # el paquete donde está tu script
+        executable='cylinder_marker',    # el nombre que pusiste en setup.py
+        output='screen'
+    )
 
     joint_state_publisher_gui = Node(
         package='joint_state_publisher_gui',
@@ -68,8 +72,7 @@ def generate_launch_description():
         declare_use_sim_time,
         robot_state_publisher,
         declare_rviz,
-        rviz2, 
-        
+        rviz2,
+        joint_state_publisher_gui,
+        cylinder_marker   # 👈 aquí agregamos el cilindro
     ])
-
-        

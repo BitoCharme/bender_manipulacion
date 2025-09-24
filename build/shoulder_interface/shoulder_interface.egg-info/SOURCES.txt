@@ -1,0 +1,10 @@
+package.xml
+setup.cfg
+setup.py
+resource/shoulder_interface
+shoulder_interface.egg-info/PKG-INFO
+shoulder_interface.egg-info/SOURCES.txt
+shoulder_interface.egg-info/dependency_links.txt
+shoulder_interface.egg-info/requires.txt
+shoulder_interface.egg-info/top_level.txt
+shoulder_interface.egg-info/zip-safe
