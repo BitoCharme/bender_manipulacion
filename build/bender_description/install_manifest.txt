@@ -65,6 +65,7 @@
 /home/robotica-06/nuevasuper/bender_manipulacion/install/lib/python3.12/site-packages/bender_description-0.0.1-py3.12.egg-info/dependency_links.txt
 /home/robotica-06/nuevasuper/bender_manipulacion/install/lib/python3.12/site-packages/bender_description/joint_tester.py
 /home/robotica-06/nuevasuper/bender_manipulacion/install/lib/python3.12/site-packages/bender_description/dynamic_obstacles.py
+/home/robotica-06/nuevasuper/bender_manipulacion/install/lib/python3.12/site-packages/bender_description/global_motion_planner.py
 /home/robotica-06/nuevasuper/bender_manipulacion/install/lib/python3.12/site-packages/bender_description/cylinder_marker.py
 /home/robotica-06/nuevasuper/bender_manipulacion/install/lib/python3.12/site-packages/bender_description/moveit_target_pose.py
 /home/robotica-06/nuevasuper/bender_manipulacion/install/lib/python3.12/site-packages/bender_description/__init__.py

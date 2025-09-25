@@ -1,7 +1,0 @@
-Metadata-Version: 2.1
-Name: bender-moveit-scripts
-Version: 0.0.1
-Summary: Scripts personalizados para controlar MoveIt con ROS 2
-Maintainer: Mattias Prieto
-Maintainer-email: tu_email@example.com
-License: Apache-2.0
