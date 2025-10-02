@@ -20,7 +20,7 @@ setup(
     tests_require=["pytest"],
     entry_points={
         "console_scripts": [
-            "moveit_target_pose = bender_description.moveit_target_pose:main",
+            "prueba1 = bender_description.prueba1:main",
         ],
     },
 )

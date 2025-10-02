@@ -81,7 +81,6 @@ _colcon_package_sh_source_script() {
 _colcon_package_sh_source_script "$COLCON_CURRENT_PREFIX/share/bender_moveit_scripts/hook/cmake_prefix_path.sh"
 _colcon_package_sh_source_script "$COLCON_CURRENT_PREFIX/share/bender_moveit_scripts/hook/pythonpath.sh"
 _colcon_package_sh_source_script "$COLCON_CURRENT_PREFIX/share/bender_moveit_scripts/hook/ament_prefix_path.sh"
-_colcon_package_sh_source_script "$COLCON_CURRENT_PREFIX/../build/bender_moveit_scripts/share/bender_moveit_scripts/hook/pythonpath_develop.sh"
 
 unset _colcon_package_sh_source_script
 unset COLCON_CURRENT_PREFIX
