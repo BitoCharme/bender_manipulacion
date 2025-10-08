@@ -1,5 +1,5 @@
 /home/robotica-06/bender_manipulacion/install/lib/bender_pick_place_cpp/pick_place_demo
-/home/robotica-06/bender_manipulacion/install/lib/bender_pick_place_cpp/pick_place_debug
+/home/robotica-06/bender_manipulacion/install/lib/bender_pick_place_cpp/add_table
 /home/robotica-06/bender_manipulacion/install/share/ament_index/resource_index/package_run_dependencies/bender_pick_place_cpp
 /home/robotica-06/bender_manipulacion/install/share/ament_index/resource_index/parent_prefix_path/bender_pick_place_cpp
 /home/robotica-06/bender_manipulacion/install/share/bender_pick_place_cpp/environment/ament_prefix_path.sh

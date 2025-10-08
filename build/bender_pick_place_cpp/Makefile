@@ -211,17 +211,41 @@ pick_place_demo/fast:
 .PHONY : pick_place_demo/fast
 
 #=============================================================================
-# Target rules for targets named pick_place_debug
+# Target rules for targets named add_table
 
 # Build rule for target.
-pick_place_debug: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pick_place_debug
-.PHONY : pick_place_debug
+add_table: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 add_table
+.PHONY : add_table
 
 # fast build rule for target.
-pick_place_debug/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pick_place_debug.dir/build.make CMakeFiles/pick_place_debug.dir/build
-.PHONY : pick_place_debug/fast
+add_table/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/add_table.dir/build.make CMakeFiles/add_table.dir/build
+.PHONY : add_table/fast
+
+src/add_table.o: src/add_table.cpp.o
+.PHONY : src/add_table.o
+
+# target to build an object file
+src/add_table.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/add_table.dir/build.make CMakeFiles/add_table.dir/src/add_table.cpp.o
+.PHONY : src/add_table.cpp.o
+
+src/add_table.i: src/add_table.cpp.i
+.PHONY : src/add_table.i
+
+# target to preprocess a source file
+src/add_table.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/add_table.dir/build.make CMakeFiles/add_table.dir/src/add_table.cpp.i
+.PHONY : src/add_table.cpp.i
+
+src/add_table.s: src/add_table.cpp.s
+.PHONY : src/add_table.s
+
+# target to generate assembly for a file
+src/add_table.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/add_table.dir/build.make CMakeFiles/add_table.dir/src/add_table.cpp.s
+.PHONY : src/add_table.cpp.s
 
 src/bender_pick_and_place.o: src/bender_pick_and_place.cpp.o
 .PHONY : src/bender_pick_and_place.o
@@ -247,30 +271,6 @@ src/bender_pick_and_place.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pick_place_demo.dir/build.make CMakeFiles/pick_place_demo.dir/src/bender_pick_and_place.cpp.s
 .PHONY : src/bender_pick_and_place.cpp.s
 
-src/pick_place_debug.o: src/pick_place_debug.cpp.o
-.PHONY : src/pick_place_debug.o
-
-# target to build an object file
-src/pick_place_debug.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pick_place_debug.dir/build.make CMakeFiles/pick_place_debug.dir/src/pick_place_debug.cpp.o
-.PHONY : src/pick_place_debug.cpp.o
-
-src/pick_place_debug.i: src/pick_place_debug.cpp.i
-.PHONY : src/pick_place_debug.i
-
-# target to preprocess a source file
-src/pick_place_debug.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pick_place_debug.dir/build.make CMakeFiles/pick_place_debug.dir/src/pick_place_debug.cpp.i
-.PHONY : src/pick_place_debug.cpp.i
-
-src/pick_place_debug.s: src/pick_place_debug.cpp.s
-.PHONY : src/pick_place_debug.s
-
-# target to generate assembly for a file
-src/pick_place_debug.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pick_place_debug.dir/build.make CMakeFiles/pick_place_debug.dir/src/pick_place_debug.cpp.s
-.PHONY : src/pick_place_debug.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -286,14 +286,14 @@ help:
 	@echo "... test"
 	@echo "... bender_pick_place_cpp_uninstall"
 	@echo "... uninstall"
-	@echo "... pick_place_debug"
+	@echo "... add_table"
 	@echo "... pick_place_demo"
+	@echo "... src/add_table.o"
+	@echo "... src/add_table.i"
+	@echo "... src/add_table.s"
 	@echo "... src/bender_pick_and_place.o"
 	@echo "... src/bender_pick_and_place.i"
 	@echo "... src/bender_pick_and_place.s"
-	@echo "... src/pick_place_debug.o"
-	@echo "... src/pick_place_debug.i"
-	@echo "... src/pick_place_debug.s"
 .PHONY : help
 
 
