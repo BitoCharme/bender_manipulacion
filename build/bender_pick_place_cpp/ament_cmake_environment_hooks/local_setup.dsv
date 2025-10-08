@@ -1,0 +1,2 @@
+source;share/bender_pick_place_cpp/environment/ament_prefix_path.sh
+source;share/bender_pick_place_cpp/environment/path.sh

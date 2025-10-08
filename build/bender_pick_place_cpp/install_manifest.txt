@@ -1,0 +1,17 @@
+/home/robotica-06/bender_manipulacion/install/lib/bender_pick_place_cpp/pick_place_demo
+/home/robotica-06/bender_manipulacion/install/lib/bender_pick_place_cpp/pick_place_debug
+/home/robotica-06/bender_manipulacion/install/share/ament_index/resource_index/package_run_dependencies/bender_pick_place_cpp
+/home/robotica-06/bender_manipulacion/install/share/ament_index/resource_index/parent_prefix_path/bender_pick_place_cpp
+/home/robotica-06/bender_manipulacion/install/share/bender_pick_place_cpp/environment/ament_prefix_path.sh
+/home/robotica-06/bender_manipulacion/install/share/bender_pick_place_cpp/environment/ament_prefix_path.dsv
+/home/robotica-06/bender_manipulacion/install/share/bender_pick_place_cpp/environment/path.sh
+/home/robotica-06/bender_manipulacion/install/share/bender_pick_place_cpp/environment/path.dsv
+/home/robotica-06/bender_manipulacion/install/share/bender_pick_place_cpp/local_setup.bash
+/home/robotica-06/bender_manipulacion/install/share/bender_pick_place_cpp/local_setup.sh
+/home/robotica-06/bender_manipulacion/install/share/bender_pick_place_cpp/local_setup.zsh
+/home/robotica-06/bender_manipulacion/install/share/bender_pick_place_cpp/local_setup.dsv
+/home/robotica-06/bender_manipulacion/install/share/bender_pick_place_cpp/package.dsv
+/home/robotica-06/bender_manipulacion/install/share/ament_index/resource_index/packages/bender_pick_place_cpp
+/home/robotica-06/bender_manipulacion/install/share/bender_pick_place_cpp/cmake/bender_pick_place_cppConfig.cmake
+/home/robotica-06/bender_manipulacion/install/share/bender_pick_place_cpp/cmake/bender_pick_place_cppConfig-version.cmake
+/home/robotica-06/bender_manipulacion/install/share/bender_pick_place_cpp/package.xml
