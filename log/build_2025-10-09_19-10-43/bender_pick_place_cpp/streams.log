@@ -1,0 +1,118 @@
+[0.452s] Invoking command in '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robotica-06/ws_moveit/install/moveit_configs_utils:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/robotica-06/bender_manipulacion/src/bender_pick_place_cpp -DCMAKE_INSTALL_PREFIX=/home/robotica-06/bender_manipulacion/install
+[0.547s] -- The C compiler identification is GNU 13.3.0
+[0.632s] -- The CXX compiler identification is GNU 13.3.0
+[0.652s] -- Detecting C compiler ABI info
+[0.785s] -- Detecting C compiler ABI info - done
+[0.802s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.802s] -- Detecting C compile features
+[0.803s] -- Detecting C compile features - done
+[0.815s] -- Detecting CXX compiler ABI info
+[0.970s] -- Detecting CXX compiler ABI info - done
+[0.988s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.988s] -- Detecting CXX compile features
+[0.989s] -- Detecting CXX compile features - done
+[1.001s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[1.288s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.553s] -- Found rclcpp: 28.1.11 (/opt/ros/jazzy/share/rclcpp/cmake)
+[1.704s] -- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[1.752s] -- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[1.816s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.875s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.095s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[2.113s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[2.312s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[2.361s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[2.404s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.588s] -- Found moveit_ros_planning_interface: 2.14.0 (/home/robotica-06/ws_moveit/install/moveit_ros_planning_interface/share/moveit_ros_planning_interface/cmake)
+[2.819s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: date_time filesystem program_options system thread 
+[3.381s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: chrono date_time filesystem iostreams program_options regex serialization system thread 
+[3.613s] -- Found parameter_traits: 0.5.0 (/opt/ros/jazzy/share/parameter_traits/cmake)
+[3.662s] -- Found rclcpp_lifecycle: 28.1.11 (/opt/ros/jazzy/share/rclcpp_lifecycle/cmake)
+[3.742s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: filesystem 
+[3.909s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[3.909s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[4.379s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time program_options thread chrono 
+[4.474s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: thread system filesystem regex date_time program_options 
+[4.530s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time program_options thread 
+[4.601s] -- Found moveit_visual_tools: 4.1.2 (/home/robotica-06/ws_moveit/install/moveit_visual_tools/share/moveit_visual_tools/cmake)
+[4.761s] -- Setting OGRE_DIR to: '/opt/ros/jazzy/share/rviz_ogre_vendor/cmake/../../../opt/rviz_ogre_vendor/lib/OGRE/cmake'
+[4.763s] -- Found OGRE
+[4.763s] --   static     : OFF
+[4.763s] --   components : MeshLodGenerator;Overlay;Paging;Property;RTShaderSystem;Terrain;Volume
+[4.763s] --   plugins    : Plugin_BSPSceneManager;Plugin_OctreeSceneManager;Plugin_PCZSceneManager;Plugin_ParticleFX;RenderSystem_GL;RenderSystem_GL3Plus;Codec_STBI
+[4.764s] --   media      : /opt/ros/jazzy/opt/rviz_ogre_vendor/share/OGRE/Media
+[4.764s] -- OGRE_LIBRARIES: OgreMeshLodGenerator;OgreOverlay;OgrePaging;OgreProperty;OgreRTShaderSystem;OgreTerrain;OgreVolume;OgreMain
+[4.764s] -- OGRE_LIBRARY_DIRS: /opt/ros/jazzy/opt/rviz_ogre_vendor/lib
+[4.764s] -- OGRE_PLUGINS: Plugin_BSPSceneManager;Plugin_OctreeSceneManager;Plugin_PCZSceneManager;Plugin_ParticleFX;RenderSystem_GL;RenderSystem_GL3Plus;Codec_STBI
+[4.764s] -- OGRE_PLUGIN_DIR: /opt/ros/jazzy/opt/rviz_ogre_vendor/lib/OGRE
+[4.765s] -- rviz_ogre_vendor::OgreOverlay for IMPORTED_LOCATION_RELEASE: /opt/ros/jazzy/opt/rviz_ogre_vendor/lib/libOgreOverlay.so
+[4.765s] -- rviz_ogre_vendor::OgreOverlay for IMPORTED_LOCATION_DEBUG: /opt/ros/jazzy/opt/rviz_ogre_vendor/lib/libOgreOverlay.so
+[4.765s] -- rviz_ogre_vendor::OgreMain for IMPORTED_LOCATION_RELEASE: /opt/ros/jazzy/opt/rviz_ogre_vendor/lib/libOgreMain.so
+[4.765s] -- rviz_ogre_vendor::OgreMain for IMPORTED_LOCATION_DEBUG: /opt/ros/jazzy/opt/rviz_ogre_vendor/lib/libOgreMain.so
+[4.843s] -- Found ZLIB: /usr/lib/x86_64-linux-gnu/libz.so (found version "1.3")  
+[4.876s] -- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so   
+[5.333s] -- Found X11: /usr/include   
+[5.334s] -- Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so
+[5.492s] -- Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so - found
+[5.493s] -- Looking for gethostbyname
+[5.644s] -- Looking for gethostbyname - found
+[5.644s] -- Looking for connect
+[5.786s] -- Looking for connect - found
+[5.787s] -- Looking for remove
+[5.937s] -- Looking for remove - found
+[5.937s] -- Looking for shmat
+[6.100s] -- Looking for shmat - found
+[6.100s] -- Looking for IceConnectionNumber in ICE
+[6.253s] -- Looking for IceConnectionNumber in ICE - found
+[6.301s] -- Setting yaml-cpp_DIR to: '/opt/ros/jazzy/share/yaml_cpp_vendor/cmake/../../../opt/yaml_cpp_vendor/share/cmake/yaml-cpp'
+[6.701s] -- Configuring done (6.2s)
+[6.777s] -- Generating done (0.1s)
+[6.791s] -- Build files have been written to: /home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp
+[6.812s] Invoked command in '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robotica-06/ws_moveit/install/moveit_configs_utils:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/robotica-06/bender_manipulacion/src/bender_pick_place_cpp -DCMAKE_INSTALL_PREFIX=/home/robotica-06/bender_manipulacion/install
+[6.814s] Invoking command in '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robotica-06/ws_moveit/install/moveit_configs_utils:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp -- -j8 -l8
+[6.920s] [ 25%] [32mBuilding CXX object CMakeFiles/pick_place_demo.dir/src/bender_pick_and_place.cpp.o[0m
+[6.920s] [ 50%] [32mBuilding CXX object CMakeFiles/add_table.dir/src/add_table.cpp.o[0m
+[10.407s] In file included from [01m[K/home/robotica-06/bender_manipulacion/src/bender_pick_place_cpp/src/add_table.cpp:2[m[K:
+[10.407s] [01m[K/home/robotica-06/ws_moveit/install/moveit_ros_planning_interface/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+[10.407s]    50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+[10.407s]       |                                                                             [01;36m[K^[m[K
+[10.486s] In file included from [01m[K/home/robotica-06/bender_manipulacion/src/bender_pick_place_cpp/src/bender_pick_and_place.cpp:2[m[K:
+[10.486s] [01m[K/home/robotica-06/ws_moveit/install/moveit_ros_planning_interface/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.h:51:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+[10.486s]    51 | a message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+[10.487s]       |                                                                       [01;36m[K^[m[K
+[10.487s] 
+[13.270s] In file included from [01m[K/home/robotica-06/bender_manipulacion/src/bender_pick_place_cpp/src/bender_pick_and_place.cpp:3[m[K:
+[13.271s] [01m[K/home/robotica-06/ws_moveit/install/moveit_ros_planning_interface/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+[13.271s]    50 | a message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+[13.271s]       |                                                                       [01;36m[K^[m[K
+[13.271s] 
+[15.567s] [ 75%] [32m[1mLinking CXX executable add_table[0m
+[16.057s] [ 75%] Built target add_table
+[18.410s] [100%] [32m[1mLinking CXX executable pick_place_demo[0m
+[19.036s] [100%] Built target pick_place_demo
+[19.058s] Invoked command in '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robotica-06/ws_moveit/install/moveit_configs_utils:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp -- -j8 -l8
+[19.062s] Invoking command in '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robotica-06/ws_moveit/install/moveit_configs_utils:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp
+[19.078s] -- Install configuration: ""
+[19.078s] -- Installing: /home/robotica-06/bender_manipulacion/install/lib/bender_pick_place_cpp/pick_place_demo
+[19.081s] -- Set non-toolchain portion of runtime path of "/home/robotica-06/bender_manipulacion/install/lib/bender_pick_place_cpp/pick_place_demo" to ""
+[19.081s] -- Installing: /home/robotica-06/bender_manipulacion/install/lib/bender_pick_place_cpp/add_table
+[19.082s] -- Set non-toolchain portion of runtime path of "/home/robotica-06/bender_manipulacion/install/lib/bender_pick_place_cpp/add_table" to ""
+[19.082s] -- Installing: /home/robotica-06/bender_manipulacion/install/share/bender_pick_place_cpp/launch
+[19.082s] -- Installing: /home/robotica-06/bender_manipulacion/install/share/bender_pick_place_cpp/launch/pick_place_demo_ancient.launch.py
+[19.083s] -- Installing: /home/robotica-06/bender_manipulacion/install/share/bender_pick_place_cpp/launch/pick_place_demo.launch.py
+[19.083s] -- Installing: /home/robotica-06/bender_manipulacion/install/share/ament_index/resource_index/package_run_dependencies/bender_pick_place_cpp
+[19.083s] -- Installing: /home/robotica-06/bender_manipulacion/install/share/ament_index/resource_index/parent_prefix_path/bender_pick_place_cpp
+[19.083s] -- Installing: /home/robotica-06/bender_manipulacion/install/share/bender_pick_place_cpp/environment/ament_prefix_path.sh
+[19.084s] -- Installing: /home/robotica-06/bender_manipulacion/install/share/bender_pick_place_cpp/environment/ament_prefix_path.dsv
+[19.084s] -- Installing: /home/robotica-06/bender_manipulacion/install/share/bender_pick_place_cpp/environment/path.sh
+[19.084s] -- Installing: /home/robotica-06/bender_manipulacion/install/share/bender_pick_place_cpp/environment/path.dsv
+[19.085s] -- Installing: /home/robotica-06/bender_manipulacion/install/share/bender_pick_place_cpp/local_setup.bash
+[19.085s] -- Installing: /home/robotica-06/bender_manipulacion/install/share/bender_pick_place_cpp/local_setup.sh
+[19.085s] -- Installing: /home/robotica-06/bender_manipulacion/install/share/bender_pick_place_cpp/local_setup.zsh
+[19.085s] -- Installing: /home/robotica-06/bender_manipulacion/install/share/bender_pick_place_cpp/local_setup.dsv
+[19.086s] -- Installing: /home/robotica-06/bender_manipulacion/install/share/bender_pick_place_cpp/package.dsv
+[19.086s] -- Installing: /home/robotica-06/bender_manipulacion/install/share/ament_index/resource_index/packages/bender_pick_place_cpp
+[19.086s] -- Installing: /home/robotica-06/bender_manipulacion/install/share/bender_pick_place_cpp/cmake/bender_pick_place_cppConfig.cmake
+[19.086s] -- Installing: /home/robotica-06/bender_manipulacion/install/share/bender_pick_place_cpp/cmake/bender_pick_place_cppConfig-version.cmake
+[19.087s] -- Installing: /home/robotica-06/bender_manipulacion/install/share/bender_pick_place_cpp/package.xml
+[19.091s] Invoked command in '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robotica-06/ws_moveit/install/moveit_configs_utils:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp

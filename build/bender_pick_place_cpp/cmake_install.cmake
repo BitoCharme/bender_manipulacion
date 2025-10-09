@@ -91,6 +91,10 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bender_pick_place_cpp" TYPE DIRECTORY FILES "/home/robotica-06/bender_manipulacion/src/bender_pick_place_cpp/launch")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/bender_pick_place_cpp")
 endif()
 

@@ -33,8 +33,6 @@ class MoveLeftArm(Node):
             self.get_logger().error("Action server /move_action no disponible")
             return
 
-       
-
         # Crear goal de MoveGroup
         goal_msg = MoveGroup.Goal()
         goal_msg.request.group_name = "left_arm"

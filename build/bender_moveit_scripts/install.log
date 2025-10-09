@@ -1,8 +1,12 @@
+/home/robotica-06/bender_manipulacion/install/lib/python3.12/site-packages/bender_moveit_scripts/publish_target_pose.py
 /home/robotica-06/bender_manipulacion/install/lib/python3.12/site-packages/bender_moveit_scripts/move_left_arm.py
+/home/robotica-06/bender_manipulacion/install/lib/python3.12/site-packages/bender_moveit_scripts/bender_skills.py
 /home/robotica-06/bender_manipulacion/install/lib/python3.12/site-packages/bender_moveit_scripts/move_groups_control.py
 /home/robotica-06/bender_manipulacion/install/lib/python3.12/site-packages/bender_moveit_scripts/moveit_target_pose.py
 /home/robotica-06/bender_manipulacion/install/lib/python3.12/site-packages/bender_moveit_scripts/__init__.py
+/home/robotica-06/bender_manipulacion/install/lib/python3.12/site-packages/bender_moveit_scripts/__pycache__/publish_target_pose.cpython-312.pyc
 /home/robotica-06/bender_manipulacion/install/lib/python3.12/site-packages/bender_moveit_scripts/__pycache__/move_left_arm.cpython-312.pyc
+/home/robotica-06/bender_manipulacion/install/lib/python3.12/site-packages/bender_moveit_scripts/__pycache__/bender_skills.cpython-312.pyc
 /home/robotica-06/bender_manipulacion/install/lib/python3.12/site-packages/bender_moveit_scripts/__pycache__/move_groups_control.cpython-312.pyc
 /home/robotica-06/bender_manipulacion/install/lib/python3.12/site-packages/bender_moveit_scripts/__pycache__/moveit_target_pose.cpython-312.pyc
 /home/robotica-06/bender_manipulacion/install/lib/python3.12/site-packages/bender_moveit_scripts/__pycache__/__init__.cpython-312.pyc
@@ -18,3 +22,4 @@
 /home/robotica-06/bender_manipulacion/install/lib/bender_moveit_scripts/move_groups_control
 /home/robotica-06/bender_manipulacion/install/lib/bender_moveit_scripts/move_left_arm
 /home/robotica-06/bender_manipulacion/install/lib/bender_moveit_scripts/moveit_target_pose
+/home/robotica-06/bender_manipulacion/install/lib/bender_moveit_scripts/publish_target_pose

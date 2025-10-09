@@ -9,9 +9,11 @@ setup.py
 ../../build/bender_moveit_scripts/bender_moveit_scripts.egg-info/top_level.txt
 ../../build/bender_moveit_scripts/bender_moveit_scripts.egg-info/zip-safe
 bender_moveit_scripts/__init__.py
+bender_moveit_scripts/bender_skills.py
 bender_moveit_scripts/move_groups_control.py
 bender_moveit_scripts/move_left_arm.py
 bender_moveit_scripts/moveit_target_pose.py
+bender_moveit_scripts/publish_target_pose.py
 resource/bender_moveit_scripts
 test/test_copyright.py
 test/test_flake8.py
