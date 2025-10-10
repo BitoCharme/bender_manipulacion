@@ -24,6 +24,7 @@ setup(
 	    "move_left_arm = bender_moveit_scripts.move_left_arm:main",
 	    "move_groups_control = bender_moveit_scripts.move_groups_control:main",
             "publish_target_pose = bender_moveit_scripts.publish_target_pose:main",
+            "skills = bender_moveit_scripts.skills:main",
         ],
     },
 )

@@ -65,6 +65,7 @@ CMAKE_BINARY_DIR = /home/robotica-06/bender_manipulacion/build/bender_pick_place
 # The main recursive "all" target.
 all: CMakeFiles/pick_place_demo.dir/all
 all: CMakeFiles/add_table.dir/all
+all: CMakeFiles/mtc_node.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -76,6 +77,7 @@ clean: CMakeFiles/uninstall.dir/clean
 clean: CMakeFiles/bender_pick_place_cpp_uninstall.dir/clean
 clean: CMakeFiles/pick_place_demo.dir/clean
 clean: CMakeFiles/add_table.dir/clean
+clean: CMakeFiles/mtc_node.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -137,7 +139,7 @@ CMakeFiles/bender_pick_place_cpp_uninstall.dir/clean:
 CMakeFiles/pick_place_demo.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pick_place_demo.dir/build.make CMakeFiles/pick_place_demo.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pick_place_demo.dir/build.make CMakeFiles/pick_place_demo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles --progress-num=3,4 "Built target pick_place_demo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles --progress-num=5,6 "Built target pick_place_demo"
 .PHONY : CMakeFiles/pick_place_demo.dir/all
 
 # Build rule for subdir invocation for target.
@@ -181,6 +183,32 @@ add_table: CMakeFiles/add_table.dir/rule
 CMakeFiles/add_table.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/add_table.dir/build.make CMakeFiles/add_table.dir/clean
 .PHONY : CMakeFiles/add_table.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/mtc_node.dir
+
+# All Build rule for target.
+CMakeFiles/mtc_node.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mtc_node.dir/build.make CMakeFiles/mtc_node.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mtc_node.dir/build.make CMakeFiles/mtc_node.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles --progress-num=3,4 "Built target mtc_node"
+.PHONY : CMakeFiles/mtc_node.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/mtc_node.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/mtc_node.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles 0
+.PHONY : CMakeFiles/mtc_node.dir/rule
+
+# Convenience name for target.
+mtc_node: CMakeFiles/mtc_node.dir/rule
+.PHONY : mtc_node
+
+# clean rule for target.
+CMakeFiles/mtc_node.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mtc_node.dir/build.make CMakeFiles/mtc_node.dir/clean
+.PHONY : CMakeFiles/mtc_node.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

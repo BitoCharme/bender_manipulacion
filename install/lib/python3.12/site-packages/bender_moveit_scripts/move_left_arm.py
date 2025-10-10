@@ -18,12 +18,14 @@ class MoveLeftArm(Node):
         # Suscripción al tópico /target_pose
         self.subscription = self.create_subscription(
             Pose,
+            #'/left_arm_target_pose',
             '/target_pose',
             self.pose_callback,
             10
         )
 
         self.get_logger().info("Nodo listo, publica una geometry_msgs/Pose en /target_pose")
+        #self.get_logger().info("Nodo listo, publica una geometry_msgs/Pose en /left_arm_target_pose")
 
     def pose_callback(self, msg: Pose):
         self.get_logger().info(f"Recibida target pose: {msg}")
@@ -44,9 +46,9 @@ class MoveLeftArm(Node):
         position_constraint = PositionConstraint()
         position_constraint.header.frame_id = "base_link"
         position_constraint.link_name = "l6l_1"  # ⚠️ Cambia según tu robot
-        position_constraint.target_point_offset.x = 0.0
-        position_constraint.target_point_offset.y = 0.0
-        position_constraint.target_point_offset.z = 0.0
+        position_constraint.target_point_offset.x = 0.05
+        position_constraint.target_point_offset.y = 0.05
+        position_constraint.target_point_offset.z = 0.05
         position_constraint.constraint_region.primitives = []
         position_constraint.weight = 1.0
 

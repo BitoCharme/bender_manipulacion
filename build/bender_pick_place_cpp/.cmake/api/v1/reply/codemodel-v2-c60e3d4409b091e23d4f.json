@@ -1,0 +1,97 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-c380599f3f5c940de0a5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "bender_pick_place_cpp",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "add_table::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-add_table-2e44c4ca5d448512bf75.json",
+					"name" : "add_table",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "bender_pick_place_cpp_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bender_pick_place_cpp_uninstall-142212fe233b8d75bb09.json",
+					"name" : "bender_pick_place_cpp_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "mtc_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-mtc_node-2b5435acc3c4c4af1068.json",
+					"name" : "mtc_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "pick_place_demo::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-pick_place_demo-77fc37d3e2787ce26591.json",
+					"name" : "pick_place_demo",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-5c18e6b12ee1ed310e21.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp",
+		"source" : "/home/robotica-06/bender_manipulacion/src/bender_pick_place_cpp"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

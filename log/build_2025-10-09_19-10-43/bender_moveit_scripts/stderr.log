@@ -1,5 +1,0 @@
-  File "/home/robotica-06/bender_manipulacion/install/lib/python3.12/site-packages/bender_moveit_scripts/bender_skills.py", line 3
-    ros2 topic pub /target_pose geometry_msgs/msg/Pose "{position:{x: 0.0, y: 0.0, z: 0.0}, orientation:{x: 0.5, y: 0.0, z: 0.0, w: 0.0}}"
-         ^^^^^
-SyntaxError: invalid syntax
-

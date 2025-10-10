@@ -1,5 +1,6 @@
 /home/robotica-06/bender_manipulacion/install/lib/bender_pick_place_cpp/pick_place_demo
 /home/robotica-06/bender_manipulacion/install/lib/bender_pick_place_cpp/add_table
+/home/robotica-06/bender_manipulacion/install/lib/bender_pick_place_cpp/mtc_node
 /home/robotica-06/bender_manipulacion/install/share/bender_pick_place_cpp/launch/pick_place_demo_ancient.launch.py
 /home/robotica-06/bender_manipulacion/install/share/bender_pick_place_cpp/launch/pick_place_demo.launch.py
 /home/robotica-06/bender_manipulacion/install/share/ament_index/resource_index/package_run_dependencies/bender_pick_place_cpp

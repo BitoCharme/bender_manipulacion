@@ -61,8 +61,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-lvay5Q"
-      binary: "/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-lvay5Q"
+      source: "/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-FKVgzn"
+      binary: "/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-FKVgzn"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -71,13 +71,13 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-lvay5Q'
+        Change Dir: '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-FKVgzn'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_b67cc/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_b67cc.dir/build.make CMakeFiles/cmTC_b67cc.dir/build
-        gmake[1]: Entering directory '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-lvay5Q'
-        Building C object CMakeFiles/cmTC_b67cc.dir/CMakeCCompilerABI.c.o
-        /usr/bin/cc   -v -o CMakeFiles/cmTC_b67cc.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_a03f7/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_a03f7.dir/build.make CMakeFiles/cmTC_a03f7.dir/build
+        gmake[1]: Entering directory '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-FKVgzn'
+        Building C object CMakeFiles/cmTC_a03f7.dir/CMakeCCompilerABI.c.o
+        /usr/bin/cc   -v -o CMakeFiles/cmTC_a03f7.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c
         Using built-in specs.
         COLLECT_GCC=/usr/bin/cc
         OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
@@ -87,8 +87,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b67cc.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_b67cc.dir/'
-         /usr/libexec/gcc/x86_64-linux-gnu/13/cc1 -quiet -v -imultiarch x86_64-linux-gnu /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_b67cc.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/cc9vxxeV.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a03f7.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_a03f7.dir/'
+         /usr/libexec/gcc/x86_64-linux-gnu/13/cc1 -quiet -v -imultiarch x86_64-linux-gnu /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_a03f7.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccO2dggN.s
         GNU C17 (Ubuntu 13.3.0-6ubuntu2~24.04) version 13.3.0 (x86_64-linux-gnu)
         	compiled by GNU C version 13.3.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version isl-0.26-GMP
         
@@ -105,15 +105,15 @@ events:
          /usr/include
         End of search list.
         Compiler executable checksum: 38987c28e967c64056a6454abdef726e
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b67cc.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_b67cc.dir/'
-         as -v --64 -o CMakeFiles/cmTC_b67cc.dir/CMakeCCompilerABI.c.o /tmp/cc9vxxeV.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a03f7.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_a03f7.dir/'
+         as -v --64 -o CMakeFiles/cmTC_a03f7.dir/CMakeCCompilerABI.c.o /tmp/ccO2dggN.s
         GNU assembler version 2.42 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.42
         COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b67cc.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_b67cc.dir/CMakeCCompilerABI.c.'
-        Linking C executable cmTC_b67cc
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b67cc.dir/link.txt --verbose=1
-        /usr/bin/cc  -v CMakeFiles/cmTC_b67cc.dir/CMakeCCompilerABI.c.o -o cmTC_b67cc 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a03f7.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_a03f7.dir/CMakeCCompilerABI.c.'
+        Linking C executable cmTC_a03f7
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a03f7.dir/link.txt --verbose=1
+        /usr/bin/cc  -v CMakeFiles/cmTC_a03f7.dir/CMakeCCompilerABI.c.o -o cmTC_a03f7 
         Using built-in specs.
         COLLECT_GCC=/usr/bin/cc
         COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper
@@ -126,10 +126,10 @@ events:
         gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04) 
         COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_b67cc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_b67cc.'
-         /usr/libexec/gcc/x86_64-linux-gnu/13/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/ccLGI3mv.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_b67cc /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. CMakeFiles/cmTC_b67cc.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_b67cc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_b67cc.'
-        gmake[1]: Leaving directory '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-lvay5Q'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a03f7' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_a03f7.'
+         /usr/libexec/gcc/x86_64-linux-gnu/13/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/cc8xgo9O.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_a03f7 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. CMakeFiles/cmTC_a03f7.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a03f7' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_a03f7.'
+        gmake[1]: Leaving directory '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-FKVgzn'
         
       exitCode: 0
   -
@@ -163,13 +163,13 @@ events:
     message: |
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        ignore line: [Change Dir: '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-lvay5Q']
+        ignore line: [Change Dir: '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-FKVgzn']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_b67cc/fast]
-        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_b67cc.dir/build.make CMakeFiles/cmTC_b67cc.dir/build]
-        ignore line: [gmake[1]: Entering directory '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-lvay5Q']
-        ignore line: [Building C object CMakeFiles/cmTC_b67cc.dir/CMakeCCompilerABI.c.o]
-        ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_b67cc.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_a03f7/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_a03f7.dir/build.make CMakeFiles/cmTC_a03f7.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-FKVgzn']
+        ignore line: [Building C object CMakeFiles/cmTC_a03f7.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_a03f7.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/cc]
         ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
@@ -179,8 +179,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b67cc.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_b67cc.dir/']
-        ignore line: [ /usr/libexec/gcc/x86_64-linux-gnu/13/cc1 -quiet -v -imultiarch x86_64-linux-gnu /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_b67cc.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/cc9vxxeV.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a03f7.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_a03f7.dir/']
+        ignore line: [ /usr/libexec/gcc/x86_64-linux-gnu/13/cc1 -quiet -v -imultiarch x86_64-linux-gnu /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_a03f7.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccO2dggN.s]
         ignore line: [GNU C17 (Ubuntu 13.3.0-6ubuntu2~24.04) version 13.3.0 (x86_64-linux-gnu)]
         ignore line: [	compiled by GNU C version 13.3.0  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version isl-0.26-GMP]
         ignore line: []
@@ -197,15 +197,15 @@ events:
         ignore line: [ /usr/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 38987c28e967c64056a6454abdef726e]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b67cc.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_b67cc.dir/']
-        ignore line: [ as -v --64 -o CMakeFiles/cmTC_b67cc.dir/CMakeCCompilerABI.c.o /tmp/cc9vxxeV.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a03f7.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_a03f7.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_a03f7.dir/CMakeCCompilerABI.c.o /tmp/ccO2dggN.s]
         ignore line: [GNU assembler version 2.42 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.42]
         ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b67cc.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_b67cc.dir/CMakeCCompilerABI.c.']
-        ignore line: [Linking C executable cmTC_b67cc]
-        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b67cc.dir/link.txt --verbose=1]
-        ignore line: [/usr/bin/cc  -v CMakeFiles/cmTC_b67cc.dir/CMakeCCompilerABI.c.o -o cmTC_b67cc ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a03f7.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_a03f7.dir/CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_a03f7]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a03f7.dir/link.txt --verbose=1]
+        ignore line: [/usr/bin/cc  -v CMakeFiles/cmTC_a03f7.dir/CMakeCCompilerABI.c.o -o cmTC_a03f7 ]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/cc]
         ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper]
@@ -218,13 +218,13 @@ events:
         ignore line: [gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04) ]
         ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_b67cc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_b67cc.']
-        link line: [ /usr/libexec/gcc/x86_64-linux-gnu/13/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/ccLGI3mv.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_b67cc /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. CMakeFiles/cmTC_b67cc.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a03f7' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_a03f7.']
+        link line: [ /usr/libexec/gcc/x86_64-linux-gnu/13/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/cc8xgo9O.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_a03f7 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. CMakeFiles/cmTC_a03f7.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o]
           arg [/usr/libexec/gcc/x86_64-linux-gnu/13/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/ccLGI3mv.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/cc8xgo9O.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -242,7 +242,7 @@ events:
           arg [-znow] ==> ignore
           arg [-zrelro] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_b67cc] ==> ignore
+          arg [cmTC_a03f7] ==> ignore
           arg [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o]
           arg [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o]
           arg [/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o]
@@ -254,7 +254,7 @@ events:
           arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
           arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
           arg [-L/usr/lib/gcc/x86_64-linux-gnu/13/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../..]
-          arg [CMakeFiles/cmTC_b67cc.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [CMakeFiles/cmTC_a03f7.dir/CMakeCCompilerABI.c.o] ==> ignore
           arg [-lgcc] ==> lib [gcc]
           arg [--push-state] ==> ignore
           arg [--as-needed] ==> ignore
@@ -294,8 +294,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-ccnOrJ"
-      binary: "/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-ccnOrJ"
+      source: "/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-ZkeKVM"
+      binary: "/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-ZkeKVM"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -304,13 +304,13 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-ccnOrJ'
+        Change Dir: '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-ZkeKVM'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_dbd44/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_dbd44.dir/build.make CMakeFiles/cmTC_dbd44.dir/build
-        gmake[1]: Entering directory '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-ccnOrJ'
-        Building CXX object CMakeFiles/cmTC_dbd44.dir/CMakeCXXCompilerABI.cpp.o
-        /usr/bin/c++   -v -o CMakeFiles/cmTC_dbd44.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_bb227/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_bb227.dir/build.make CMakeFiles/cmTC_bb227.dir/build
+        gmake[1]: Entering directory '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-ZkeKVM'
+        Building CXX object CMakeFiles/cmTC_bb227.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/bin/c++   -v -o CMakeFiles/cmTC_bb227.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp
         Using built-in specs.
         COLLECT_GCC=/usr/bin/c++
         OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
@@ -320,8 +320,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_dbd44.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_dbd44.dir/'
-         /usr/libexec/gcc/x86_64-linux-gnu/13/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_dbd44.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccSobWqk.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_bb227.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_bb227.dir/'
+         /usr/libexec/gcc/x86_64-linux-gnu/13/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_bb227.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccGRKFRj.s
         GNU C++17 (Ubuntu 13.3.0-6ubuntu2~24.04) version 13.3.0 (x86_64-linux-gnu)
         	compiled by GNU C version 13.3.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version isl-0.26-GMP
         
@@ -342,15 +342,15 @@ events:
          /usr/include
         End of search list.
         Compiler executable checksum: c81c05345ce537099dafd5580045814a
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_dbd44.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_dbd44.dir/'
-         as -v --64 -o CMakeFiles/cmTC_dbd44.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccSobWqk.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_bb227.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_bb227.dir/'
+         as -v --64 -o CMakeFiles/cmTC_bb227.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccGRKFRj.s
         GNU assembler version 2.42 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.42
         COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_dbd44.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_dbd44.dir/CMakeCXXCompilerABI.cpp.'
-        Linking CXX executable cmTC_dbd44
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dbd44.dir/link.txt --verbose=1
-        /usr/bin/c++  -v CMakeFiles/cmTC_dbd44.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_dbd44 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_bb227.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_bb227.dir/CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_bb227
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bb227.dir/link.txt --verbose=1
+        /usr/bin/c++  -v CMakeFiles/cmTC_bb227.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_bb227 
         Using built-in specs.
         COLLECT_GCC=/usr/bin/c++
         COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper
@@ -363,10 +363,10 @@ events:
         gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04) 
         COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_dbd44' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_dbd44.'
-         /usr/libexec/gcc/x86_64-linux-gnu/13/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/ccWGsDAB.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_dbd44 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. CMakeFiles/cmTC_dbd44.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_dbd44' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_dbd44.'
-        gmake[1]: Leaving directory '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-ccnOrJ'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_bb227' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_bb227.'
+         /usr/libexec/gcc/x86_64-linux-gnu/13/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/ccSnzAS5.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_bb227 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. CMakeFiles/cmTC_bb227.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_bb227' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_bb227.'
+        gmake[1]: Leaving directory '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-ZkeKVM'
         
       exitCode: 0
   -
@@ -406,13 +406,13 @@ events:
     message: |
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        ignore line: [Change Dir: '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-ccnOrJ']
+        ignore line: [Change Dir: '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-ZkeKVM']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_dbd44/fast]
-        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_dbd44.dir/build.make CMakeFiles/cmTC_dbd44.dir/build]
-        ignore line: [gmake[1]: Entering directory '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-ccnOrJ']
-        ignore line: [Building CXX object CMakeFiles/cmTC_dbd44.dir/CMakeCXXCompilerABI.cpp.o]
-        ignore line: [/usr/bin/c++   -v -o CMakeFiles/cmTC_dbd44.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_bb227/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_bb227.dir/build.make CMakeFiles/cmTC_bb227.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-ZkeKVM']
+        ignore line: [Building CXX object CMakeFiles/cmTC_bb227.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/usr/bin/c++   -v -o CMakeFiles/cmTC_bb227.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/c++]
         ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
@@ -422,8 +422,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_dbd44.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_dbd44.dir/']
-        ignore line: [ /usr/libexec/gcc/x86_64-linux-gnu/13/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_dbd44.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccSobWqk.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_bb227.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_bb227.dir/']
+        ignore line: [ /usr/libexec/gcc/x86_64-linux-gnu/13/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_bb227.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccGRKFRj.s]
         ignore line: [GNU C++17 (Ubuntu 13.3.0-6ubuntu2~24.04) version 13.3.0 (x86_64-linux-gnu)]
         ignore line: [	compiled by GNU C version 13.3.0  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version isl-0.26-GMP]
         ignore line: []
@@ -444,15 +444,15 @@ events:
         ignore line: [ /usr/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: c81c05345ce537099dafd5580045814a]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_dbd44.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_dbd44.dir/']
-        ignore line: [ as -v --64 -o CMakeFiles/cmTC_dbd44.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccSobWqk.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_bb227.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_bb227.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_bb227.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccGRKFRj.s]
         ignore line: [GNU assembler version 2.42 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.42]
         ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_dbd44.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_dbd44.dir/CMakeCXXCompilerABI.cpp.']
-        ignore line: [Linking CXX executable cmTC_dbd44]
-        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dbd44.dir/link.txt --verbose=1]
-        ignore line: [/usr/bin/c++  -v CMakeFiles/cmTC_dbd44.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_dbd44 ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_bb227.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_bb227.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_bb227]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bb227.dir/link.txt --verbose=1]
+        ignore line: [/usr/bin/c++  -v CMakeFiles/cmTC_bb227.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_bb227 ]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/c++]
         ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper]
@@ -465,13 +465,13 @@ events:
         ignore line: [gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04) ]
         ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_dbd44' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_dbd44.']
-        link line: [ /usr/libexec/gcc/x86_64-linux-gnu/13/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/ccWGsDAB.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_dbd44 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. CMakeFiles/cmTC_dbd44.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_bb227' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_bb227.']
+        link line: [ /usr/libexec/gcc/x86_64-linux-gnu/13/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/ccSnzAS5.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_bb227 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. CMakeFiles/cmTC_bb227.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o]
           arg [/usr/libexec/gcc/x86_64-linux-gnu/13/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/ccWGsDAB.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccSnzAS5.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -489,7 +489,7 @@ events:
           arg [-znow] ==> ignore
           arg [-zrelro] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_dbd44] ==> ignore
+          arg [cmTC_bb227] ==> ignore
           arg [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o]
           arg [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o]
           arg [/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o]
@@ -501,7 +501,7 @@ events:
           arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
           arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
           arg [-L/usr/lib/gcc/x86_64-linux-gnu/13/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../..]
-          arg [CMakeFiles/cmTC_dbd44.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [CMakeFiles/cmTC_bb227.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
           arg [-lstdc++] ==> lib [stdc++]
           arg [-lm] ==> lib [m]
           arg [-lgcc_s] ==> lib [gcc_s]
@@ -544,8 +544,8 @@ events:
       - "/home/robotica-06/ws_moveit/install/moveit_ros_planning_interface/share/moveit_ros_planning_interface/cmake/moveit_ros_planning_interfaceConfig.cmake:41 (include)"
       - "CMakeLists.txt:6 (find_package)"
     directories:
-      source: "/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-WXaJ3R"
-      binary: "/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-WXaJ3R"
+      source: "/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-m5nayn"
+      binary: "/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-m5nayn"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -555,17 +555,17 @@ events:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-WXaJ3R'
+        Change Dir: '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-m5nayn'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_fbd76/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_fbd76.dir/build.make CMakeFiles/cmTC_fbd76.dir/build
-        gmake[1]: Entering directory '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-WXaJ3R'
-        Building C object CMakeFiles/cmTC_fbd76.dir/src.c.o
-        /usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_fbd76.dir/src.c.o -c /home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-WXaJ3R/src.c
-        Linking C executable cmTC_fbd76
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fbd76.dir/link.txt --verbose=1
-        /usr/bin/cc CMakeFiles/cmTC_fbd76.dir/src.c.o -o cmTC_fbd76 
-        gmake[1]: Leaving directory '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-WXaJ3R'
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_e4b9d/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_e4b9d.dir/build.make CMakeFiles/cmTC_e4b9d.dir/build
+        gmake[1]: Entering directory '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-m5nayn'
+        Building C object CMakeFiles/cmTC_e4b9d.dir/src.c.o
+        /usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_e4b9d.dir/src.c.o -c /home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-m5nayn/src.c
+        Linking C executable cmTC_e4b9d
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e4b9d.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_e4b9d.dir/src.c.o -o cmTC_e4b9d 
+        gmake[1]: Leaving directory '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-m5nayn'
         
       exitCode: 0
   -
@@ -585,8 +585,8 @@ events:
     checks:
       - "Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so"
     directories:
-      source: "/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-Y4R859"
-      binary: "/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-Y4R859"
+      source: "/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-J8DCPI"
+      binary: "/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-J8DCPI"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -596,17 +596,17 @@ events:
       variable: "X11_LIB_X11_SOLO"
       cached: true
       stdout: |
-        Change Dir: '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-Y4R859'
+        Change Dir: '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-J8DCPI'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_dde8b/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_dde8b.dir/build.make CMakeFiles/cmTC_dde8b.dir/build
-        gmake[1]: Entering directory '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-Y4R859'
-        Building C object CMakeFiles/cmTC_dde8b.dir/CheckFunctionExists.c.o
-        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay -o CMakeFiles/cmTC_dde8b.dir/CheckFunctionExists.c.o -c /home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-Y4R859/CheckFunctionExists.c
-        Linking C executable cmTC_dde8b
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dde8b.dir/link.txt --verbose=1
-        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=XOpenDisplay CMakeFiles/cmTC_dde8b.dir/CheckFunctionExists.c.o -o cmTC_dde8b  /usr/lib/x86_64-linux-gnu/libX11.so /usr/lib/x86_64-linux-gnu/libXext.so 
-        gmake[1]: Leaving directory '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-Y4R859'
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_6cc6f/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_6cc6f.dir/build.make CMakeFiles/cmTC_6cc6f.dir/build
+        gmake[1]: Entering directory '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-J8DCPI'
+        Building C object CMakeFiles/cmTC_6cc6f.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay -o CMakeFiles/cmTC_6cc6f.dir/CheckFunctionExists.c.o -c /home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-J8DCPI/CheckFunctionExists.c
+        Linking C executable cmTC_6cc6f
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6cc6f.dir/link.txt --verbose=1
+        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=XOpenDisplay CMakeFiles/cmTC_6cc6f.dir/CheckFunctionExists.c.o -o cmTC_6cc6f  /usr/lib/x86_64-linux-gnu/libX11.so /usr/lib/x86_64-linux-gnu/libXext.so 
+        gmake[1]: Leaving directory '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-J8DCPI'
         
       exitCode: 0
   -
@@ -626,8 +626,8 @@ events:
     checks:
       - "Looking for gethostbyname"
     directories:
-      source: "/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-rosTun"
-      binary: "/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-rosTun"
+      source: "/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-htENKI"
+      binary: "/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-htENKI"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -637,17 +637,17 @@ events:
       variable: "CMAKE_HAVE_GETHOSTBYNAME"
       cached: true
       stdout: |
-        Change Dir: '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-rosTun'
+        Change Dir: '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-htENKI'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_ad588/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_ad588.dir/build.make CMakeFiles/cmTC_ad588.dir/build
-        gmake[1]: Entering directory '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-rosTun'
-        Building C object CMakeFiles/cmTC_ad588.dir/CheckFunctionExists.c.o
-        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname -o CMakeFiles/cmTC_ad588.dir/CheckFunctionExists.c.o -c /home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-rosTun/CheckFunctionExists.c
-        Linking C executable cmTC_ad588
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ad588.dir/link.txt --verbose=1
-        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=gethostbyname CMakeFiles/cmTC_ad588.dir/CheckFunctionExists.c.o -o cmTC_ad588 
-        gmake[1]: Leaving directory '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-rosTun'
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_b3de1/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_b3de1.dir/build.make CMakeFiles/cmTC_b3de1.dir/build
+        gmake[1]: Entering directory '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-htENKI'
+        Building C object CMakeFiles/cmTC_b3de1.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname -o CMakeFiles/cmTC_b3de1.dir/CheckFunctionExists.c.o -c /home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-htENKI/CheckFunctionExists.c
+        Linking C executable cmTC_b3de1
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b3de1.dir/link.txt --verbose=1
+        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=gethostbyname CMakeFiles/cmTC_b3de1.dir/CheckFunctionExists.c.o -o cmTC_b3de1 
+        gmake[1]: Leaving directory '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-htENKI'
         
       exitCode: 0
   -
@@ -667,8 +667,8 @@ events:
     checks:
       - "Looking for connect"
     directories:
-      source: "/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-WGeMce"
-      binary: "/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-WGeMce"
+      source: "/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-2Iy1sv"
+      binary: "/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-2Iy1sv"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -678,17 +678,17 @@ events:
       variable: "CMAKE_HAVE_CONNECT"
       cached: true
       stdout: |
-        Change Dir: '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-WGeMce'
+        Change Dir: '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-2Iy1sv'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_24f97/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_24f97.dir/build.make CMakeFiles/cmTC_24f97.dir/build
-        gmake[1]: Entering directory '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-WGeMce'
-        Building C object CMakeFiles/cmTC_24f97.dir/CheckFunctionExists.c.o
-        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect -o CMakeFiles/cmTC_24f97.dir/CheckFunctionExists.c.o -c /home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-WGeMce/CheckFunctionExists.c
-        Linking C executable cmTC_24f97
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_24f97.dir/link.txt --verbose=1
-        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=connect CMakeFiles/cmTC_24f97.dir/CheckFunctionExists.c.o -o cmTC_24f97 
-        gmake[1]: Leaving directory '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-WGeMce'
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_c3a9f/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_c3a9f.dir/build.make CMakeFiles/cmTC_c3a9f.dir/build
+        gmake[1]: Entering directory '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-2Iy1sv'
+        Building C object CMakeFiles/cmTC_c3a9f.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect -o CMakeFiles/cmTC_c3a9f.dir/CheckFunctionExists.c.o -c /home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-2Iy1sv/CheckFunctionExists.c
+        Linking C executable cmTC_c3a9f
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c3a9f.dir/link.txt --verbose=1
+        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=connect CMakeFiles/cmTC_c3a9f.dir/CheckFunctionExists.c.o -o cmTC_c3a9f 
+        gmake[1]: Leaving directory '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-2Iy1sv'
         
       exitCode: 0
   -
@@ -708,8 +708,8 @@ events:
     checks:
       - "Looking for remove"
     directories:
-      source: "/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-zsVdmC"
-      binary: "/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-zsVdmC"
+      source: "/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-K8RAkN"
+      binary: "/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-K8RAkN"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -719,17 +719,17 @@ events:
       variable: "CMAKE_HAVE_REMOVE"
       cached: true
       stdout: |
-        Change Dir: '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-zsVdmC'
+        Change Dir: '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-K8RAkN'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_dce6f/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_dce6f.dir/build.make CMakeFiles/cmTC_dce6f.dir/build
-        gmake[1]: Entering directory '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-zsVdmC'
-        Building C object CMakeFiles/cmTC_dce6f.dir/CheckFunctionExists.c.o
-        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove -o CMakeFiles/cmTC_dce6f.dir/CheckFunctionExists.c.o -c /home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-zsVdmC/CheckFunctionExists.c
-        Linking C executable cmTC_dce6f
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dce6f.dir/link.txt --verbose=1
-        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=remove CMakeFiles/cmTC_dce6f.dir/CheckFunctionExists.c.o -o cmTC_dce6f 
-        gmake[1]: Leaving directory '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-zsVdmC'
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_34331/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_34331.dir/build.make CMakeFiles/cmTC_34331.dir/build
+        gmake[1]: Entering directory '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-K8RAkN'
+        Building C object CMakeFiles/cmTC_34331.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove -o CMakeFiles/cmTC_34331.dir/CheckFunctionExists.c.o -c /home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-K8RAkN/CheckFunctionExists.c
+        Linking C executable cmTC_34331
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_34331.dir/link.txt --verbose=1
+        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=remove CMakeFiles/cmTC_34331.dir/CheckFunctionExists.c.o -o cmTC_34331 
+        gmake[1]: Leaving directory '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-K8RAkN'
         
       exitCode: 0
   -
@@ -749,8 +749,8 @@ events:
     checks:
       - "Looking for shmat"
     directories:
-      source: "/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-TM6GYf"
-      binary: "/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-TM6GYf"
+      source: "/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-NZrQ3c"
+      binary: "/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-NZrQ3c"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -760,17 +760,17 @@ events:
       variable: "CMAKE_HAVE_SHMAT"
       cached: true
       stdout: |
-        Change Dir: '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-TM6GYf'
+        Change Dir: '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-NZrQ3c'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_3f985/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_3f985.dir/build.make CMakeFiles/cmTC_3f985.dir/build
-        gmake[1]: Entering directory '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-TM6GYf'
-        Building C object CMakeFiles/cmTC_3f985.dir/CheckFunctionExists.c.o
-        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat -o CMakeFiles/cmTC_3f985.dir/CheckFunctionExists.c.o -c /home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-TM6GYf/CheckFunctionExists.c
-        Linking C executable cmTC_3f985
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3f985.dir/link.txt --verbose=1
-        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=shmat CMakeFiles/cmTC_3f985.dir/CheckFunctionExists.c.o -o cmTC_3f985 
-        gmake[1]: Leaving directory '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-TM6GYf'
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_a42aa/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_a42aa.dir/build.make CMakeFiles/cmTC_a42aa.dir/build
+        gmake[1]: Entering directory '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-NZrQ3c'
+        Building C object CMakeFiles/cmTC_a42aa.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat -o CMakeFiles/cmTC_a42aa.dir/CheckFunctionExists.c.o -c /home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-NZrQ3c/CheckFunctionExists.c
+        Linking C executable cmTC_a42aa
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a42aa.dir/link.txt --verbose=1
+        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=shmat CMakeFiles/cmTC_a42aa.dir/CheckFunctionExists.c.o -o cmTC_a42aa 
+        gmake[1]: Leaving directory '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-NZrQ3c'
         
       exitCode: 0
   -
@@ -790,8 +790,8 @@ events:
     checks:
       - "Looking for IceConnectionNumber in ICE"
     directories:
-      source: "/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-SBFoUI"
-      binary: "/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-SBFoUI"
+      source: "/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-GsZ01O"
+      binary: "/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-GsZ01O"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -801,17 +801,17 @@ events:
       variable: "CMAKE_LIB_ICE_HAS_ICECONNECTIONNUMBER"
       cached: true
       stdout: |
-        Change Dir: '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-SBFoUI'
+        Change Dir: '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-GsZ01O'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_dbaf5/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_dbaf5.dir/build.make CMakeFiles/cmTC_dbaf5.dir/build
-        gmake[1]: Entering directory '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-SBFoUI'
-        Building C object CMakeFiles/cmTC_dbaf5.dir/CheckFunctionExists.c.o
-        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber -o CMakeFiles/cmTC_dbaf5.dir/CheckFunctionExists.c.o -c /home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-SBFoUI/CheckFunctionExists.c
-        Linking C executable cmTC_dbaf5
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dbaf5.dir/link.txt --verbose=1
-        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=IceConnectionNumber CMakeFiles/cmTC_dbaf5.dir/CheckFunctionExists.c.o -o cmTC_dbaf5  -lICE 
-        gmake[1]: Leaving directory '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-SBFoUI'
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_b9d4d/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_b9d4d.dir/build.make CMakeFiles/cmTC_b9d4d.dir/build
+        gmake[1]: Entering directory '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-GsZ01O'
+        Building C object CMakeFiles/cmTC_b9d4d.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber -o CMakeFiles/cmTC_b9d4d.dir/CheckFunctionExists.c.o -c /home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-GsZ01O/CheckFunctionExists.c
+        Linking C executable cmTC_b9d4d
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b9d4d.dir/link.txt --verbose=1
+        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=IceConnectionNumber CMakeFiles/cmTC_b9d4d.dir/CheckFunctionExists.c.o -o cmTC_b9d4d  -lICE 
+        gmake[1]: Leaving directory '/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/CMakeScratch/TryCompile-GsZ01O'
         
       exitCode: 0
 ...
