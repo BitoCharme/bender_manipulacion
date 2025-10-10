@@ -43,30 +43,6 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/bender_pick_place_cpp/pick_place_demo" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/bender_pick_place_cpp/pick_place_demo")
-    file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/bender_pick_place_cpp/pick_place_demo"
-         RPATH "")
-  endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/bender_pick_place_cpp" TYPE EXECUTABLE FILES "/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/pick_place_demo")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/bender_pick_place_cpp/pick_place_demo" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/bender_pick_place_cpp/pick_place_demo")
-    file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/bender_pick_place_cpp/pick_place_demo"
-         OLD_RPATH "/home/robotica-06/ws_moveit/install/moveit_ros_planning_interface/lib:/home/robotica-06/ws_moveit/install/moveit_ros_move_group/lib:/opt/ros/jazzy/lib:/home/robotica-06/ws_moveit/install/moveit_ros_warehouse/lib:/home/robotica-06/ws_moveit/install/moveit_ros_planning/lib:/home/robotica-06/ws_moveit/install/moveit_ros_occupancy_map_monitor/lib:/home/robotica-06/ws_moveit/install/moveit_core/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/home/robotica-06/ws_moveit/install/moveit_msgs/lib:"
-         NEW_RPATH "")
-    if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/bender_pick_place_cpp/pick_place_demo")
-    endif()
-  endif()
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/pick_place_demo.dir/install-cxx-module-bmi-noconfig.cmake" OPTIONAL)
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/bender_pick_place_cpp/add_table" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/bender_pick_place_cpp/add_table")
     file(RPATH_CHECK
@@ -88,34 +64,6 @@ endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   include("/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/add_table.dir/install-cxx-module-bmi-noconfig.cmake" OPTIONAL)
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/bender_pick_place_cpp/mtc_node" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/bender_pick_place_cpp/mtc_node")
-    file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/bender_pick_place_cpp/mtc_node"
-         RPATH "")
-  endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/bender_pick_place_cpp" TYPE EXECUTABLE FILES "/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/mtc_node")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/bender_pick_place_cpp/mtc_node" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/bender_pick_place_cpp/mtc_node")
-    file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/bender_pick_place_cpp/mtc_node"
-         OLD_RPATH "/home/robotica-06/ws_moveit/install/moveit_task_constructor_core/lib:/home/robotica-06/ws_moveit/install/rviz_marker_tools/lib:/home/robotica-06/ws_moveit/install/moveit_task_constructor_msgs/lib:/home/robotica-06/ws_moveit/install/moveit_ros_planning_interface/lib:/home/robotica-06/ws_moveit/install/moveit_ros_move_group/lib:/opt/ros/jazzy/lib:/home/robotica-06/ws_moveit/install/moveit_ros_warehouse/lib:/home/robotica-06/ws_moveit/install/moveit_ros_planning/lib:/home/robotica-06/ws_moveit/install/moveit_ros_occupancy_map_monitor/lib:/home/robotica-06/ws_moveit/install/moveit_core/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/home/robotica-06/ws_moveit/install/moveit_msgs/lib:"
-         NEW_RPATH "")
-    if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/bender_pick_place_cpp/mtc_node")
-    endif()
-  endif()
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp/CMakeFiles/mtc_node.dir/install-cxx-module-bmi-noconfig.cmake" OPTIONAL)
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bender_pick_place_cpp" TYPE DIRECTORY FILES "/home/robotica-06/bender_manipulacion/src/bender_pick_place_cpp/launch")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
