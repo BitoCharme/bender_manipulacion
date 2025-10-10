@@ -12,10 +12,7 @@ def euler_to_quaternion(yaw, pitch, roll):
     qw = np.cos(roll/2) * np.cos(pitch/2) * np.cos(yaw/2) + np.sin(roll/2) * np.sin(pitch/2) * np.sin(yaw/2)
     return [qx, qy, qz, qw]
 
-input_values = input("Enter x, y, z, yaw, pitch, roll (in radians) separated by spaces: ")
-x, y, z, yaw, pitch, roll = map(float, input_values.split())
-
-def move_left_arm(x, y, z, yaw, pitch, roll):
+def move_arm(x, y, z, yaw, pitch, roll):
     rclpy.init()
     node = TargetPosePublisher()
     qx, qy, qz, qw = euler_to_quaternion(yaw, pitch, roll)
@@ -25,7 +22,7 @@ def move_left_arm(x, y, z, yaw, pitch, roll):
 def main():
     input_values = input("Enter x, y, z, yaw, pitch, roll (in radians) separated by spaces: ")
     x, y, z, yaw, pitch, roll = map(float, input_values.split())
-    move_left_arm(x, y, z, yaw, pitch, roll)
+    move_arm(x, y, z, yaw, pitch, roll)
 
 if __name__ == "__main__":
     main()

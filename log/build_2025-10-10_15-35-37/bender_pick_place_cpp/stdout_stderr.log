@@ -65,12 +65,12 @@
 -- Looking for IceConnectionNumber in ICE - found
 -- Setting yaml-cpp_DIR to: '/opt/ros/jazzy/share/yaml_cpp_vendor/cmake/../../../opt/yaml_cpp_vendor/share/cmake/yaml-cpp'
 -- Found moveit_task_constructor_core: 0.1.3 (/home/robotica-06/ws_moveit/install/moveit_task_constructor_core/share/moveit_task_constructor_core/cmake)
--- Configuring done (5.8s)
+-- Configuring done (8.6s)
 -- Generating done (0.1s)
 -- Build files have been written to: /home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp
 [ 33%] [32mBuilding CXX object CMakeFiles/pick_place_demo.dir/src/bender_pick_and_place.cpp.o[0m
-[ 33%] [32mBuilding CXX object CMakeFiles/add_table.dir/src/add_table.cpp.o[0m
-[ 50%] [32mBuilding CXX object CMakeFiles/mtc_node.dir/src/mtc_node.cpp.o[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/mtc_node.dir/src/mtc_node.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/add_table.dir/src/add_table.cpp.o[0m
 In file included from [01m[K/home/robotica-06/bender_manipulacion/src/bender_pick_place_cpp/src/add_table.cpp:2[m[K:
 [01m[K/home/robotica-06/ws_moveit/install/moveit_ros_planning_interface/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
    50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K

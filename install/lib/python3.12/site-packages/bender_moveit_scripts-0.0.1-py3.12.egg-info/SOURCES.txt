@@ -11,6 +11,7 @@ setup.py
 bender_moveit_scripts/__init__.py
 bender_moveit_scripts/move_groups_control.py
 bender_moveit_scripts/move_left_arm.py
+bender_moveit_scripts/move_right_arm.py
 bender_moveit_scripts/moveit_target_pose.py
 bender_moveit_scripts/publish_target_pose.py
 bender_moveit_scripts/skills.py

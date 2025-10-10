@@ -16,6 +16,7 @@ creating /home/robotica-06/bender_manipulacion/build/bender_moveit_scripts/build
 copying bender_moveit_scripts/publish_target_pose.py -> /home/robotica-06/bender_manipulacion/build/bender_moveit_scripts/build/lib/bender_moveit_scripts
 copying bender_moveit_scripts/move_left_arm.py -> /home/robotica-06/bender_manipulacion/build/bender_moveit_scripts/build/lib/bender_moveit_scripts
 copying bender_moveit_scripts/skills.py -> /home/robotica-06/bender_manipulacion/build/bender_moveit_scripts/build/lib/bender_moveit_scripts
+copying bender_moveit_scripts/move_right_arm.py -> /home/robotica-06/bender_manipulacion/build/bender_moveit_scripts/build/lib/bender_moveit_scripts
 copying bender_moveit_scripts/move_groups_control.py -> /home/robotica-06/bender_manipulacion/build/bender_moveit_scripts/build/lib/bender_moveit_scripts
 copying bender_moveit_scripts/moveit_target_pose.py -> /home/robotica-06/bender_manipulacion/build/bender_moveit_scripts/build/lib/bender_moveit_scripts
 copying bender_moveit_scripts/__init__.py -> /home/robotica-06/bender_manipulacion/build/bender_moveit_scripts/build/lib/bender_moveit_scripts
@@ -25,12 +26,14 @@ creating /home/robotica-06/bender_manipulacion/install/lib/python3.12/site-packa
 copying /home/robotica-06/bender_manipulacion/build/bender_moveit_scripts/build/lib/bender_moveit_scripts/publish_target_pose.py -> /home/robotica-06/bender_manipulacion/install/lib/python3.12/site-packages/bender_moveit_scripts
 copying /home/robotica-06/bender_manipulacion/build/bender_moveit_scripts/build/lib/bender_moveit_scripts/move_left_arm.py -> /home/robotica-06/bender_manipulacion/install/lib/python3.12/site-packages/bender_moveit_scripts
 copying /home/robotica-06/bender_manipulacion/build/bender_moveit_scripts/build/lib/bender_moveit_scripts/skills.py -> /home/robotica-06/bender_manipulacion/install/lib/python3.12/site-packages/bender_moveit_scripts
+copying /home/robotica-06/bender_manipulacion/build/bender_moveit_scripts/build/lib/bender_moveit_scripts/move_right_arm.py -> /home/robotica-06/bender_manipulacion/install/lib/python3.12/site-packages/bender_moveit_scripts
 copying /home/robotica-06/bender_manipulacion/build/bender_moveit_scripts/build/lib/bender_moveit_scripts/move_groups_control.py -> /home/robotica-06/bender_manipulacion/install/lib/python3.12/site-packages/bender_moveit_scripts
 copying /home/robotica-06/bender_manipulacion/build/bender_moveit_scripts/build/lib/bender_moveit_scripts/moveit_target_pose.py -> /home/robotica-06/bender_manipulacion/install/lib/python3.12/site-packages/bender_moveit_scripts
 copying /home/robotica-06/bender_manipulacion/build/bender_moveit_scripts/build/lib/bender_moveit_scripts/__init__.py -> /home/robotica-06/bender_manipulacion/install/lib/python3.12/site-packages/bender_moveit_scripts
 byte-compiling /home/robotica-06/bender_manipulacion/install/lib/python3.12/site-packages/bender_moveit_scripts/publish_target_pose.py to publish_target_pose.cpython-312.pyc
 byte-compiling /home/robotica-06/bender_manipulacion/install/lib/python3.12/site-packages/bender_moveit_scripts/move_left_arm.py to move_left_arm.cpython-312.pyc
 byte-compiling /home/robotica-06/bender_manipulacion/install/lib/python3.12/site-packages/bender_moveit_scripts/skills.py to skills.cpython-312.pyc
+byte-compiling /home/robotica-06/bender_manipulacion/install/lib/python3.12/site-packages/bender_moveit_scripts/move_right_arm.py to move_right_arm.cpython-312.pyc
 byte-compiling /home/robotica-06/bender_manipulacion/install/lib/python3.12/site-packages/bender_moveit_scripts/move_groups_control.py to move_groups_control.cpython-312.pyc
 byte-compiling /home/robotica-06/bender_manipulacion/install/lib/python3.12/site-packages/bender_moveit_scripts/moveit_target_pose.py to moveit_target_pose.cpython-312.pyc
 byte-compiling /home/robotica-06/bender_manipulacion/install/lib/python3.12/site-packages/bender_moveit_scripts/__init__.py to __init__.cpython-312.pyc
@@ -42,6 +45,7 @@ Copying ../../build/bender_moveit_scripts/bender_moveit_scripts.egg-info to /hom
 running install_scripts
 Installing move_groups_control script to /home/robotica-06/bender_manipulacion/install/lib/bender_moveit_scripts
 Installing move_left_arm script to /home/robotica-06/bender_manipulacion/install/lib/bender_moveit_scripts
+Installing move_right_arm script to /home/robotica-06/bender_manipulacion/install/lib/bender_moveit_scripts
 Installing moveit_target_pose script to /home/robotica-06/bender_manipulacion/install/lib/bender_moveit_scripts
 Installing publish_target_pose script to /home/robotica-06/bender_manipulacion/install/lib/bender_moveit_scripts
 Installing skills script to /home/robotica-06/bender_manipulacion/install/lib/bender_moveit_scripts

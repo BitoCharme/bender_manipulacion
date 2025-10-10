@@ -18,14 +18,8 @@
 -- Added test 'lint_cmake' to check CMake code style
 -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
 -- Added test 'xmllint' to check XML markup files
--- Configuring done (1.5s)
+-- Configuring done (1.7s)
 -- Generating done (0.0s)
-[33mCMake Warning:
-  Manually-specified variables were not used by the project:
-
-    CATKIN_INSTALL_INTO_PREFIX_ROOT
-
-[0m
 -- Build files have been written to: /home/robotica-06/bender_manipulacion/build/bender_description
 -- Install configuration: ""
 -- Installing: /home/robotica-06/bender_manipulacion/install/share/bender_description/launch
