@@ -21,6 +21,7 @@ setup(
     entry_points={
         "console_scripts": [
             "moveit_target_pose = bender_description.moveit_target_pose:main",
+            "moveit_execute_no_rviz = bender_description.moveit_execute_no_rviz:main",
         ],
     },
 )

@@ -7,6 +7,7 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
+find_package(ament_cmake_python REQUIRED)
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
@@ -14,6 +15,16 @@ find_package(ament_cmake REQUIRED)
 install(
   DIRECTORY launch urdf config rviz meshes worlds
   DESTINATION share/${PROJECT_NAME}
+)
+
+# Instalar el paquete Python y scripts ejecutables
+ament_python_install_package(${PROJECT_NAME})
+
+install(
+  PROGRAMS
+    ${PROJECT_NAME}/moveit_execute_no_rviz.py
+    ${PROJECT_NAME}/moveit_target_pose.py
+  DESTINATION lib/${PROJECT_NAME}
 )
 
 if(BUILD_TESTING)

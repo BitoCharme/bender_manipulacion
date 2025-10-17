@@ -1,5 +1,7 @@
 /home/robotica-06/bender_manipulacion/build/bender_description/CMakeFiles/uninstall.dir
 /home/robotica-06/bender_manipulacion/build/bender_description/CMakeFiles/bender_description_uninstall.dir
+/home/robotica-06/bender_manipulacion/build/bender_description/CMakeFiles/ament_cmake_python_copy_bender_description.dir
+/home/robotica-06/bender_manipulacion/build/bender_description/CMakeFiles/ament_cmake_python_build_bender_description_egg.dir
 /home/robotica-06/bender_manipulacion/build/bender_description/CMakeFiles/test.dir
 /home/robotica-06/bender_manipulacion/build/bender_description/CMakeFiles/edit_cache.dir
 /home/robotica-06/bender_manipulacion/build/bender_description/CMakeFiles/rebuild_cache.dir
