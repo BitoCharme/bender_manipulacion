@@ -24,6 +24,8 @@ class GripperActionCommander(Node):
 
         goal = GripperCommand.Goal()
         goal.command.max_effort = 10.0
+
+        # Si le mandas "open" abre el gripper, si le mandas cualquier otra cosa lo cierra
         goal.command.position = 0.8 if action == "open" else 0.0
 
         self.get_logger().info(f"👉 Enviando '{action}' al {side} gripper...")
@@ -52,7 +54,7 @@ def main(args=None):
         side = sys.argv[2].lower()
         node.send_goal(side, action)
     else:
-        node.get_logger().info("Uso: ros2 run my_utils gripper_action_commander open left")
+        node.get_logger().info("Uso: ros2 run bender_moveit_scripts move_grippers open left")
 
     node.destroy_node()
     rclpy.shutdown()

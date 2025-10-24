@@ -49,7 +49,7 @@ class MoveLeftArm(Node):
 
         self.last_pose = None
 
-        self.get_logger().info("Nodo listo, publica geometry_msgs/Pose en /target_pose")
+        self.get_logger().info("Nodo listo, publica geometry_msgs/PoseStamped en /target_pose_left")
 
     def publish_marker(self, pose: Pose, marker_id: int, color=(0.0, 1.0, 0.0)):
         marker = Marker()

@@ -1110,4 +1110,9 @@ CMakeFiles/add_table.dir/src/add_table.cpp.o: \
  /home/robotica-06/ws_moveit/install/moveit_msgs/include/moveit_msgs/moveit_msgs/msg/detail/planning_scene_world__traits.hpp \
  /opt/ros/jazzy/include/octomap_msgs/octomap_msgs/msg/detail/octomap_with_pose__traits.hpp \
  /opt/ros/jazzy/include/octomap_msgs/octomap_msgs/msg/detail/octomap__traits.hpp \
- /home/robotica-06/ws_moveit/install/moveit_msgs/include/moveit_msgs/moveit_msgs/msg/detail/planning_scene__type_support.hpp
+ /home/robotica-06/ws_moveit/install/moveit_msgs/include/moveit_msgs/moveit_msgs/msg/detail/planning_scene__type_support.hpp \
+ /home/robotica-06/ws_moveit/install/moveit_msgs/include/moveit_msgs/moveit_msgs/srv/apply_planning_scene.hpp \
+ /home/robotica-06/ws_moveit/install/moveit_msgs/include/moveit_msgs/moveit_msgs/srv/detail/apply_planning_scene__struct.hpp \
+ /home/robotica-06/ws_moveit/install/moveit_msgs/include/moveit_msgs/moveit_msgs/srv/detail/apply_planning_scene__builder.hpp \
+ /home/robotica-06/ws_moveit/install/moveit_msgs/include/moveit_msgs/moveit_msgs/srv/detail/apply_planning_scene__traits.hpp \
+ /home/robotica-06/ws_moveit/install/moveit_msgs/include/moveit_msgs/moveit_msgs/srv/detail/apply_planning_scene__type_support.hpp

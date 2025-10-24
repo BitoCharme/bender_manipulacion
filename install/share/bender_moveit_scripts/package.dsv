@@ -1,6 +1,3 @@
-source;share/bender_moveit_scripts/hook/cmake_prefix_path.ps1
-source;share/bender_moveit_scripts/hook/cmake_prefix_path.dsv
-source;share/bender_moveit_scripts/hook/cmake_prefix_path.sh
 source;share/bender_moveit_scripts/hook/pythonpath.ps1
 source;share/bender_moveit_scripts/hook/pythonpath.dsv
 source;share/bender_moveit_scripts/hook/pythonpath.sh

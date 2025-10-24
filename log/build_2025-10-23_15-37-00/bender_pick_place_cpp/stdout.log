@@ -64,14 +64,10 @@
 -- Looking for IceConnectionNumber in ICE
 -- Looking for IceConnectionNumber in ICE - found
 -- Setting yaml-cpp_DIR to: '/opt/ros/jazzy/share/yaml_cpp_vendor/cmake/../../../opt/yaml_cpp_vendor/share/cmake/yaml-cpp'
--- Configuring done (7.3s)
--- Generating done (0.0s)
+-- Configuring done (12.3s)
+-- Generating done (0.1s)
 -- Build files have been written to: /home/robotica-06/bender_manipulacion/build/bender_pick_place_cpp
 [ 50%] [32mBuilding CXX object CMakeFiles/add_table.dir/src/add_table.cpp.o[0m
-In file included from [01m[K/home/robotica-06/bender_manipulacion/src/bender_pick_place_cpp/src/add_table.cpp:2[m[K:
-[01m[K/home/robotica-06/ws_moveit/install/moveit_ros_planning_interface/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
-   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
-      |                                                                             [01;36m[K^[m[K
 [100%] [32m[1mLinking CXX executable add_table[0m
 [100%] Built target add_table
 -- Install configuration: ""
