@@ -20,15 +20,12 @@ setup(
     tests_require=["pytest"],
     entry_points={
         "console_scripts": [
-            "moveit_target_pose = bender_moveit_scripts.moveit_target_pose:main",
-            "move_left_arm = bender_moveit_scripts.move_left_arm:main",
-            "move_right_arm = bender_moveit_scripts.move_right_arm:main",
-            "move_groups_control = bender_moveit_scripts.move_groups_control:main",
-            "publish_target_pose = bender_moveit_scripts.publish_target_pose:main",
-            "skills = bender_moveit_scripts.skills:main",
-            "pick_and_place = bender_moveit_scripts.pick_and_place:main",
-            "move_head = bender_moveit_scripts.move_head:main",
-            "move_grippers = bender_moveit_scripts.move_grippers:main",
+        "bender_update_octomap = bender_moveit_scripts.bender_update_octomap:main",
+        "moveit_target_pose = bender_moveit_scripts.moveit_target_pose:main",
+	    "move_left_arm = bender_moveit_scripts.move_left_arm:main",
+        "move_right_arm = bender_moveit_scripts.move_right_arm:main",
+        "move_head = bender_moveit_scripts.move_head:main",
+        "gripper_action_commander = bender_moveit_scripts.move_grippers:main",
         ],
     },
 )

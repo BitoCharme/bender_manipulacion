@@ -133,6 +133,31 @@
       <state_interface name="effort"/>
     </joint>
 
+    <!-- RUEDAS BASE -->
+    <joint name="wrl_to_base_link">
+      <command_interface name="velocity"/>
+      <state_interface name="velocity"/>
+      <state_interface name="position"/>
+    </joint>
+
+    <joint name="wrr_to_base_link">
+      <command_interface name="velocity"/>
+      <state_interface name="velocity"/>
+      <state_interface name="position"/>
+    </joint>
+
+    <joint name="wfl_to_base_link">
+      <command_interface name="velocity"/>
+      <state_interface name="velocity"/>
+      <state_interface name="position"/>
+    </joint>
+
+    <joint name="wfr_to_base_link">
+      <command_interface name="velocity"/>
+      <state_interface name="velocity"/>
+      <state_interface name="position"/>
+    </joint>
+
   </ros2_control>
   
   <gazebo> 

@@ -1,0 +1,62 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+import rclpy
+from rclpy.action import ActionServer
+from rclpy.node import Node
+from std_msgs.msg import Float64MultiArray
+from control_msgs.action import FollowJointTrajectory
+from trajectory_msgs.msg import JointTrajectoryPoint
+import time
+
+
+class DynamixelTrajectoryBridge(Node):
+    def __init__(self):
+        super().__init__('dynamixel_trajectory_bridge')
+
+        # Publicador al mismo tópico que usa tu nodo real
+        self.goal_pub = self.create_publisher(Float64MultiArray, 'goal_pos', 10)
+
+        # Action server que MoveIt usará
+        self._action_server = ActionServer(
+            self,
+            FollowJointTrajectory,
+            '/left_arm_controller/follow_joint_trajectory',
+            execute_callback=self.execute_callback
+        )
+
+        self.get_logger().info("DynamixelTrajectoryBridge listo: escuchando FollowJointTrajectory")
+
+    async def execute_callback(self, goal_handle):
+        traj = goal_handle.request.trajectory
+        n_points = len(traj.points)
+        self.get_logger().info(f"Recibida trayectoria con {n_points} puntos")
+
+        for i, point in enumerate(traj.points):
+            msg = Float64MultiArray()
+            # Si el hombro es controlado aparte, agrega un 0 o su valor actual como primer elemento
+            hombro_dummy = 0.0
+            msg.data = [hombro_dummy] + list(point.positions[:7])  # primeros 7 Dynamixels
+            self.goal_pub.publish(msg)
+
+            # Esperar hasta el próximo punto
+            dt = point.time_from_start.sec + point.time_from_start.nanosec * 1e-9
+            if i < n_points - 1:
+                next_dt = traj.points[i+1].time_from_start.sec + traj.points[i+1].time_from_start.nanosec * 1e-9
+                sleep_time = max(0.0, next_dt - dt)
+                time.sleep(sleep_time)
+
+        goal_handle.succeed()
+        self.get_logger().info("Trayectoria completada")
+        return FollowJointTrajectory.Result()
+
+
+def main(args=None):
+    rclpy.init(args=args)
+    node = DynamixelTrajectoryBridge()
+    rclpy.spin(node)
+    node.destroy_node()
+    rclpy.shutdown()
+
+
+if __name__ == '__main__':
+    main()
