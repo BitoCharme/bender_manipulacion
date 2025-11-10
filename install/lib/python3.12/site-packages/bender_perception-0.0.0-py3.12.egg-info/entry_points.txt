@@ -1,0 +1,8 @@
+[console_scripts]
+camera_node = bender_perception.camera_node:main
+grasping_node = bender_perception.grasping_node:main
+head_tracker = bender_perception.head_tracker:main
+mecanum_pid = bender_perception.mecanum_pid:main
+workspace_left = bender_perception.workspace_left:main
+workspace_right = bender_perception.workspace_right:main
+yolo_node = bender_perception.yolo_node:main

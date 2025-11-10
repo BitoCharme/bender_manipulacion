@@ -1,6 +1,6 @@
 [console_scripts]
-move_grippers = bender_moveit_scripts.move_grippers:main
-move_groups_control = bender_moveit_scripts.move_groups_control:main
+bender_update_octomap = bender_moveit_scripts.bender_update_octomap:main
+gripper_action_commander = bender_moveit_scripts.move_grippers:main
 move_head = bender_moveit_scripts.move_head:main
 move_left_arm = bender_moveit_scripts.move_left_arm:main
 move_right_arm = bender_moveit_scripts.move_right_arm:main

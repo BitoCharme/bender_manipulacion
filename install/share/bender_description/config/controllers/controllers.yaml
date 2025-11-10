@@ -19,6 +19,9 @@ controller_manager:
 
     right_gripper_controller:
       type: position_controllers/GripperActionController
+    
+    mecanum_base_controller:
+      type: "mecanum_drive_controller/MecanumDriveController"
 
 joint_state_broadcaster:
   ros__parameters:
@@ -88,3 +91,21 @@ right_gripper_controller:
   ros__parameters:
     type: position_controllers/GripperActionController
     joint: g2ra_to_g1r
+
+mecanum_base_controller:
+  ros__parameters:
+    reference_timeout: 0.9
+    front_left_wheel_command_joint_name: "wfl_to_base_link"
+    front_right_wheel_command_joint_name: "wfr_to_base_link"
+    rear_right_wheel_command_joint_name: "wrl_to_base_link"
+    rear_left_wheel_command_joint_name: "wrr_to_base_link"
+    kinematics:
+      base_frame_offset: { x: 0.0, y: 0.0, theta: 0.0 }
+      wheels_radius: 0.1
+      sum_of_robot_center_projection_on_X_Y_axis: 1.0
+    base_frame_id: "base_link"
+    odom_frame_id: "odom"
+    enable_odom_tf: true
+    twist_covariance_diagonal: [0.0, 7.0, 14.0, 21.0, 28.0, 35.0]
+    pose_covariance_diagonal: [0.0, 6.0, 12.0, 18.0, 24.0, 30.0]
+  

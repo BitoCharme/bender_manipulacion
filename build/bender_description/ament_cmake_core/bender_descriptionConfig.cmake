@@ -16,7 +16,7 @@ set(_bender_description_CONFIG_INCLUDED TRUE)
 
 # output package information
 if(NOT bender_description_FIND_QUIETLY)
-  message(STATUS "Found bender_description: 0.0.1 (${bender_description_DIR})")
+  message(STATUS "Found bender_description: 0.0.0 (${bender_description_DIR})")
 endif()
 
 # warn when using a deprecated package

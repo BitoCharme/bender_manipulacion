@@ -127,9 +127,9 @@ class MoveRightArm(Node):
         orient.orientation = msg.pose.orientation
         orient.weight = 1.0
         # PON tolerancias razonables si quieres fijar la orientación:
-        orient.absolute_x_axis_tolerance = 0.04
-        orient.absolute_y_axis_tolerance = 0.04
-        orient.absolute_z_axis_tolerance = 0.2
+        orient.absolute_x_axis_tolerance = 0.1
+        orient.absolute_y_axis_tolerance = 0.1
+        orient.absolute_z_axis_tolerance = 0.5
 
         constraints.orientation_constraints.append(orient)
 

@@ -1,0 +1,56 @@
+[0.096s] Invoking command in '/home/robotica-06/bender_ws/bender_manipulacion/build/bender_manipulation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robotica-06/ws_moveit/install/moveit_configs_utils:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/robotica-06/bender_ws/bender_manipulacion/src/bender_manipulation -DCMAKE_INSTALL_PREFIX=/home/robotica-06/bender_ws/bender_manipulacion/install
+[0.975s] -- The C compiler identification is GNU 13.3.0
+[0.975s] -- The CXX compiler identification is GNU 13.3.0
+[0.975s] -- Detecting C compiler ABI info
+[0.976s] -- Detecting C compiler ABI info - done
+[0.976s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.977s] -- Detecting C compile features
+[0.977s] -- Detecting C compile features - done
+[0.977s] -- Detecting CXX compiler ABI info
+[0.978s] -- Detecting CXX compiler ABI info - done
+[0.978s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.978s] -- Detecting CXX compile features
+[0.979s] -- Detecting CXX compile features - done
+[0.980s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.980s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.343s] -- Found ament_lint_auto: 0.17.3 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[1.678s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.678s] -- Configured 'flake8' exclude dirs and/or files: 
+[1.681s] -- Added test 'lint_cmake' to check CMake code style
+[1.688s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.688s] -- Added test 'xmllint' to check XML markup files
+[1.696s] -- Configuring done (1.6s)
+[1.702s] -- Generating done (0.0s)
+[1.707s] -- Build files have been written to: /home/robotica-06/bender_ws/bender_manipulacion/build/bender_manipulation
+[1.716s] Invoked command in '/home/robotica-06/bender_ws/bender_manipulacion/build/bender_manipulation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robotica-06/ws_moveit/install/moveit_configs_utils:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/robotica-06/bender_ws/bender_manipulacion/src/bender_manipulation -DCMAKE_INSTALL_PREFIX=/home/robotica-06/bender_ws/bender_manipulacion/install
+[1.718s] Invoking command in '/home/robotica-06/bender_ws/bender_manipulacion/build/bender_manipulation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robotica-06/ws_moveit/install/moveit_configs_utils:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/robotica-06/bender_ws/bender_manipulacion/build/bender_manipulation -- -j8 -l8
+[1.830s] Invoked command in '/home/robotica-06/bender_ws/bender_manipulacion/build/bender_manipulation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robotica-06/ws_moveit/install/moveit_configs_utils:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/robotica-06/bender_ws/bender_manipulacion/build/bender_manipulation -- -j8 -l8
+[1.831s] Invoking command in '/home/robotica-06/bender_ws/bender_manipulacion/build/bender_manipulation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robotica-06/ws_moveit/install/moveit_configs_utils:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/robotica-06/bender_ws/bender_manipulacion/build/bender_manipulation
+[1.860s] -- Install configuration: ""
+[1.861s] -- Installing: /home/robotica-06/bender_ws/bender_manipulacion/install/share/bender_manipulation/launch
+[1.862s] -- Installing: /home/robotica-06/bender_ws/bender_manipulacion/install/share/bender_manipulation/launch/test.launch.py
+[1.862s] -- Installing: /home/robotica-06/bender_ws/bender_manipulacion/install/share/bender_manipulation/launch/dynamixel_bridge.launch.py
+[1.863s] -- Installing: /home/robotica-06/bender_ws/bender_manipulacion/install/share/bender_manipulation/config
+[1.863s] -- Installing: /home/robotica-06/bender_ws/bender_manipulacion/install/share/bender_manipulation/config/moveit_controllers.yaml
+[1.863s] -- Installing: /home/robotica-06/bender_ws/bender_manipulacion/install/share/bender_manipulation/config/params.yaml
+[1.864s] -- Installing: /home/robotica-06/bender_ws/bender_manipulacion/install/lib/bender_manipulation/dynamixel_node.py
+[1.866s] -- Installing: /home/robotica-06/bender_ws/bender_manipulacion/install/lib/bender_manipulation/dynamixel_vel_node.py
+[1.870s] -- Installing: /home/robotica-06/bender_ws/bender_manipulacion/install/lib/bender_manipulation/serial_encoder_node.py
+[1.870s] -- Installing: /home/robotica-06/bender_ws/bender_manipulacion/install/lib/bender_manipulation/oddrive.py
+[1.871s] -- Installing: /home/robotica-06/bender_ws/bender_manipulacion/install/lib/bender_manipulation/test.py
+[1.873s] -- Installing: /home/robotica-06/bender_ws/bender_manipulacion/install/share/ament_index/resource_index/package_run_dependencies/bender_manipulation
+[1.875s] -- Installing: /home/robotica-06/bender_ws/bender_manipulacion/install/share/ament_index/resource_index/parent_prefix_path/bender_manipulation
+[1.875s] -- Installing: /home/robotica-06/bender_ws/bender_manipulacion/install/share/bender_manipulation/environment/ament_prefix_path.sh
+[1.875s] -- Installing: /home/robotica-06/bender_ws/bender_manipulacion/install/share/bender_manipulation/environment/ament_prefix_path.dsv
+[1.875s] -- Installing: /home/robotica-06/bender_ws/bender_manipulacion/install/share/bender_manipulation/environment/path.sh
+[1.875s] -- Installing: /home/robotica-06/bender_ws/bender_manipulacion/install/share/bender_manipulation/environment/path.dsv
+[1.876s] -- Installing: /home/robotica-06/bender_ws/bender_manipulacion/install/share/bender_manipulation/local_setup.bash
+[1.876s] -- Installing: /home/robotica-06/bender_ws/bender_manipulacion/install/share/bender_manipulation/local_setup.sh
+[1.877s] -- Installing: /home/robotica-06/bender_ws/bender_manipulacion/install/share/bender_manipulation/local_setup.zsh
+[1.877s] -- Installing: /home/robotica-06/bender_ws/bender_manipulacion/install/share/bender_manipulation/local_setup.dsv
+[1.877s] -- Installing: /home/robotica-06/bender_ws/bender_manipulacion/install/share/bender_manipulation/package.dsv
+[1.877s] -- Installing: /home/robotica-06/bender_ws/bender_manipulacion/install/share/ament_index/resource_index/packages/bender_manipulation
+[1.878s] -- Installing: /home/robotica-06/bender_ws/bender_manipulacion/install/share/bender_manipulation/cmake/bender_manipulationConfig.cmake
+[1.878s] -- Installing: /home/robotica-06/bender_ws/bender_manipulacion/install/share/bender_manipulation/cmake/bender_manipulationConfig-version.cmake
+[1.879s] -- Installing: /home/robotica-06/bender_ws/bender_manipulacion/install/share/bender_manipulation/package.xml
+[1.883s] Invoked command in '/home/robotica-06/bender_ws/bender_manipulacion/build/bender_manipulation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robotica-06/ws_moveit/install/moveit_configs_utils:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/robotica-06/bender_ws/bender_manipulacion/build/bender_manipulation

@@ -142,7 +142,7 @@
         <visualize>true</visualize>
         <update_rate>30</update_rate>
         <topic>${camera_name}</topic>
-        <gz_frame_id>${camera_name}</gz_frame_id>
+        <gz_frame_id>${camera_name}_link</gz_frame_id>
         <camera>
           <camera_info_topic>camera_info</camera_info_topic>
           <horizontal_fov>${horizontal_fov}</horizontal_fov>

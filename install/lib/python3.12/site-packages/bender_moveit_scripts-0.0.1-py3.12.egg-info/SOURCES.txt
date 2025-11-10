@@ -9,6 +9,7 @@ setup.py
 ../../build/bender_moveit_scripts/bender_moveit_scripts.egg-info/top_level.txt
 ../../build/bender_moveit_scripts/bender_moveit_scripts.egg-info/zip-safe
 bender_moveit_scripts/__init__.py
+bender_moveit_scripts/bender_update_octomap.py
 bender_moveit_scripts/move_grippers.py
 bender_moveit_scripts/move_groups_control.py
 bender_moveit_scripts/move_head.py

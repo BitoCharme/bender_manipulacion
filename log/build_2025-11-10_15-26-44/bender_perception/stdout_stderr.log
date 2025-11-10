@@ -1,0 +1,53 @@
+running egg_info
+creating ../../build/bender_perception/bender_perception.egg-info
+writing ../../build/bender_perception/bender_perception.egg-info/PKG-INFO
+writing dependency_links to ../../build/bender_perception/bender_perception.egg-info/dependency_links.txt
+writing entry points to ../../build/bender_perception/bender_perception.egg-info/entry_points.txt
+writing requirements to ../../build/bender_perception/bender_perception.egg-info/requires.txt
+writing top-level names to ../../build/bender_perception/bender_perception.egg-info/top_level.txt
+writing manifest file '../../build/bender_perception/bender_perception.egg-info/SOURCES.txt'
+reading manifest file '../../build/bender_perception/bender_perception.egg-info/SOURCES.txt'
+writing manifest file '../../build/bender_perception/bender_perception.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/robotica-06/bender_ws/bender_manipulacion/build/bender_perception/build
+creating /home/robotica-06/bender_ws/bender_manipulacion/build/bender_perception/build/lib
+creating /home/robotica-06/bender_ws/bender_manipulacion/build/bender_perception/build/lib/bender_perception
+copying bender_perception/mecanum_pid.py -> /home/robotica-06/bender_ws/bender_manipulacion/build/bender_perception/build/lib/bender_perception
+copying bender_perception/workspace_right.py -> /home/robotica-06/bender_ws/bender_manipulacion/build/bender_perception/build/lib/bender_perception
+copying bender_perception/camera_node.py -> /home/robotica-06/bender_ws/bender_manipulacion/build/bender_perception/build/lib/bender_perception
+copying bender_perception/workspace_left.py -> /home/robotica-06/bender_ws/bender_manipulacion/build/bender_perception/build/lib/bender_perception
+copying bender_perception/yolo_node.py -> /home/robotica-06/bender_ws/bender_manipulacion/build/bender_perception/build/lib/bender_perception
+copying bender_perception/__init__.py -> /home/robotica-06/bender_ws/bender_manipulacion/build/bender_perception/build/lib/bender_perception
+copying bender_perception/head_tracker.py -> /home/robotica-06/bender_ws/bender_manipulacion/build/bender_perception/build/lib/bender_perception
+running install
+running install_lib
+creating /home/robotica-06/bender_ws/bender_manipulacion/install/lib/python3.12/site-packages/bender_perception
+copying /home/robotica-06/bender_ws/bender_manipulacion/build/bender_perception/build/lib/bender_perception/mecanum_pid.py -> /home/robotica-06/bender_ws/bender_manipulacion/install/lib/python3.12/site-packages/bender_perception
+copying /home/robotica-06/bender_ws/bender_manipulacion/build/bender_perception/build/lib/bender_perception/workspace_right.py -> /home/robotica-06/bender_ws/bender_manipulacion/install/lib/python3.12/site-packages/bender_perception
+copying /home/robotica-06/bender_ws/bender_manipulacion/build/bender_perception/build/lib/bender_perception/camera_node.py -> /home/robotica-06/bender_ws/bender_manipulacion/install/lib/python3.12/site-packages/bender_perception
+copying /home/robotica-06/bender_ws/bender_manipulacion/build/bender_perception/build/lib/bender_perception/workspace_left.py -> /home/robotica-06/bender_ws/bender_manipulacion/install/lib/python3.12/site-packages/bender_perception
+copying /home/robotica-06/bender_ws/bender_manipulacion/build/bender_perception/build/lib/bender_perception/yolo_node.py -> /home/robotica-06/bender_ws/bender_manipulacion/install/lib/python3.12/site-packages/bender_perception
+copying /home/robotica-06/bender_ws/bender_manipulacion/build/bender_perception/build/lib/bender_perception/__init__.py -> /home/robotica-06/bender_ws/bender_manipulacion/install/lib/python3.12/site-packages/bender_perception
+copying /home/robotica-06/bender_ws/bender_manipulacion/build/bender_perception/build/lib/bender_perception/head_tracker.py -> /home/robotica-06/bender_ws/bender_manipulacion/install/lib/python3.12/site-packages/bender_perception
+byte-compiling /home/robotica-06/bender_ws/bender_manipulacion/install/lib/python3.12/site-packages/bender_perception/mecanum_pid.py to mecanum_pid.cpython-312.pyc
+byte-compiling /home/robotica-06/bender_ws/bender_manipulacion/install/lib/python3.12/site-packages/bender_perception/workspace_right.py to workspace_right.cpython-312.pyc
+byte-compiling /home/robotica-06/bender_ws/bender_manipulacion/install/lib/python3.12/site-packages/bender_perception/camera_node.py to camera_node.cpython-312.pyc
+byte-compiling /home/robotica-06/bender_ws/bender_manipulacion/install/lib/python3.12/site-packages/bender_perception/workspace_left.py to workspace_left.cpython-312.pyc
+byte-compiling /home/robotica-06/bender_ws/bender_manipulacion/install/lib/python3.12/site-packages/bender_perception/yolo_node.py to yolo_node.cpython-312.pyc
+byte-compiling /home/robotica-06/bender_ws/bender_manipulacion/install/lib/python3.12/site-packages/bender_perception/__init__.py to __init__.cpython-312.pyc
+byte-compiling /home/robotica-06/bender_ws/bender_manipulacion/install/lib/python3.12/site-packages/bender_perception/head_tracker.py to head_tracker.cpython-312.pyc
+running install_data
+copying resource/bender_perception -> /home/robotica-06/bender_ws/bender_manipulacion/install/share/ament_index/resource_index/packages
+copying package.xml -> /home/robotica-06/bender_ws/bender_manipulacion/install/share/bender_perception
+running install_egg_info
+Copying ../../build/bender_perception/bender_perception.egg-info to /home/robotica-06/bender_ws/bender_manipulacion/install/lib/python3.12/site-packages/bender_perception-0.0.0-py3.12.egg-info
+running install_scripts
+Installing camera_node script to /home/robotica-06/bender_ws/bender_manipulacion/install/lib/bender_perception
+Installing grasping_node script to /home/robotica-06/bender_ws/bender_manipulacion/install/lib/bender_perception
+Installing head_tracker script to /home/robotica-06/bender_ws/bender_manipulacion/install/lib/bender_perception
+Installing mecanum_pid script to /home/robotica-06/bender_ws/bender_manipulacion/install/lib/bender_perception
+Installing workspace_left script to /home/robotica-06/bender_ws/bender_manipulacion/install/lib/bender_perception
+Installing workspace_right script to /home/robotica-06/bender_ws/bender_manipulacion/install/lib/bender_perception
+Installing yolo_node script to /home/robotica-06/bender_ws/bender_manipulacion/install/lib/bender_perception
+writing list of installed files to '/home/robotica-06/bender_ws/bender_manipulacion/build/bender_perception/install.log'

@@ -54,9 +54,7 @@ class MoveItTargetPose(Node):
 def main():
     rclpy.init()
     node = MoveItTargetPose()
-    print("Llegamos hasta 1")
     rclpy.spin(node)
-    print("Llegamos hasta 2")
     rclpy.shutdown()
 
 

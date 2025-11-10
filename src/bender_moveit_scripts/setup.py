@@ -26,6 +26,9 @@ setup(
         "move_right_arm = bender_moveit_scripts.move_right_arm:main",
         "move_head = bender_moveit_scripts.move_head:main",
         "gripper_action_commander = bender_moveit_scripts.move_grippers:main",
+        "publish_target_pose = bender_moveit_scripts.publish_target_pose:main",
+        "skills = bender_moveit_scripts.skills:main",
+        "pick_and_place = bender_moveit_scripts.pick_and_place:main",
         ],
     },
 )
