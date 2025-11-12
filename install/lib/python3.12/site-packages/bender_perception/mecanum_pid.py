@@ -205,6 +205,36 @@ class VisualPickPID(Node):
     # ------------------------------
     def _approach_behavior(self):
         p = self.object_point
+        if p is None:
+            return
+        # Safety fallback: if object is already within grasp distance (and in
+        # front of the robot), stop and proceed to the controlled grasp
+        # (fallback to trigger sensor). Ignore negative p.x (behind robot).
+        grasp_dist = self.get_parameter("grasp_dist").value + 0.25
+        try:
+            px_val = float(p.x)
+            py_val = float(p.y)
+            pz_val = float(p.z)
+        except Exception:
+            px_val = p.x
+            py_val = p.y
+            pz_val = p.z
+
+        # Log coordinates for debugging (helpful to diagnose wrong TFs/frames)
+        self.get_logger().debug(f"object_point (x,y,z) = {px_val:.3f},{py_val:.3f},{pz_val:.3f}")
+        print(f"px_val: {px_val}, grasp_dist: {grasp_dist}")
+
+        # Only trigger fallback if object is in front (positive x) and within grasp distance
+        # NOTE: do NOT close the gripper here. Instead stop the base and start the
+        # arm movement to the grasp pose (moving_to_grasp) so the arm moves first
+        # and only after the arm reaches the pose we close the gripper.
+        if px_val > 0.0 and px_val <= grasp_dist:
+            self.publish_stop()
+            self.get_logger().info("✋ Distancia de grasp alcanzada — deteniendo base y moviendo brazo al grasp")
+            # transition immediately to moving_to_grasp (this will call execute_grasp
+            # and schedule the pre_close_move_time before closing the gripper).
+            self._transition_to_grasp()
+            return
         target_y = self.get_parameter("target_y_left").value if self.closest_arm == "left" else self.get_parameter("target_y_right").value
         close_dist = self.get_parameter("close_dist").value
         kp_x = self.get_parameter("kp_x").value
