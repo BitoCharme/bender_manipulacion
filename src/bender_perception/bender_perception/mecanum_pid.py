@@ -13,7 +13,8 @@ from moveit_msgs.msg import (
 )
 from moveit_msgs.srv import ApplyPlanningScene
 import math
-
+import tf2_ros
+import time
 
 def clamp(x, lo, hi):
     return max(lo, min(hi, x))
@@ -47,7 +48,7 @@ class VisualPickPID(Node):
         # Timings
         self.declare_parameter("grasp_settle_time",   0.8)
         self.declare_parameter("pre_close_move_time", 0.6)
-        self.declare_parameter("lift_duration",       1.0)
+        self.declare_parameter("lift_duration",       2.0)
 
         # === MoveIt Planning Scene ===
         self.declare_parameter("obj_size_x", 0.06)
@@ -89,6 +90,10 @@ class VisualPickPID(Node):
         if not self.scene_client.wait_for_service(timeout_sec=2.0):
             self.get_logger().warn("⚠️ Servicio /apply_planning_scene no disponible aún.")
 
+        # TF2 listener to read end-effector poses
+        self.tf_buffer = tf2_ros.Buffer()
+        self.tf_listener = tf2_ros.TransformListener(self.tf_buffer, self)
+
         self.timer = self.create_timer(0.05, self.control_loop)
         self.get_logger().info("🤖 VisualPickPID con offset de colisión y orden de grasp FIX ✅")
 
@@ -106,7 +111,18 @@ class VisualPickPID(Node):
         if self.state == "idle":
             self.closest_arm = "left" if msg.point.y > 0 else "right"
             self.state = "opening_gripper"
-            self.get_logger().info(f"🎯 Objeto detectado — abriendo gripper {self.closest_arm}")
+            # Añadir el objeto a la PlanningScene inmediatamente (evita race conditions)
+            try:
+                self._scene_add_or_update_world_object(self.object_point)
+            except Exception as e:
+                self.get_logger().warn(f"⚠️ Error añadiendo objeto a PlanningScene: {e}")
+
+            # Log object position and current end-effector pose (if available)
+            ee_pose = self._get_end_effector_pose(self.closest_arm)
+            if ee_pose is not None:
+                self.get_logger().info(f"🎯 Objeto detectado — punto: ({msg.point.x:.3f},{msg.point.y:.3f},{msg.point.z:.3f}) | ee: ({ee_pose.pose.position.x:.3f},{ee_pose.pose.position.y:.3f},{ee_pose.pose.position.z:.3f}) — abriendo gripper {self.closest_arm}")
+            else:
+                self.get_logger().info(f"🎯 Objeto detectado — punto: ({msg.point.x:.3f},{msg.point.y:.3f},{msg.point.z:.3f}) — abriendo gripper {self.closest_arm}")
             self.send_gripper(self.closest_arm, "open", next_state="approaching")
 
     def trigger_cb(self, msg):
@@ -138,6 +154,29 @@ class VisualPickPID(Node):
 
         self.pending_timer = self.create_timer(float(duration), _wrapper)
 
+    def _get_end_effector_pose(self, side):
+        """Try to get the current PoseStamped of the gripper link via TF2.
+
+        Returns PoseStamped or None if not available.
+        """
+        try:
+            link = self.get_parameter(f"gripper_link_{side}").value
+            world_frame = self.get_parameter("world_frame").value
+            # lookup transform from world_frame -> link
+            trans = self.tf_buffer.lookup_transform(world_frame, link, rclpy.time.Time())
+            ps = PoseStamped()
+            ps.header.stamp = trans.header.stamp
+            ps.header.frame_id = world_frame
+            ps.pose.position.x = trans.transform.translation.x
+            ps.pose.position.y = trans.transform.translation.y
+            ps.pose.position.z = trans.transform.translation.z
+            ps.pose.orientation = trans.transform.rotation
+            return ps
+        except Exception as e:
+            # Could be LookupException, ExtrapolationException, ConnectivityException
+            self.get_logger().debug(f"TF lookup failed for ee '{side}': {e}")
+            return None
+
     # ------------------------------
     def _transition_to_grasp(self):
         if self.object_point is None:
@@ -167,6 +206,11 @@ class VisualPickPID(Node):
             # si ya estamos en attaching por el RESULT, igual hacemos attach
             self.state = "attaching"
         self._scene_attach_object(self.closest_arm)
+        # dar un pequeño tiempo para que MoveIt procese el attach y actualice la PlanningScene
+        try:
+            time.sleep(0.25)
+        except Exception:
+            pass
         self._start_lift()
 
     def _start_lift(self):
@@ -205,68 +249,59 @@ class VisualPickPID(Node):
     # ------------------------------
     def _approach_behavior(self):
         p = self.object_point
-        if p is None:
-            return
-        # Safety fallback: if object is already within grasp distance (and in
-        # front of the robot), stop and proceed to the controlled grasp
-        # (fallback to trigger sensor). Ignore negative p.x (behind robot).
-        grasp_dist = self.get_parameter("grasp_dist").value + 0.3
-        try:
-            px_val = float(p.x)
-            py_val = float(p.y)
-            pz_val = float(p.z)
-        except Exception:
-            px_val = p.x
-            py_val = p.y
-            pz_val = p.z
-
-        # Log coordinates for debugging (helpful to diagnose wrong TFs/frames)
-        self.get_logger().debug(f"object_point (x,y,z) = {px_val:.3f},{py_val:.3f},{pz_val:.3f}")
-        print(f"px_val: {px_val}, grasp_dist: {grasp_dist}")
-
-        # Only trigger fallback if object is in front (positive x) and within grasp distance
-        # NOTE: do NOT close the gripper here. Instead stop the base and start the
-        # arm movement to the grasp pose (moving_to_grasp) so the arm moves first
-        # and only after the arm reaches the pose we close the gripper.
-        if px_val > 0.0 and px_val <= grasp_dist:
-            self.publish_stop()
-            self.get_logger().info("✋ Distancia de grasp alcanzada — deteniendo base y moviendo brazo al grasp")
-            # transition immediately to moving_to_grasp (this will call execute_grasp
-            # and schedule the pre_close_move_time before closing the gripper).
-            self._transition_to_grasp()
-            return
         target_y = self.get_parameter("target_y_left").value if self.closest_arm == "left" else self.get_parameter("target_y_right").value
-        close_dist = self.get_parameter("close_dist").value
-        kp_x = self.get_parameter("kp_x").value
-        kp_y = self.get_parameter("kp_y").value
-        vx_limit = self.get_parameter("vx_limit").value
-        wz_limit = self.get_parameter("wz_limit").value
+        
+        # Estos mueven la base del robot, no nos interesa
+        # close_dist = self.get_parameter("close_dist").value
+        # kp_x = self.get_parameter("kp_x").value
+        # kp_y = self.get_parameter("kp_y").value
+        # vx_limit = self.get_parameter("vx_limit").value
+        # wz_limit = self.get_parameter("wz_limit").value
 
-        vx = clamp(kp_x * (p.x - close_dist), -vx_limit, vx_limit)
-        wz = clamp(kp_y * (target_y - p.y), -wz_limit, wz_limit)
+        # vx = clamp(kp_x * (p.x - close_dist), -vx_limit, vx_limit)
+        # wz = clamp(kp_y * (target_y - p.y), -wz_limit, wz_limit)
 
-        cmd = TwistStamped()
-        cmd.twist.linear.x = vx
-        cmd.twist.angular.z = -wz
-        self.pub_ref.publish(cmd)
+        #cmd = TwistStamped()
+        #cmd.twist.linear.x = vx
+        #cmd.twist.angular.z = -wz
+        #self.pub_ref.publish(cmd)
 
         pose = PoseStamped()
         pose.header.frame_id = "base_link"
-        pose.pose.position.x = clamp(p.x, 0.3, 0.45)
-        pose.pose.position.y = target_y
+        pose.pose.position.x = clamp(p.x - 0.1, 0.3, 0.5)
+        pose.pose.position.y = clamp(p.y, -0.1 + target_y, 0.1 + target_y)
         pose.pose.position.z = clamp(p.z, self.get_parameter("min_z").value, self.get_parameter("max_z").value)
         pose.pose.orientation.y = 0.707
         pose.pose.orientation.w = -0.707
         pub = self.pub_pose_left if self.closest_arm == "left" else self.pub_pose_right
         pub.publish(pose)
+        # Debug using logger: print detected object position and end-effector pose
+        self.get_logger().info(f"Target pose: {pose.pose.position.x},{pose.pose.position.y},{pose.pose.position.z}")
+        try:
+            ee_ps = self._get_end_effector_pose(self.closest_arm)
+        except Exception:
+            ee_ps = None
+        try:
+            if ee_ps is not None:
+                self.get_logger().info(
+                    f"[APPROACH] object: ({p.x:.3f},{p.y:.3f},{p.z:.3f}) | ee: ({ee_ps.pose.position.x:.3f},{ee_ps.pose.position.y:.3f},{ee_ps.pose.position.z:.3f})"
+                )
+            else:
+                self.get_logger().info(
+                    f"[APPROACH] object: ({p.x:.3f},{p.y:.3f},{p.z:.3f}) | ee: n/a"
+                )
+        except Exception:
+            pass
 
     def _backoff_behavior(self):
         if self.start_x is None:
             self.start_x = self.current_x
         if abs(self.current_x - self.start_x) < 1.0:
-            cmd = TwistStamped()
-            cmd.twist.linear.x = -0.1
-            self.pub_ref.publish(cmd)
+            pass
+            # Estos mueven la base del robot, no nos interesa
+            # cmd = TwistStamped()
+            # cmd.twist.linear.x = -0.1
+            # self.pub_ref.publish(cmd)
         else:
             self.publish_stop()
             self._scene_detach_and_remove()
@@ -275,9 +310,10 @@ class VisualPickPID(Node):
 
     # ------------------------------
     def execute_grasp(self, p):
-        x_final = clamp(p.x, 0.3, 0.45)
-        y_final = self.get_parameter("target_y_left").value if self.closest_arm == "left" else self.get_parameter("target_y_right").value
-        z_final = clamp(p.z - 0.05, 0.40, 0.90)  # baja 5 cm para contactar
+        target_y = self.get_parameter("target_y_left").value if self.closest_arm == "left" else self.get_parameter("target_y_right").value
+        x_final = clamp(p.x - 0.08, 0.3, 0.45)
+        y_final = clamp(p.y, -0.1 + target_y, 0.1 + target_y)
+        z_final = clamp(p.z - 0.1, 0.40, 0.90)  # baja 5 cm para contactar
 
         ps = PoseStamped()
         ps.header.frame_id = "base_link"
@@ -288,14 +324,16 @@ class VisualPickPID(Node):
         ps.pose.orientation.w = -0.707
 
         pub = self.pub_pose_left if self.closest_arm == "left" else self.pub_pose_right
-        pub.publish(ps)
+        for i in range(3):  # publicar varias veces para asegurar recepción
+            pub.publish(ps)
+            time.sleep(1)  # pequeño delay para asegurar que llega publicación
 
     def lift_object(self):
         ps = PoseStamped()
         ps.header.frame_id = "base_link"
         ps.pose.position.x = 0.3
         ps.pose.position.y = self.get_parameter("target_y_left").value if self.closest_arm == "left" else self.get_parameter("target_y_right").value
-        ps.pose.position.z = 1.0
+        ps.pose.position.z = 1.2
         ps.pose.orientation.y = 0.707
         ps.pose.orientation.w = -0.707
         pub = self.pub_pose_left if self.closest_arm == "left" else self.pub_pose_right
@@ -342,9 +380,18 @@ class VisualPickPID(Node):
         scene.world = world
 
         req = ApplyPlanningScene.Request(scene=scene)
-        self.scene_client.call_async(req)
-        self.get_logger().info(f"📦 Objeto '{obj_id}' añadido/actualizado en escena en "
-                               f"{pose.position.x:.2f},{pose.position.y:.2f},{pose.position.z:.2f}")
+        future = self.scene_client.call_async(req)
+        # esperar respuesta del servicio para evitar condiciones de carrera
+        try:
+            rclpy.spin_until_future_complete(self, future, timeout_sec=1.0)
+            res = future.result()
+            if res is None:
+                self.get_logger().warn("⚠️ apply_planning_scene no respondió en tiempo (add/update)")
+            else:
+                self.get_logger().info(f"📦 Objeto '{obj_id}' añadido/actualizado en escena en "
+                                       f"{pose.position.x:.2f},{pose.position.y:.2f},{pose.position.z:.2f}")
+        except Exception as e:
+            self.get_logger().warn(f"⚠️ Error esperando ApplyPlanningScene (add/update): {e}")
 
     def _scene_attach_object(self, side):
         if not self.scene_client.wait_for_service(timeout_sec=1.0):
@@ -378,8 +425,17 @@ class VisualPickPID(Node):
         scene.robot_state = rs
 
         req = ApplyPlanningScene.Request(scene=scene)
-        self.scene_client.call_async(req)
-        self.get_logger().info(f"🔗 Objeto '{obj_id}' ATTACHED a '{link}' con touch_links={touch_links}")
+        future = self.scene_client.call_async(req)
+        # esperar respuesta del servicio para evitar condiciones de carrera
+        try:
+            rclpy.spin_until_future_complete(self, future, timeout_sec=1.0)
+            res = future.result()
+            if res is None:
+                self.get_logger().warn("⚠️ apply_planning_scene no respondió en tiempo (attach)")
+            else:
+                self.get_logger().info(f"🔗 Objeto '{obj_id}' ATTACHED a '{link}' con touch_links={touch_links}")
+        except Exception as e:
+            self.get_logger().warn(f"⚠️ Error esperando ApplyPlanningScene (attach): {e}")
 
     def _scene_detach_and_remove(self):
         if not self.scene_client.wait_for_service(timeout_sec=1.0):
@@ -407,8 +463,19 @@ class VisualPickPID(Node):
         scene.robot_state = rs
 
         req = ApplyPlanningScene.Request(scene=scene)
-        self.scene_client.call_async(req)
-
+        future = self.scene_client.call_async(req)
+        # esperar respuesta del servicio para evitar condiciones de carrera
+        try:
+            rclpy.spin_until_future_complete(self, future, timeout_sec=1.0)
+            res = future.result()
+            if res is None:
+                self.get_logger().warn("⚠️ apply_planning_scene no respondió en tiempo (detach/remove)")
+            else:
+                # nada específico a loggear aquí
+                pass
+        except Exception as e:
+            self.get_logger().warn(f"⚠️ Error esperando ApplyPlanningScene (detach/remove): {e}")
+        
     # ------------------------------
     def send_gripper(self, side, action, next_state=None):
         client = self.gripper_left if side == "left" else self.gripper_right
