@@ -1,0 +1,50 @@
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Found ament_lint_auto: 0.17.3 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Configured 'flake8' exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done (1.8s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/robotica-06/bender_ws/bender_manipulacion/build/bender_manipulation
+-- Install configuration: ""
+-- Installing: /home/robotica-06/bender_ws/bender_manipulacion/install/share/bender_manipulation/launch
+-- Installing: /home/robotica-06/bender_ws/bender_manipulacion/install/share/bender_manipulation/launch/test.launch.py
+-- Installing: /home/robotica-06/bender_ws/bender_manipulacion/install/share/bender_manipulation/launch/dynamixel_bridge.launch.py
+-- Installing: /home/robotica-06/bender_ws/bender_manipulacion/install/share/bender_manipulation/config
+-- Installing: /home/robotica-06/bender_ws/bender_manipulacion/install/share/bender_manipulation/config/moveit_controllers.yaml
+-- Installing: /home/robotica-06/bender_ws/bender_manipulacion/install/share/bender_manipulation/config/params.yaml
+-- Installing: /home/robotica-06/bender_ws/bender_manipulacion/install/lib/bender_manipulation/dynamixel_node.py
+-- Installing: /home/robotica-06/bender_ws/bender_manipulacion/install/lib/bender_manipulation/dynamixel_vel_node.py
+-- Installing: /home/robotica-06/bender_ws/bender_manipulacion/install/lib/bender_manipulation/serial_encoder_node.py
+-- Installing: /home/robotica-06/bender_ws/bender_manipulacion/install/lib/bender_manipulation/oddrive.py
+-- Installing: /home/robotica-06/bender_ws/bender_manipulacion/install/lib/bender_manipulation/test.py
+-- Installing: /home/robotica-06/bender_ws/bender_manipulacion/install/share/ament_index/resource_index/package_run_dependencies/bender_manipulation
+-- Installing: /home/robotica-06/bender_ws/bender_manipulacion/install/share/ament_index/resource_index/parent_prefix_path/bender_manipulation
+-- Installing: /home/robotica-06/bender_ws/bender_manipulacion/install/share/bender_manipulation/environment/ament_prefix_path.sh
+-- Installing: /home/robotica-06/bender_ws/bender_manipulacion/install/share/bender_manipulation/environment/ament_prefix_path.dsv
+-- Installing: /home/robotica-06/bender_ws/bender_manipulacion/install/share/bender_manipulation/environment/path.sh
+-- Installing: /home/robotica-06/bender_ws/bender_manipulacion/install/share/bender_manipulation/environment/path.dsv
+-- Installing: /home/robotica-06/bender_ws/bender_manipulacion/install/share/bender_manipulation/local_setup.bash
+-- Installing: /home/robotica-06/bender_ws/bender_manipulacion/install/share/bender_manipulation/local_setup.sh
+-- Installing: /home/robotica-06/bender_ws/bender_manipulacion/install/share/bender_manipulation/local_setup.zsh
+-- Installing: /home/robotica-06/bender_ws/bender_manipulacion/install/share/bender_manipulation/local_setup.dsv
+-- Installing: /home/robotica-06/bender_ws/bender_manipulacion/install/share/bender_manipulation/package.dsv
+-- Installing: /home/robotica-06/bender_ws/bender_manipulacion/install/share/ament_index/resource_index/packages/bender_manipulation
+-- Installing: /home/robotica-06/bender_ws/bender_manipulacion/install/share/bender_manipulation/cmake/bender_manipulationConfig.cmake
+-- Installing: /home/robotica-06/bender_ws/bender_manipulacion/install/share/bender_manipulation/cmake/bender_manipulationConfig-version.cmake
+-- Installing: /home/robotica-06/bender_ws/bender_manipulacion/install/share/bender_manipulation/package.xml

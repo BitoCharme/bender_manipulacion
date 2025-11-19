@@ -52,7 +52,7 @@ class HeadController(Node):
     def look_center(self): self.send_goal(0.0, 0.0)
     def look_left(self): self.send_goal(0.4, 0.0)
     def look_right(self): self.send_goal(-0.4, 0.0)
-    def look_down(self): self.send_goal(0.0, -0.4)
+    def look_down(self): self.send_goal(0.0, -0.6)
     def look_up(self): self.send_goal(0.0, 0.4)
 
     # ---- Movimiento continuo ----
