@@ -18,7 +18,7 @@
 -- Added test 'lint_cmake' to check CMake code style
 -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
 -- Added test 'xmllint' to check XML markup files
--- Configuring done (1.9s)
+-- Configuring done (3.6s)
 -- Generating done (0.0s)
 -- Build files have been written to: /home/robotica-06/bender_ws/bender_manipulacion/build/bender_description
 -- Install configuration: ""

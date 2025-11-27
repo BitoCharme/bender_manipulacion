@@ -11,6 +11,7 @@ from moveit_msgs.msg import (
     PlanningScene, CollisionObject, AttachedCollisionObject,
     RobotState, PlanningSceneWorld
 )
+from moveit_msgs.msg import AllowedCollisionEntry
 from moveit_msgs.srv import ApplyPlanningScene
 import math
 import tf2_ros
@@ -24,6 +25,25 @@ def quat_to_yaw(q):
     siny_cosp = 2.0 * (q.w * q.z + q.x * q.y)
     cosy_cosp = 1.0 - 2.0 * (q.y * q.y + q.z * q.z)
     return math.atan2(siny_cosp, cosy_cosp)
+
+
+def euler_to_quaternion(yaw, pitch, roll):
+    """Convert Euler angles (yaw, pitch, roll) to quaternion (x,y,z,w).
+
+    Angles are in radians. Follows convention: roll around X, pitch around Y, yaw around Z.
+    """
+    cy = math.cos(yaw * 0.5)
+    sy = math.sin(yaw * 0.5)
+    cp = math.cos(pitch * 0.5)
+    sp = math.sin(pitch * 0.5)
+    cr = math.cos(roll * 0.5)
+    sr = math.sin(roll * 0.5)
+
+    qw = cr * cp * cy + sr * sp * sy
+    qx = sr * cp * cy - cr * sp * sy
+    qy = cr * sp * cy + sr * cp * sy
+    qz = cr * cp * sy - sr * sp * cy
+    return qx, qy, qz, qw
 
 
 class VisualPickPID(Node):
@@ -88,6 +108,10 @@ class VisualPickPID(Node):
         # flag que indica si se recibió el trigger de confirmación/override
         # cuando se quiere autorizar continuar tras el cierre del gripper
         self._auto_grasp_triggered = False
+        # flag que indica que estamos esperando el trigger para proceder al attach
+        self._waiting_for_attach_trigger = False
+        # timer one-shot usado mientras esperamos el /auto_grasp_trigger tras el close
+        self._attach_wait_timer = None
 
         # === ROS Interfaces ===
         self.pub_ref = self.create_publisher(TwistStamped, '/mecanum_base_controller/reference', 10)
@@ -189,12 +213,33 @@ class VisualPickPID(Node):
 
     def trigger_cb(self, msg):
         if msg.data:
-            # auto_grasp_trigger ahora actúa como confirmación/override:
-            # - marca que se ha recibido el trigger (para permitir continuar tras close)
-            # - además intenta cancelar cualquier cierre en curso por seguridad
-            self.get_logger().info("✋ auto_grasp_trigger recibido — autorizando continuación y cancelando cierre si procede")
+            # Si estamos esperando trigger tras el cierre, proceder al attach
+            if getattr(self, '_waiting_for_attach_trigger', False):
+                self.get_logger().info("✋ auto_grasp_trigger recibido durante wait-for-attach — procediendo a attach")
+                try:
+                    self._waiting_for_attach_trigger = False
+                except Exception:
+                    pass
+                try:
+                    # cancelar timer de espera si estaba activo
+                    try:
+                        if self._attach_wait_timer:
+                            try:
+                                self._attach_wait_timer.cancel()
+                            except Exception:
+                                pass
+                            self._attach_wait_timer = None
+                    except Exception:
+                        pass
+                    # realizar attach y lift ahora que tenemos autorización
+                    self._scene_attach_and_lift()
+                except Exception as e:
+                    self.get_logger().warn(f"⚠️ Error al proceder al attach tras trigger: {e}")
+                return
+
+            # En otras fases, este trigger actúa como autorización/interrupt: marcar y cancelar cierres
+            self.get_logger().info("✋ auto_grasp_trigger recibido — autorizando continuación/cancel")
             try:
-                # marcar que se ha recibido el trigger (será comprobado tras close)
                 self._auto_grasp_triggered = True
             except Exception:
                 pass
@@ -204,6 +249,25 @@ class VisualPickPID(Node):
                 pass
             try:
                 self.cancel_gripper('right')
+            except Exception:
+                pass
+            # Additionally: when an auto-grasp trigger is received, remove the
+            # corresponding object from the PlanningScene to avoid stale world
+            # collisions. This is desired when the grasping pipeline hands the
+            # object to the robot or the perception pose is no longer needed.
+            try:
+                if getattr(self, 'object_point', None) is not None or getattr(self, 'object_point_scene', None) is not None:
+                    self.get_logger().info("🗑️ auto_grasp_trigger: borrando objeto de la PlanningScene")
+                    try:
+                        self._scene_detach_and_remove()
+                    except Exception as e:
+                        self.get_logger().warn(f"⚠️ Error al borrar objeto tras trigger: {e}")
+                    # clear local references
+                    try:
+                        self.object_point = None
+                        self.object_point_scene = None
+                    except Exception:
+                        pass
             except Exception:
                 pass
             return
@@ -308,7 +372,7 @@ class VisualPickPID(Node):
     def _pre_lift(self):
         """Eleva el brazo a una postura segura y mantiene la pose antes de continuar.
 
-        Publica varias veces la pose (x=0.3, y=target_y, z=1.1) y luego abre el gripper
+        Publica varias veces la pose (x=0.3, y=pre_target_y, z=1.1) y luego abre el gripper
         para continuar con el flujo ('approaching').
         """
         try:
@@ -316,21 +380,51 @@ class VisualPickPID(Node):
                 self.get_logger().warn("⚠️ pre_lift: closest_arm desconocido")
                 return
 
-            target_y = self.get_parameter("target_y_left").value if self.closest_arm == "left" else self.get_parameter("target_y_right").value
+            pre_target_y = -0.5 if self.closest_arm == "left" else 0.5
             ps = PoseStamped()
             ps.header.frame_id = self.get_parameter("world_frame").value
             ps.pose.position.x = 0.3
-            ps.pose.position.y = float(target_y)
+            ps.pose.position.y = pre_target_y
             ps.pose.position.z = 1.1
-            ps.pose.orientation.y = 0.707
-            ps.pose.orientation.w = -0.707
+            # Compute a shoulder-relative yaw so the wrist faces along the arm
+            # regardless of whether it's left or right. Use shoulder y offsets
+            # (left: -0.3, right: +0.3). For the left arm we invert the yaw so
+            # it becomes the negative of the right-arm yaw as requested.
+            shoulder_y = -0.3 if self.closest_arm == 'left' else 0.3
+            shoulder_x = 0.0
+            dx = float(ps.pose.position.x) - shoulder_x
+            dy = float(ps.pose.position.y) - shoulder_y
+            forced_yaw = -math.atan2(dy, dx)
+            if pre_target_y < self.target_y_left and self.closest_arm == "left":
+                forced_yaw = -forced_yaw  # invertir para brazo izquierdo
+            if pre_target_y > self.target_y_right and self.closest_arm == "right":
+                forced_yaw = -forced_yaw  # invertir para brazo derecho
+
+            # Force palm parallel to ground
+            forced_pitch = -math.pi / 2.0
+            forced_roll = 0.0
+            qx, qy, qz, qw = euler_to_quaternion(forced_yaw, forced_pitch, forced_roll)
+            ps.pose.orientation.x = float(qx)
+            ps.pose.orientation.y = float(qy)
+            ps.pose.orientation.z = float(qz)
+            ps.pose.orientation.w = float(qw)
+
+            # Log the exact pose that will be published for debugging
+            try:
+                self.get_logger().info(
+                    f"[pre_lift] -> side={self.closest_arm} pose=(x={ps.pose.position.x:.3f}, y={pre_target_y:.3f}, z={ps.pose.position.z:.3f}) "
+                    f"euler=(yaw={forced_yaw:.4f} rad/{math.degrees(forced_yaw):.1f}deg, pitch={forced_pitch:.4f} rad) "
+                    f"quat=(x={qx:.4f}, y={qy:.4f}, z={qz:.4f}, w={qw:.4f})"
+                )
+            except Exception:
+                pass
 
             pub = self.pub_pose_left if self.closest_arm == "left" else self.pub_pose_right
 
             send_count = int(self.get_parameter("pre_lift_send_count").value)
             interval = float(self.get_parameter("pre_lift_send_interval").value)
 
-            self.get_logger().info(f"⤴️ pre_lift: elevando brazo a x=0.3,y={target_y:.2f},z=1.1 durante ~{send_count*interval:.1f}s (trayectoria cartesiana)")
+            self.get_logger().info(f"⤴️ pre_lift: elevando brazo a x=0.3,y={pre_target_y:.2f},z=1.1 durante ~{send_count*interval:.1f}s (trayectoria cartesiana)")
 
             # Intentar trayectoria cartesiana: interpolar desde la pose actual del efector final
             start_ps = self._get_end_effector_pose(self.closest_arm)
@@ -389,15 +483,58 @@ class VisualPickPID(Node):
         """Cerrar primero, luego adjuntar, y entonces levantar."""
         self.state = "closing_gripper"
         self.get_logger().info("🤏 Cerrando gripper...")
-        # Cuando llegue el RESULT, pasamos a 'attaching'
+        # Indicamos que esperamos el trigger para proceder al attach
+        self._waiting_for_attach_trigger = True
+        # Enviamos comando de cierre; el attach NO se ejecutará automáticamente
+        # hasta recibir /auto_grasp_trigger (ver send_gripper + trigger_cb)
         self.send_gripper(self.closest_arm, "close", next_state="attaching")
-        # Además, disparamos un pequeño margen para adjuntar y levantar (por si el controlador no bloquea bien)
-        self._start_one_shot(0.8, self._scene_attach_and_lift)
+        self.get_logger().info("⏳ Gripper cerrado: esperando /auto_grasp_trigger para proceder al attach...")
+
+        # arrancar timer one-shot de 7s: si expira sin recibir el trigger, resetear por seguridad
+        try:
+            # cancelar timer previo si existe
+            if self._attach_wait_timer:
+                try:
+                    self._attach_wait_timer.cancel()
+                except Exception:
+                    pass
+                self._attach_wait_timer = None
+
+            def _attach_timeout_cb():
+                # cancelar este timer (hacerlo one-shot)
+                try:
+                    if self._attach_wait_timer:
+                        self._attach_wait_timer.cancel()
+                except Exception:
+                    pass
+                self._attach_wait_timer = None
+                try:
+                    self.get_logger().warn("⚠️ Timeout (7s) esperando /auto_grasp_trigger — reseteando rutina por seguridad")
+                except Exception:
+                    pass
+                try:
+                    self.reset_routine()
+                except Exception:
+                    pass
+
+            self._attach_wait_timer = self.create_timer(7.0, _attach_timeout_cb)
+        except Exception:
+            pass
 
     def _scene_attach_and_lift(self):
         if self.state != "attaching":
             # si ya estamos en attaching por el RESULT, igual hacemos attach
             self.state = "attaching"
+        # asegurar que cualquier timer de espera se cancele al ejecutar attach
+        try:
+            if self._attach_wait_timer:
+                try:
+                    self._attach_wait_timer.cancel()
+                except Exception:
+                    pass
+                self._attach_wait_timer = None
+        except Exception:
+            pass
         self._scene_attach_object(self.closest_arm)
         # dar un pequeño tiempo para que MoveIt procese el attach y actualice la PlanningScene
         try:
@@ -462,11 +599,15 @@ class VisualPickPID(Node):
 
         pose = PoseStamped()
         pose.header.frame_id = "base_link"
-        pose.pose.position.x = clamp(p.x - 0.09 + float(self.get_parameter("obj_x_offset").value), 0.3, 0.5)
+        pose.pose.position.x = clamp(p.x - 0.1 + float(self.get_parameter("obj_x_offset").value), 0.3, 0.5)
         pose.pose.position.y = clamp(p.y, -0.1 + target_y, 0.1 + target_y)
         pose.pose.position.z = clamp(p.z - 0.02, self.get_parameter("min_z").value, self.get_parameter("max_z").value)
-        pose.pose.orientation.y = 0.707 #Deberíamos hacer que esto varíe según la posición en y del objeto.
-        pose.pose.orientation.w = -0.707
+        # Use Euler -> quaternion for clarity: yaw=0, pitch=pi/2 (palm parallel), roll=0
+        qx, qy, qz, qw = euler_to_quaternion(0.0, -math.pi/2.0, 0.0)
+        pose.pose.orientation.x = float(qx)
+        pose.pose.orientation.y = float(qy)
+        pose.pose.orientation.z = float(qz)
+        pose.pose.orientation.w = float(qw)
         pub = self.pub_pose_left if self.closest_arm == "left" else self.pub_pose_right
         pub.publish(pose)
         # contar publicaciones de approach para la transición automática
@@ -506,13 +647,20 @@ class VisualPickPID(Node):
         ps.pose.position.x = x_final
         ps.pose.position.y = y_final
         ps.pose.position.z = z_final
-        ps.pose.orientation.y = 0.707
-        ps.pose.orientation.w = -0.707
+        # Use Euler -> quaternion for clarity: yaw=0, pitch=pi/2 (palm parallel), roll=0
+        qx, qy, qz, qw = euler_to_quaternion(0.0, -math.pi/2.0, 0.0)
+        ps.pose.orientation.x = float(qx)
+        ps.pose.orientation.y = float(qy)
+        ps.pose.orientation.z = float(qz)
+        ps.pose.orientation.w = float(qw)
 
         pub = self.pub_pose_left if self.closest_arm == "left" else self.pub_pose_right
-        for i in range(3):  # publicar varias veces para asegurar recepción
+        for _ in range(3):  # publicar varias veces para asegurar recepción
             pub.publish(ps)
-            time.sleep(1)  # pequeño delay para asegurar que llega publicación
+            try:
+                time.sleep(1)  # pequeño delay para asegurar que llega publicación
+            except Exception:
+                pass
 
     def lift_object(self):
         ps = PoseStamped()
@@ -520,8 +668,12 @@ class VisualPickPID(Node):
         ps.pose.position.x = 0.3
         ps.pose.position.y = self.get_parameter("target_y_left").value if self.closest_arm == "left" else self.get_parameter("target_y_right").value
         ps.pose.position.z = 1.2
-        ps.pose.orientation.y = 0.707
-        ps.pose.orientation.w = -0.707
+        # Use Euler -> quaternion for clarity: yaw=0, pitch=pi/2 (palm parallel), roll=0
+        qx, qy, qz, qw = euler_to_quaternion(0.0, -math.pi/2.0, 0.0)
+        ps.pose.orientation.x = float(qx)
+        ps.pose.orientation.y = float(qy)
+        ps.pose.orientation.z = float(qz)
+        ps.pose.orientation.w = float(qw)
         pub = self.pub_pose_left if self.closest_arm == "left" else self.pub_pose_right
         pub.publish(ps)
 
@@ -702,15 +854,25 @@ class VisualPickPID(Node):
             def _on_result(_):
                 self.get_logger().info("✅ Gripper: RESULT recibido")
                 if next_state:
-                    # Si acabamos de cerrar el gripper y se espera adjuntar,
-                    # requerimos que se haya recibido el /auto_grasp_trigger para
-                    # continuar; en caso contrario resetear por seguridad.
+                    # Si acabamos de cerrar el gripper y la intención es adjuntar,
+                    # no avanzamos automáticamente hasta que se reciba el /auto_grasp_trigger.
                     try:
                         if action == 'close' and next_state == 'attaching':
-                            if not getattr(self, '_auto_grasp_triggered', False):
-                                self.get_logger().warn("⚠️ Gripper cerrado pero no se recibió /auto_grasp_trigger — reseteando rutina por seguridad")
-                                self.reset_routine()
-                                # limpiar handle también abajo; salir
+                            # Si ya se había recibido el trigger (raro, pero posible), consumirlo
+                            if getattr(self, '_auto_grasp_triggered', False):
+                                try:
+                                    self._auto_grasp_triggered = False
+                                except Exception:
+                                    pass
+                                # continuar normalmente y permitir la transición a attaching
+                            else:
+                                # Marcar que estamos esperando el trigger y no avanzar
+                                try:
+                                    self._waiting_for_attach_trigger = True
+                                except Exception:
+                                    pass
+                                self.get_logger().info("⏳ Gripper cerrado — esperando /auto_grasp_trigger para proceder al attach")
+                                # limpiar handle
                                 try:
                                     if side == 'left':
                                         self._last_gripper_goal_left = None
@@ -719,12 +881,6 @@ class VisualPickPID(Node):
                                 except Exception:
                                     pass
                                 return
-                            else:
-                                # Consumir el trigger (se usa una sola vez)
-                                try:
-                                    self._auto_grasp_triggered = False
-                                except Exception:
-                                    pass
                     except Exception:
                         pass
 
@@ -818,6 +974,16 @@ class VisualPickPID(Node):
         # limpiar flag de trigger para próximas ejecuciones
         try:
             self._auto_grasp_triggered = False
+        except Exception:
+            pass
+        # cancelar timer de espera por trigger si existe
+        try:
+            if getattr(self, '_attach_wait_timer', None):
+                try:
+                    self._attach_wait_timer.cancel()
+                except Exception:
+                    pass
+                self._attach_wait_timer = None
         except Exception:
             pass
         self.start_x = None

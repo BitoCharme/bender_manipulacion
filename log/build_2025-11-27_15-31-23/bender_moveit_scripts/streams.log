@@ -1,0 +1,69 @@
+[3.973s] Invoking command in '/home/robotica-06/bender_ws/bender_manipulacion/src/bender_moveit_scripts': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/robotica-06/bender_ws/bender_manipulacion/build/bender_moveit_scripts/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/robotica-06/bender_ws/bender_manipulacion/install/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/bender_moveit_scripts build --build-base /home/robotica-06/bender_ws/bender_manipulacion/build/bender_moveit_scripts/build install --record /home/robotica-06/bender_ws/bender_manipulacion/build/bender_moveit_scripts/install.log --single-version-externally-managed install_data
+[4.868s] running egg_info
+[4.868s] creating ../../build/bender_moveit_scripts/bender_moveit_scripts.egg-info
+[4.932s] writing ../../build/bender_moveit_scripts/bender_moveit_scripts.egg-info/PKG-INFO
+[4.933s] writing dependency_links to ../../build/bender_moveit_scripts/bender_moveit_scripts.egg-info/dependency_links.txt
+[4.934s] writing entry points to ../../build/bender_moveit_scripts/bender_moveit_scripts.egg-info/entry_points.txt
+[4.934s] writing requirements to ../../build/bender_moveit_scripts/bender_moveit_scripts.egg-info/requires.txt
+[4.936s] writing top-level names to ../../build/bender_moveit_scripts/bender_moveit_scripts.egg-info/top_level.txt
+[4.936s] writing manifest file '../../build/bender_moveit_scripts/bender_moveit_scripts.egg-info/SOURCES.txt'
+[5.086s] reading manifest file '../../build/bender_moveit_scripts/bender_moveit_scripts.egg-info/SOURCES.txt'
+[5.088s] writing manifest file '../../build/bender_moveit_scripts/bender_moveit_scripts.egg-info/SOURCES.txt'
+[5.088s] running build
+[5.088s] running build_py
+[5.088s] creating /home/robotica-06/bender_ws/bender_manipulacion/build/bender_moveit_scripts/build
+[5.089s] creating /home/robotica-06/bender_ws/bender_manipulacion/build/bender_moveit_scripts/build/lib
+[5.089s] creating /home/robotica-06/bender_ws/bender_manipulacion/build/bender_moveit_scripts/build/lib/bender_moveit_scripts
+[5.090s] copying bender_moveit_scripts/move_grippers.py -> /home/robotica-06/bender_ws/bender_manipulacion/build/bender_moveit_scripts/build/lib/bender_moveit_scripts
+[5.090s] copying bender_moveit_scripts/pick_and_place.py -> /home/robotica-06/bender_ws/bender_manipulacion/build/bender_moveit_scripts/build/lib/bender_moveit_scripts
+[5.091s] copying bender_moveit_scripts/publish_target_pose.py -> /home/robotica-06/bender_ws/bender_manipulacion/build/bender_moveit_scripts/build/lib/bender_moveit_scripts
+[5.091s] copying bender_moveit_scripts/move_left_arm.py -> /home/robotica-06/bender_ws/bender_manipulacion/build/bender_moveit_scripts/build/lib/bender_moveit_scripts
+[5.092s] copying bender_moveit_scripts/move_head.py -> /home/robotica-06/bender_ws/bender_manipulacion/build/bender_moveit_scripts/build/lib/bender_moveit_scripts
+[5.092s] copying bender_moveit_scripts/skills.py -> /home/robotica-06/bender_ws/bender_manipulacion/build/bender_moveit_scripts/build/lib/bender_moveit_scripts
+[5.093s] copying bender_moveit_scripts/move_right_arm.py -> /home/robotica-06/bender_ws/bender_manipulacion/build/bender_moveit_scripts/build/lib/bender_moveit_scripts
+[5.094s] copying bender_moveit_scripts/move_groups_control.py -> /home/robotica-06/bender_ws/bender_manipulacion/build/bender_moveit_scripts/build/lib/bender_moveit_scripts
+[5.094s] copying bender_moveit_scripts/moveit_target_pose.py -> /home/robotica-06/bender_ws/bender_manipulacion/build/bender_moveit_scripts/build/lib/bender_moveit_scripts
+[5.094s] copying bender_moveit_scripts/__init__.py -> /home/robotica-06/bender_ws/bender_manipulacion/build/bender_moveit_scripts/build/lib/bender_moveit_scripts
+[5.094s] copying bender_moveit_scripts/bender_update_octomap.py -> /home/robotica-06/bender_ws/bender_manipulacion/build/bender_moveit_scripts/build/lib/bender_moveit_scripts
+[5.096s] running install
+[5.114s] running install_lib
+[5.187s] creating /home/robotica-06/bender_ws/bender_manipulacion/install/lib/python3.12/site-packages/bender_moveit_scripts
+[5.187s] copying /home/robotica-06/bender_ws/bender_manipulacion/build/bender_moveit_scripts/build/lib/bender_moveit_scripts/move_grippers.py -> /home/robotica-06/bender_ws/bender_manipulacion/install/lib/python3.12/site-packages/bender_moveit_scripts
+[5.188s] copying /home/robotica-06/bender_ws/bender_manipulacion/build/bender_moveit_scripts/build/lib/bender_moveit_scripts/pick_and_place.py -> /home/robotica-06/bender_ws/bender_manipulacion/install/lib/python3.12/site-packages/bender_moveit_scripts
+[5.191s] copying /home/robotica-06/bender_ws/bender_manipulacion/build/bender_moveit_scripts/build/lib/bender_moveit_scripts/publish_target_pose.py -> /home/robotica-06/bender_ws/bender_manipulacion/install/lib/python3.12/site-packages/bender_moveit_scripts
+[5.191s] copying /home/robotica-06/bender_ws/bender_manipulacion/build/bender_moveit_scripts/build/lib/bender_moveit_scripts/move_left_arm.py -> /home/robotica-06/bender_ws/bender_manipulacion/install/lib/python3.12/site-packages/bender_moveit_scripts
+[5.192s] copying /home/robotica-06/bender_ws/bender_manipulacion/build/bender_moveit_scripts/build/lib/bender_moveit_scripts/move_head.py -> /home/robotica-06/bender_ws/bender_manipulacion/install/lib/python3.12/site-packages/bender_moveit_scripts
+[5.192s] copying /home/robotica-06/bender_ws/bender_manipulacion/build/bender_moveit_scripts/build/lib/bender_moveit_scripts/skills.py -> /home/robotica-06/bender_ws/bender_manipulacion/install/lib/python3.12/site-packages/bender_moveit_scripts
+[5.192s] copying /home/robotica-06/bender_ws/bender_manipulacion/build/bender_moveit_scripts/build/lib/bender_moveit_scripts/move_right_arm.py -> /home/robotica-06/bender_ws/bender_manipulacion/install/lib/python3.12/site-packages/bender_moveit_scripts
+[5.192s] copying /home/robotica-06/bender_ws/bender_manipulacion/build/bender_moveit_scripts/build/lib/bender_moveit_scripts/move_groups_control.py -> /home/robotica-06/bender_ws/bender_manipulacion/install/lib/python3.12/site-packages/bender_moveit_scripts
+[5.194s] copying /home/robotica-06/bender_ws/bender_manipulacion/build/bender_moveit_scripts/build/lib/bender_moveit_scripts/moveit_target_pose.py -> /home/robotica-06/bender_ws/bender_manipulacion/install/lib/python3.12/site-packages/bender_moveit_scripts
+[5.194s] copying /home/robotica-06/bender_ws/bender_manipulacion/build/bender_moveit_scripts/build/lib/bender_moveit_scripts/__init__.py -> /home/robotica-06/bender_ws/bender_manipulacion/install/lib/python3.12/site-packages/bender_moveit_scripts
+[5.194s] copying /home/robotica-06/bender_ws/bender_manipulacion/build/bender_moveit_scripts/build/lib/bender_moveit_scripts/bender_update_octomap.py -> /home/robotica-06/bender_ws/bender_manipulacion/install/lib/python3.12/site-packages/bender_moveit_scripts
+[5.194s] byte-compiling /home/robotica-06/bender_ws/bender_manipulacion/install/lib/python3.12/site-packages/bender_moveit_scripts/move_grippers.py to move_grippers.cpython-312.pyc
+[5.197s] byte-compiling /home/robotica-06/bender_ws/bender_manipulacion/install/lib/python3.12/site-packages/bender_moveit_scripts/pick_and_place.py to pick_and_place.cpython-312.pyc
+[5.198s] byte-compiling /home/robotica-06/bender_ws/bender_manipulacion/install/lib/python3.12/site-packages/bender_moveit_scripts/publish_target_pose.py to publish_target_pose.cpython-312.pyc
+[5.198s] byte-compiling /home/robotica-06/bender_ws/bender_manipulacion/install/lib/python3.12/site-packages/bender_moveit_scripts/move_left_arm.py to move_left_arm.cpython-312.pyc
+[5.198s] byte-compiling /home/robotica-06/bender_ws/bender_manipulacion/install/lib/python3.12/site-packages/bender_moveit_scripts/move_head.py to move_head.cpython-312.pyc
+[5.200s] byte-compiling /home/robotica-06/bender_ws/bender_manipulacion/install/lib/python3.12/site-packages/bender_moveit_scripts/skills.py to skills.cpython-312.pyc
+[5.201s] byte-compiling /home/robotica-06/bender_ws/bender_manipulacion/install/lib/python3.12/site-packages/bender_moveit_scripts/move_right_arm.py to move_right_arm.cpython-312.pyc
+[5.204s] byte-compiling /home/robotica-06/bender_ws/bender_manipulacion/install/lib/python3.12/site-packages/bender_moveit_scripts/move_groups_control.py to move_groups_control.cpython-312.pyc
+[5.208s] byte-compiling /home/robotica-06/bender_ws/bender_manipulacion/install/lib/python3.12/site-packages/bender_moveit_scripts/moveit_target_pose.py to moveit_target_pose.cpython-312.pyc
+[5.209s] byte-compiling /home/robotica-06/bender_ws/bender_manipulacion/install/lib/python3.12/site-packages/bender_moveit_scripts/__init__.py to __init__.cpython-312.pyc
+[5.209s] byte-compiling /home/robotica-06/bender_ws/bender_manipulacion/install/lib/python3.12/site-packages/bender_moveit_scripts/bender_update_octomap.py to bender_update_octomap.cpython-312.pyc
+[5.209s] running install_data
+[5.210s] copying resource/bender_moveit_scripts -> /home/robotica-06/bender_ws/bender_manipulacion/install/share/ament_index/resource_index/packages
+[5.210s] copying package.xml -> /home/robotica-06/bender_ws/bender_manipulacion/install/share/bender_moveit_scripts
+[5.210s] running install_egg_info
+[5.285s] Copying ../../build/bender_moveit_scripts/bender_moveit_scripts.egg-info to /home/robotica-06/bender_ws/bender_manipulacion/install/lib/python3.12/site-packages/bender_moveit_scripts-0.0.1-py3.12.egg-info
+[5.287s] running install_scripts
+[5.749s] Installing bender_update_octomap script to /home/robotica-06/bender_ws/bender_manipulacion/install/lib/bender_moveit_scripts
+[5.749s] Installing gripper_action_commander script to /home/robotica-06/bender_ws/bender_manipulacion/install/lib/bender_moveit_scripts
+[5.750s] Installing move_head script to /home/robotica-06/bender_ws/bender_manipulacion/install/lib/bender_moveit_scripts
+[5.750s] Installing move_left_arm script to /home/robotica-06/bender_ws/bender_manipulacion/install/lib/bender_moveit_scripts
+[5.751s] Installing move_right_arm script to /home/robotica-06/bender_ws/bender_manipulacion/install/lib/bender_moveit_scripts
+[5.753s] Installing moveit_target_pose script to /home/robotica-06/bender_ws/bender_manipulacion/install/lib/bender_moveit_scripts
+[5.754s] Installing pick_and_place script to /home/robotica-06/bender_ws/bender_manipulacion/install/lib/bender_moveit_scripts
+[5.754s] Installing publish_target_pose script to /home/robotica-06/bender_ws/bender_manipulacion/install/lib/bender_moveit_scripts
+[5.754s] Installing skills script to /home/robotica-06/bender_ws/bender_manipulacion/install/lib/bender_moveit_scripts
+[5.754s] writing list of installed files to '/home/robotica-06/bender_ws/bender_manipulacion/build/bender_moveit_scripts/install.log'
+[5.846s] Invoked command in '/home/robotica-06/bender_ws/bender_manipulacion/src/bender_moveit_scripts' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/robotica-06/bender_ws/bender_manipulacion/build/bender_moveit_scripts/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/robotica-06/bender_ws/bender_manipulacion/install/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/bender_moveit_scripts build --build-base /home/robotica-06/bender_ws/bender_manipulacion/build/bender_moveit_scripts/build install --record /home/robotica-06/bender_ws/bender_manipulacion/build/bender_moveit_scripts/install.log --single-version-externally-managed install_data

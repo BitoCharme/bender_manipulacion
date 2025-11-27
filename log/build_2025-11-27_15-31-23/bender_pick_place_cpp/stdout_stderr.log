@@ -64,8 +64,8 @@
 -- Looking for IceConnectionNumber in ICE
 -- Looking for IceConnectionNumber in ICE - found
 -- Setting yaml-cpp_DIR to: '/opt/ros/jazzy/share/yaml_cpp_vendor/cmake/../../../opt/yaml_cpp_vendor/share/cmake/yaml-cpp'
--- Configuring done (7.7s)
--- Generating done (0.0s)
+-- Configuring done (11.8s)
+-- Generating done (0.1s)
 -- Build files have been written to: /home/robotica-06/bender_ws/bender_manipulacion/build/bender_pick_place_cpp
 [ 50%] [32mBuilding CXX object CMakeFiles/add_table.dir/src/add_table.cpp.o[0m
 [100%] [32m[1mLinking CXX executable add_table[0m

@@ -4,6 +4,7 @@ import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import Pose
 import numpy as np
+import math
 
 def euler_to_quaternion(yaw, pitch, roll):
     qx = np.sin(roll/2) * np.cos(pitch/2) * np.cos(yaw/2) - np.cos(roll/2) * np.sin(pitch/2) * np.sin(yaw/2)
@@ -15,8 +16,9 @@ def euler_to_quaternion(yaw, pitch, roll):
 def move_arm(side, sleep_time, x, y, z, yaw, pitch, roll):
     PoseNode = TargetPosePublisher()
     qx, qy, qz, qw = euler_to_quaternion(yaw, pitch, roll)
-    PoseNode.publish_target_pose(side, sleep_time, x, y, z, qx, qy, qz, qw)
-    PoseNode.publish_target_pose(side, sleep_time, x, y, z, qx, qy, qz, qw)
+    PoseNode.publish_target_pose(side, sleep_time, x, y, z, qx, qy, qz, qw, frame_id="base_link")
+    PoseNode.publish_target_pose(side, sleep_time, x, y, z, qx, qy, qz, qw, frame_id="base_link")
+    PoseNode.get_logger().info("Referencia de frame usada: base_link (robot base). Coordenadas interpretadas en base_link.")
     return
 
 def move_gripper(side, action):
